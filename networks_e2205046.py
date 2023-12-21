@@ -91,10 +91,10 @@ class MLP(nn.Module):
                 optimizer.zero_grad()
                 nb_batch += 1
                 loss_batch += loss.item()
-            print("epoch : " + str(epoch) + "/" + str(num_epoch) + ' - loss = '+\
+            print("epoch: " + str(epoch) + "/" + str(num_epoch) + ' - loss = '+\
                   str(loss_batch/nb_batch))
             f = open('./saved_models/logs/save_models_new.txt', 'a', encoding='utf-8')
-            f.write("epoch : " + str(epoch) + "/" + str(num_epoch) + ' - loss = '+\
+            f.write("epoch: " + str(epoch) + "/" + str(num_epoch) + ' - loss = '+\
                   str(loss_batch/nb_batch))
             f.write("\n")
             f.close()
@@ -116,9 +116,9 @@ class MLP(nn.Module):
                   f"Time: {round(time.time()-init_time)}",
                   f"(last_train: {round(last_training)}sec, last_pred: {round(last_prediction)}sec)")
             f = open('./saved_models/logs/save_models_new.txt', 'a', encoding='utf-8')
-            f.write(f"Accuracy Train: {round(100*acc_train,2)}%, Dev: {round(100*acc_dev,2)}% ;",
-                  f"Time: {round(time.time()-init_time)}",
-                  f"(last_train: {round(last_training)}sec, last_pred: {round(last_prediction)}sec)")
+            f.write(f"Accuracy Train: {round(100*acc_train,2)}%, Dev: {round(100*acc_dev,2)}% ;" +
+                  f" Time: {round(time.time()-init_time)}" +
+                  f" (last_train: {round(last_training)}sec, last_pred: {round(last_prediction)}sec)")
             f.write("\n")
             f.close()
 
@@ -135,18 +135,18 @@ class MLP(nn.Module):
                 
             self.train()
             
-            print("*"*15,f"The best score on DEV {best_epoch}:{round(100*best_dev,3)}%")
+            print("*"*15,f"The best score on DEV {best_epoch}: {round(100*best_dev,3)}%")
             f = open('./saved_models/logs/save_models_new.txt', 'a', encoding='utf-8')
-            f.write("*"*15 + f" The best score on DEV {best_epoch}:{round(100*best_dev,3)}%")
+            f.write("*"*15 + f" The best score on DEV {best_epoch}: {round(100*best_dev,3)}%")
             f.write("\n")
             f.close()
 
         self = torch.load(self.path_save + '/model_' + str(best_epoch) + '.pt')
         self.eval()
         _clas_rep = self.evalulate(dev, device)
-        print(f"Recalculing the best DEV: WAcc : {100*_clas_rep['weighted avg']['recall']}%")
+        print(f"Recalculing the best DEV: WAcc: {100*_clas_rep['weighted avg']['recall']}%")
         f = open('./saved_models/logs/save_models_new.txt', 'a', encoding='utf-8')
-        f.write(f"Recalculing the best DEV: WAcc : {100*_clas_rep['weighted avg']['recall']}%")
+        f.write(f"Recalculing the best DEV: WAcc: {100*_clas_rep['weighted avg']['recall']}%")
         f.write("\n")
         f.close()
 

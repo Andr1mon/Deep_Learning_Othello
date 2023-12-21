@@ -232,7 +232,7 @@ devSet = DataLoader(ds_dev, batch_size=dataset_conf['batch_size'])
 
 conf={}
 conf["board_size"]=BOARD_SIZE
-conf["path_save"]="save_models"
+conf["path_save"]="saved_models/save_models"
 conf['epoch']=200
 conf["earlyStopping"]=20
 conf["len_inpout_seq"]=len_samples
