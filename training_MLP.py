@@ -118,7 +118,7 @@ class CustomDataset(Dataset):
                     idx+=1
         else:
         
-            #creat a list of samples as SampleManager objcets
+            #create a list of samples as SampleManager objcets
             self.samples=np.empty(len(self.game_files_name)*30, dtype=object)
             idx=0
             for gm_idx,gm_name in tqdm(enumerate(self.game_files_name)):
@@ -140,7 +140,11 @@ class CustomDataset(Dataset):
                     idx+=1
         
         #np.random.shuffle(self.samples)
-        print(f"Number of samples : {len(self.samples)}")
+        print(f"Number of samples: {len(self.samples)}")
+        f = open('./saved_models/logs/save_models_new.txt', 'a', encoding='utf-8')
+        f.write(f"Number of samples: {len(self.samples)}")  
+        f.write("\n")
+        f.close()
         
     def __len__(self):
         return len(self.samples)
@@ -187,6 +191,10 @@ else:
     device = torch.device("cpu")
     
 print('Running on ' + str(device))
+f = open('./saved_models/logs/save_models_new.txt', 'a', encoding='utf-8')
+f.write('Running on ' + str(device))
+f.write("\n")
+f.close()
 
 len_samples=1
 
@@ -198,7 +206,11 @@ dataset_conf["len_samples"]=len_samples
 dataset_conf["path_dataset"]="./dataset/"
 dataset_conf['batch_size']=1000
 
-print("Training Dataste ... ")
+print("Training Dataset... ")
+f = open('./saved_models/logs/save_models_new.txt', 'a', encoding='utf-8')
+f.write("Training Dataset... ")
+f.write("\n")
+f.close()
 ds_train = CustomDataset(dataset_conf,load_data_once4all=True)
 trainSet = DataLoader(ds_train, batch_size=dataset_conf['batch_size'])
 
@@ -210,7 +222,11 @@ dataset_conf["len_samples"]=len_samples
 dataset_conf["path_dataset"]="./dataset/"
 dataset_conf['batch_size']=1000
 
-print("Development Dataste ... ")
+print("Development Dataset... ")
+f = open('./saved_models/logs/save_models_new.txt', 'a', encoding='utf-8')
+f.write("Development Dataset... ")
+f.write("\n")
+f.close()
 ds_dev = CustomDataset(dataset_conf,load_data_once4all=True)
 devSet = DataLoader(ds_dev, batch_size=dataset_conf['batch_size'])
 
@@ -231,6 +247,10 @@ def count_parameters(model):
 
 n = count_parameters(model)
 print("Number of parameters: %s" % n)
+f = open('./saved_models/logs/save_models_new.txt', 'a', encoding='utf-8')
+f.write("Number of parameters: %s" % n)
+f.write("\n")
+f.close()
 
 best_epoch=model.train_all(trainSet,
                        devSet,
@@ -241,5 +261,9 @@ best_epoch=model.train_all(trainSet,
 # model.eval()
 # train_clas_rep=model.evalulate(trainSet, device)
 # acc_train=train_clas_rep["weighted avg"]["recall"]
-# print(f"Accuracy Train:{round(100*acc_train,2)}%")
+# print(f"Accuracy Train: {round(100*acc_train,2)}%")
+# f = open('./saved_models/logs/save_models_new.txt', 'a', encoding='utf-8')
+# f.write(f"Accuracy Train: {round(100*acc_train,2)}%")   
+# f.write("\n")
+# f.close()
 
