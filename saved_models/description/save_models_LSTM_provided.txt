@@ -1,0 +1,9 @@
+Model: LSTM
+Optimizer: Adam 
+Optimizer Learning rate: 0.005
+Input layer: board_size*board_size [8*8]
+Hidden layer: 128
+Output layer: board_size*board_size [8*8]
+Dropout layer: 0.1
+Epoch: 200
+Earlystopping: 20

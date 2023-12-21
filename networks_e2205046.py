@@ -197,10 +197,10 @@ class LSTMs(nn.Module):
          # Define the layers of the LSTM model
         self.lstm = nn.LSTM(self.board_size*self.board_size, self.hidden_dim,batch_first=True)
         
-        #1st option: using hidden states
+        # 1st option: using hidden states
         # self.hidden2output = nn.Linear(self.hidden_dim*2, self.board_size*self.board_size)
         
-        #2nd option: using output seauence
+        # 2nd option: using output sequence
         self.hidden2output = nn.Linear(self.hidden_dim, self.board_size*self.board_size)
         
         self.dropout = nn.Dropout(p=0.1)
