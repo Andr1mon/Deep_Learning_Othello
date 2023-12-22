@@ -43,9 +43,9 @@ class MLP(nn.Module):
         self.len_inpout_seq=conf["len_inpout_seq"]
 
         # Define the layers of the MLP
-        self.lin1 = nn.Linear(self.board_size*self.board_size, 128)
-        self.lin2 = nn.Linear(128, 128)
-        self.lin3 = nn.Linear(128, self.board_size*self.board_size)
+        self.lin1 = nn.Linear(self.board_size*self.board_size, 256) # self.lin1 = nn.Linear(self.board_size*self.board_size, 128)
+        self.lin2 = nn.ReLU() # self.lin2 = nn.Linear(128, 128)
+        self.lin3 = nn.Linear(256, self.board_size*self.board_size) # self.lin3 = nn.Linear(128, self.board_size*self.board_size)
         self.dropout = nn.Dropout(p=0.1)
         
     def forward(self, seq):
@@ -195,13 +195,13 @@ class LSTMs(nn.Module):
         self.hidden_dim = conf["LSTM_conf"]["hidden_dim"]
 
          # Define the layers of the LSTM model
-        self.lstm = nn.LSTM(self.board_size*self.board_size, self.hidden_dim,batch_first=True)
+        self.lstm = nn.LSTM(self.board_size*self.board_size, 256,batch_first=True) # self.lstm = nn.LSTM(self.board_size*self.board_size, self.hidden_dim,batch_first=True)
         
         # 1st option: using hidden states
         # self.hidden2output = nn.Linear(self.hidden_dim*2, self.board_size*self.board_size)
         
         # 2nd option: using output sequence
-        self.hidden2output = nn.Linear(self.hidden_dim, self.board_size*self.board_size)
+        self.hidden2output = nn.Linear(256, self.board_size*self.board_size) # self.hidden2output = nn.Linear(self.hidden_dim, self.board_size*self.board_size)
         
         self.dropout = nn.Dropout(p=0.1)
 
