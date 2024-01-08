@@ -8,8 +8,8 @@ Activation function: ReLU
 Output layer: board_size*board_size [8*8]
 Dropout layer: 0.1
 Batch size: 1000
-Epoch: 200
-Earlystopping: 20
+Epoch: 50
+Earlystopping: 10
 Number of parameters: 33088
-Time: 
-The best score on DEV : 
+Time: 724
+The best score on DEV 50: 20.47%
