@@ -43,9 +43,10 @@ class MLP(nn.Module):
         self.len_inpout_seq=conf["len_inpout_seq"]
 
         # Define the layers of the MLP
-        self.lin1 = nn.Linear(self.board_size*self.board_size, 256) # self.lin1 = nn.Linear(self.board_size*self.board_size, 128)
-        self.lin2 = nn.ReLU() # self.lin2 = nn.Linear(128, 128)
-        self.lin3 = nn.Linear(256, self.board_size*self.board_size) # self.lin3 = nn.Linear(128, self.board_size*self.board_size)
+        self.lin1 = nn.Linear(self.board_size*self.board_size, 128) # self.lin1 = nn.Linear(self.board_size*self.board_size, 128)
+        self.lin2 = nn.Linear(128, 128)
+        self.relu = nn.ReLU()
+        self.lin3 = nn.Linear(128, self.board_size*self.board_size) # self.lin3 = nn.Linear(128, self.board_size*self.board_size)
         self.dropout = nn.Dropout(p=0.1)
         
     def forward(self, seq):
@@ -65,6 +66,7 @@ class MLP(nn.Module):
             seq=torch.flatten(seq, start_dim=0)
         x = self.lin1(seq)
         x = self.lin2(x)
+        x = self.relu(x)
         outp = self.lin3(x)
         return F.softmax(outp, dim=-1)
     
@@ -195,14 +197,14 @@ class LSTMs(nn.Module):
         self.hidden_dim = conf["LSTM_conf"]["hidden_dim"]
 
          # Define the layers of the LSTM model
-        self.lstm = nn.LSTM(self.board_size*self.board_size, 256,batch_first=True) # self.lstm = nn.LSTM(self.board_size*self.board_size, self.hidden_dim,batch_first=True)
+        self.lstm = nn.LSTM(self.board_size*self.board_size, 128, batch_first=True) # self.lstm = nn.LSTM(self.board_size*self.board_size, self.hidden_dim,batch_first=True)
         
         # 1st option: using hidden states
         # self.hidden2output = nn.Linear(self.hidden_dim*2, self.board_size*self.board_size)
-        
+
         # 2nd option: using output sequence
-        self.hidden2output = nn.Linear(256, self.board_size*self.board_size) # self.hidden2output = nn.Linear(self.hidden_dim, self.board_size*self.board_size)
-        
+        self.relu = nn.ReLU()
+        self.hidden2output = nn.Linear(128, self.board_size*self.board_size) # self.hidden2output = nn.Linear(self.hidden_dim, self.board_size*self.board_size)
         self.dropout = nn.Dropout(p=0.1)
 
     def forward(self, seq):
@@ -230,12 +232,16 @@ class LSTMs(nn.Module):
         #(lstm_out[:,-1,:] pass only last vector of output sequence)
         if len(seq.shape)>2: # to manage the batch of sample
             # Training phase where input is batch of seq
-            outp = self.hidden2output(lstm_out[:,-1,:])
+            outp = self.relu(lstm_out[:,-1,:])
+            outp = self.hidden2output(outp)
             outp = F.softmax(outp, dim=1).squeeze()
+            
         else:
             # Prediction phase where input is a single seq
-            outp = self.hidden2output(lstm_out[-1,:])
+            outp = self.relu(lstm_out[-1,:])
+            outp = self.hidden2output(outp)
             outp = F.softmax(outp).squeeze()
+            
         
         return outp
     

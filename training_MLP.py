@@ -247,10 +247,14 @@ def count_parameters(model):
 
 n = count_parameters(model)
 print("Number of parameters: %s" % n)
+print(model)
 f = open('./saved_models/logs/save_models_new.txt', 'a', encoding='utf-8')
 f.write("Number of parameters: %s" % n)
 f.write("\n")
+f.write(str(model))
+f.write("\n")
 f.close()
+
 
 best_epoch=model.train_all(trainSet,
                        devSet,
