@@ -141,7 +141,7 @@ class CustomDataset(Dataset):
         
         #np.random.shuffle(self.samples)
         print(f"Number of samples: {len(self.samples)}")
-        f = open('./saved_models/logs/save_models_new.txt', 'a', encoding='utf-8')
+        f = open('./saved_models/logs_save_models_new.txt', 'a', encoding='utf-8')
         f.write(f"Number of samples: {len(self.samples)}")
         f.write("\n")
         f.close()
@@ -192,7 +192,7 @@ else:
     device = torch.device("cpu")
     
 print('Running on ' + str(device))
-f = open('./saved_models/logs/save_models_new.txt', 'a', encoding='utf-8')
+f = open('./saved_models/logs_save_models_new.txt', 'a', encoding='utf-8')
 f.write('Running on ' + str(device))
 f.write("\n")
 f.close()
@@ -208,7 +208,7 @@ dataset_conf["path_dataset"]="./dataset/"
 dataset_conf['batch_size']=1000
 
 print("Training Dataset... ")
-f = open('./saved_models/logs/save_models_new.txt', 'a', encoding='utf-8')
+f = open('./saved_models/logs_save_models_new.txt', 'a', encoding='utf-8')
 f.write("Training Dataset... ")
 f.write("\n")
 f.close()
@@ -224,7 +224,7 @@ dataset_conf["path_dataset"]="./dataset/"
 dataset_conf['batch_size']=1000
 
 print("Development Dataset... ")
-f = open('./saved_models/logs/save_models_new.txt', 'a', encoding='utf-8')
+f = open('./saved_models/logs_save_models_new.txt', 'a', encoding='utf-8')
 f.write("Development Dataset... ")
 f.write("\n")
 f.close()
@@ -239,9 +239,10 @@ conf["earlyStopping"]=10
 conf["len_inpout_seq"]=len_samples
 conf["LSTM_conf"]={}
 conf["LSTM_conf"]["hidden_dim"]=128
+learning_rate = 0.005
 
 model = LSTMs(conf).to(device)
-opt = torch.optim.Adam(model.parameters(), lr=0.005)
+opt = torch.optim.Adam(model.parameters(), lr=learning_rate)
 
 def count_parameters(model):
     return sum(p.numel() for p in model.parameters() if p.requires_grad)
@@ -249,8 +250,10 @@ def count_parameters(model):
 n = count_parameters(model)
 print("Number of parameters: %s" % n)
 print(model)
-f = open('./saved_models/logs/save_models_new.txt', 'a', encoding='utf-8')
+f = open('./saved_models/logs_save_models_new.txt', 'a', encoding='utf-8')
 f.write("Number of parameters: %s" % n)
+f.write("\n")
+f.write('Learning rate:', learning_rate)
 f.write("\n")
 f.write(str(model))
 f.write("\n")
@@ -268,7 +271,7 @@ best_epoch=model.train_all(trainSet,
 # train_clas_rep=model.evalulate(trainSet, device)
 # acc_train=train_clas_rep["weighted avg"]["recall"]
 # print(f"Accuracy Train: {round(100*acc_train,2)}%")
-# f = open('./saved_models/logs/save_models_new.txt', 'a', encoding='utf-8')
+# f = open('./saved_models/logs_save_models_new.txt', 'a', encoding='utf-8')
 # f.write(f"Accuracy Train: {round(100*acc_train,2)}%")
 # f.write("\n")
 # f.close()

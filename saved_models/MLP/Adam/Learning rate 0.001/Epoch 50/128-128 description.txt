@@ -1,0 +1,14 @@
+Model: MLP
+Optimizer: Adam 
+Optimizer Learning rate: 0.001
+Input layer: board_size*board_size [8*8]
+Hidden layer: Linear 128
+Hidden layer: Linear 128
+Output layer: board_size*board_size [8*8]
+Dropout layer: 0.1
+Batch size: 1000
+Epoch: 50
+Earlystopping: 10
+Number of parameters: 33088
+Time: 622
+The best score on DEV 50: 14.81%
