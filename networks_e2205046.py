@@ -38,7 +38,7 @@ class MLP(nn.Module):
         super(MLP, self).__init__()  
         
         self.board_size=conf["board_size"]
-        self.path_save=conf["path_save"]+"_MLP/"
+        self.path_save=conf["path_save"]
         self.earlyStopping=conf["earlyStopping"]
         self.len_inpout_seq=conf["len_inpout_seq"]
 
@@ -46,6 +46,8 @@ class MLP(nn.Module):
         self.lin1 = nn.Linear(self.board_size*self.board_size, 128) # self.lin1 = nn.Linear(self.board_size*self.board_size, 128)
         self.lin2 = nn.Linear(128, 128)
         #self.relu = nn.ReLU()
+        self.sigmoid = nn.Sigmoid()
+        #self.tanh = nn.Tanh()
         self.lin3 = nn.Linear(128, self.board_size*self.board_size) # self.lin3 = nn.Linear(128, self.board_size*self.board_size)
         self.dropout = nn.Dropout(p=0.1)
         
@@ -67,6 +69,8 @@ class MLP(nn.Module):
         x = self.lin1(seq)
         x = self.lin2(x)
         #x = self.relu(x)
+        x = self.sigmoid(x)
+        # x = self.tanh(x)
         outp = self.lin3(x)
         return F.softmax(outp, dim=-1)
     
@@ -95,7 +99,7 @@ class MLP(nn.Module):
                 loss_batch += loss.item()
             print("epoch: " + str(epoch) + "/" + str(num_epoch) + ' - loss = '+\
                   str(loss_batch/nb_batch))
-            f = open('./saved_models/logs_save_models_new.txt', 'a', encoding='utf-8')
+            f = open(f'{self.path_save} logs.txt', 'a', encoding='utf-8')
             f.write("epoch: " + str(epoch) + "/" + str(num_epoch) + ' - loss = '+\
                   str(loss_batch/nb_batch))
             f.write("\n")
@@ -117,7 +121,7 @@ class MLP(nn.Module):
             print(f"Accuracy Train: {round(100*acc_train,2)}%, Dev: {round(100*acc_dev,2)}% ;",
                   f"Time: {round(time.time()-init_time)}",
                   f"(last_train: {round(last_training)}sec, last_pred: {round(last_prediction)}sec)")
-            f = open('./saved_models/logs_save_models_new.txt', 'a', encoding='utf-8')
+            f = open(f'{self.path_save} logs.txt', 'a', encoding='utf-8')
             f.write(f"Accuracy Train: {round(100*acc_train,2)}%, Dev: {round(100*acc_dev,2)}% ;" +
                   f" Time: {round(time.time()-init_time)}" +
                   f" (last_train: {round(last_training)}sec, last_pred: {round(last_prediction)}sec)")
@@ -138,7 +142,7 @@ class MLP(nn.Module):
             self.train()
             
             print("*"*15,f"The best score on DEV {best_epoch}: {round(100*best_dev,3)}%")
-            f = open('./saved_models/logs_save_models_new.txt', 'a', encoding='utf-8')
+            f = open(f'{self.path_save} logs.txt', 'a', encoding='utf-8')
             f.write("*"*15 + f" The best score on DEV {best_epoch}: {round(100*best_dev,3)}%")
             f.write("\n")
             f.close()
@@ -147,7 +151,7 @@ class MLP(nn.Module):
         self.eval()
         _clas_rep = self.evalulate(dev, device)
         print(f"Recalculing the best DEV: WAcc: {100*_clas_rep['weighted avg']['recall']}%")
-        f = open('./saved_models/logs_save_models_new.txt', 'a', encoding='utf-8')
+        f = open(f'{self.path_save} logs.txt', 'a', encoding='utf-8')
         f.write(f"Recalculing the best DEV: WAcc: {100*_clas_rep['weighted avg']['recall']}%")
         f.write("\n")
         f.close()
@@ -191,20 +195,29 @@ class LSTMs(nn.Module):
         super(LSTMs, self).__init__()
         
         self.board_size=conf["board_size"]
-        self.path_save=conf["path_save"]+"_LSTM/"
+        self.path_save=conf["path_save"]
         self.earlyStopping=conf["earlyStopping"]
         self.len_inpout_seq=conf["len_inpout_seq"]
         self.hidden_dim = conf["LSTM_conf"]["hidden_dim"]
+        self.activation_function = conf["activation_function"]
 
          # Define the layers of the LSTM model
-        self.lstm = nn.LSTM(self.board_size*self.board_size, 128, batch_first=True) # self.lstm = nn.LSTM(self.board_size*self.board_size, self.hidden_dim,batch_first=True)
+        self.lstm = nn.LSTM(self.board_size*self.board_size, self.hidden_dim, batch_first=True) # self.lstm = nn.LSTM(self.board_size*self.board_size, self.hidden_dim,batch_first=True)
         
         # 1st option: using hidden states
         # self.hidden2output = nn.Linear(self.hidden_dim*2, self.board_size*self.board_size)
 
         # 2nd option: using output sequence
-        #self.relu = nn.ReLU()
-        self.hidden2output = nn.Linear(128, self.board_size*self.board_size) # self.hidden2output = nn.Linear(self.hidden_dim, self.board_size*self.board_size)
+        if (self.activation_function == "ReLU"):
+            self.act_function = nn.ReLU()
+        elif (self.activation_function == "Sigmoid"):
+            self.act_function = nn.Sigmoid()
+        elif (self.activation_function == "Tanh"):
+            self.act_function = nn.Tanh()
+        elif (self.activation_function == "Leaky ReLU"):
+            self.act_function = nn.LeakyReLU()
+
+        self.hidden2output = nn.Linear(self.hidden_dim, self.board_size*self.board_size) # self.hidden2output = nn.Linear(self.hidden_dim, self.board_size*self.board_size)
         self.dropout = nn.Dropout(p=0.1)
 
     def forward(self, seq):
@@ -232,12 +245,22 @@ class LSTMs(nn.Module):
         #(lstm_out[:,-1,:] pass only last vector of output sequence)
         if len(seq.shape)>2: # to manage the batch of sample
             # Training phase where input is batch of seq
-            outp = self.hidden2output(lstm_out[:,-1,:])
+            if (self.activation_function == "Linear"):
+                outp = self.hidden2output(lstm_out[:,-1,:])
+            else:
+                outp = self.act_function(lstm_out[:,-1,:])
+                outp = self.hidden2output(outp)
+            
             outp = F.softmax(outp, dim=1).squeeze()
             
         else:
             # Prediction phase where input is a single seq
-            outp = self.hidden2output(lstm_out[-1,:])
+            if (self.activation_function == "Linear"):
+                outp = self.hidden2output(lstm_out[-1,:])
+            else:
+                outp = self.act_function(lstm_out[-1,:])
+                outp = self.hidden2output(outp)
+
             outp = F.softmax(outp).squeeze()
             
         
@@ -268,7 +291,7 @@ class LSTMs(nn.Module):
                 loss_batch += loss.item()
             print("epoch: " + str(epoch) + "/" + str(num_epoch) + ' - loss = '+\
                   str(loss_batch/nb_batch))
-            f = open('./saved_models/logs_save_models_new.txt', 'a', encoding='utf-8')
+            f = open(f'{self.path_save} logs.txt', 'a', encoding='utf-8')
             f.write("epoch: " + str(epoch) + "/" + str(num_epoch) + ' - loss = '+\
                   str(loss_batch/nb_batch))
             f.write("\n")
@@ -290,7 +313,7 @@ class LSTMs(nn.Module):
             print(f"Accuracy Train: {round(100*acc_train,2)}%, Dev: {round(100*acc_dev,2)}% ;",
                   f"Time: {round(time.time()-init_time)}",
                   f"(last_train: {round(last_training)}, last_pred: {round(last_prediction)})")
-            f = open('./saved_models/logs_save_models_new.txt', 'a', encoding='utf-8')
+            f = open(f'{self.path_save} logs.txt', 'a', encoding='utf-8')
             f.write(f"Accuracy Train: {round(100*acc_train,2)}%, Dev: {round(100*acc_dev,2)}% ; Time: {round(time.time()-init_time)} (last_train: {round(last_training)}, last_pred: {round(last_prediction)})")
             f.write("\n")
             f.close()
@@ -309,7 +332,7 @@ class LSTMs(nn.Module):
             self.train()
             
             print("*"*15,f"The best score on DEV {best_epoch}: {round(100*best_dev,3)}%")
-            f = open('./saved_models/logs_save_models_new.txt', 'a', encoding='utf-8')
+            f = open(f'{self.path_save} logs.txt', 'a', encoding='utf-8')
             f.write("*"*15 + f" The best score on DEV {best_epoch}: {round(100*best_dev,3)}%")
             f.write("\n")
             f.close()
@@ -318,9 +341,12 @@ class LSTMs(nn.Module):
         self.eval()
         _clas_rep = self.evalulate(dev, device)
         print(f"Recalculing the best DEV: WAcc: {100*_clas_rep['weighted avg']['recall']}%")
-        f = open('./saved_models/logs_save_models_new.txt', 'a', encoding='utf-8')
+        f = open(f'{self.path_save} logs.txt', 'a', encoding='utf-8')
         f.write(f"Recalculing the best DEV: WAcc: {100*_clas_rep['weighted avg']['recall']}%")
         f.write("\n")
+        f.close()
+        f = open(f'{self.path_save} desription.txt', 'a', encoding='utf-8')
+        f.write(f"{100*_clas_rep['weighted avg']['recall']}%")
         f.close()
 
         
