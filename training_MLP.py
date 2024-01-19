@@ -141,10 +141,6 @@ class CustomDataset(Dataset):
         
         #np.random.shuffle(self.samples)
         print(f"Number of samples: {len(self.samples)}")
-        f = open('./saved_models/logs_save_models_new.txt', 'a', encoding='utf-8')
-        f.write(f"Number of samples: {len(self.samples)}")  
-        f.write("\n")
-        f.close()
         
     def __len__(self):
         return len(self.samples)
@@ -184,87 +180,89 @@ class CustomDataset(Dataset):
             
         return features,y,self.len_samples
 
-    
-if torch.cuda.is_available():
-    device = torch.device("cuda:0")
-else:
-    device = torch.device("cpu")
-    
-print('Running on ' + str(device))
-f = open('./saved_models/logs_save_models_new.txt', 'a', encoding='utf-8')
-f.write('Running on ' + str(device))
-f.write("\n")
-f.close()
+for optimizer in ["Adam", "SGD", "Adagrad", "Adadelta", "RMSprop"]:
+    for learning_rate in [0.0001, 0.001, 0.01, 0.1, 1]:
+        for batch_size in [100, 1000, 5000, 15000, 30000]:
+            for epoch in [50, 100, 200, 500]:
+                for hidden_dim_1 in [128, 256]:
+                    for hidden_dim_2 in [128, 256]:
+                        for activation_function in ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]:
+                            conf={}
+                            conf["path_save"]=f"saved_models/MLP/{optimizer}/Learnings rate {learning_rate}/Batch size {batch_size}/Epoch {epoch}/{hidden_dim_1} {hidden_dim_2} {activation_function}"
 
-len_samples=1
+                            if os.path.exists(conf["path_save"]):
+                                continue
 
-dataset_conf={}  
-# self.filelist : a list of all games for train/dev/test
-dataset_conf["filelist"]="train.txt"
-#len_samples is 1 for one2one but it can be more than 1 for seq2one modeling
-dataset_conf["len_samples"]=len_samples
-dataset_conf["path_dataset"]="./dataset/"
-dataset_conf['batch_size']=1000
+                            if torch.cuda.is_available():
+                                device = torch.device("cuda:0")
+                            else:
+                                device = torch.device("cpu")
+                            print('Running on ' + str(device))
+                            
 
-print("Training Dataset... ")
-f = open('./saved_models/logs_save_models_new.txt', 'a', encoding='utf-8')
-f.write("Training Dataset... ")
-f.write("\n")
-f.close()
-ds_train = CustomDataset(dataset_conf,load_data_once4all=True)
-trainSet = DataLoader(ds_train, batch_size=dataset_conf['batch_size'])
+                            len_samples=1
 
-dataset_conf={}  
-# self.filelist : a list of all games for train/dev/test
-dataset_conf["filelist"]="dev.txt"
-#len_samples is 1 for one2one but it can be more than 1 for seq2one modeling
-dataset_conf["len_samples"]=len_samples
-dataset_conf["path_dataset"]="./dataset/"
-dataset_conf['batch_size']=1000
+                            dataset_conf={}  
+                            # self.filelist : a list of all games for train/dev/test
+                            dataset_conf["filelist"]="train.txt"
+                            #len_samples is 1 for one2one but it can be more than 1 for seq2one modeling
+                            dataset_conf["len_samples"]=len_samples
+                            dataset_conf["path_dataset"]="./dataset/"
+                            dataset_conf['batch_size']=batch_size
 
-print("Development Dataset... ")
-f = open('./saved_models/logs_save_models_new.txt', 'a', encoding='utf-8')
-f.write("Development Dataset... ")
-f.write("\n")
-f.close()
-ds_dev = CustomDataset(dataset_conf,load_data_once4all=True)
-devSet = DataLoader(ds_dev, batch_size=dataset_conf['batch_size'])
+                            print("Training Dataset... ")
+                            ds_train = CustomDataset(dataset_conf,load_data_once4all=True)
+                            trainSet = DataLoader(ds_train, batch_size=dataset_conf['batch_size'])
 
-conf={}
-conf["board_size"]=BOARD_SIZE
-conf["path_save"]="saved_models/save_models"
-conf['epoch']=50
-conf["earlyStopping"]=10
-conf["len_inpout_seq"]=len_samples
-conf["LSTM_conf"]={}
-conf["LSTM_conf"]["hidden_dim"]=128
-learning_rate = 0.001
+                            dataset_conf={}  
+                            # self.filelist : a list of all games for train/dev/test
+                            dataset_conf["filelist"]="dev.txt"
+                            #len_samples is 1 for one2one but it can be more than 1 for seq2one modeling
+                            dataset_conf["len_samples"]=len_samples
+                            dataset_conf["path_dataset"]="./dataset/"
+                            dataset_conf['batch_size']=batch_size
 
-model = MLP(conf).to(device)
-opt = torch.optim.Adam(model.parameters(), lr=learning_rate)
+                            print("Development Dataset... ")
+                            ds_dev = CustomDataset(dataset_conf,load_data_once4all=True)
+                            devSet = DataLoader(ds_dev, batch_size=dataset_conf['batch_size'])
 
-def count_parameters(model):
-    return sum(p.numel() for p in model.parameters() if p.requires_grad)
+                            conf["board_size"]=BOARD_SIZE
+                            conf['epoch']=epoch
+                            conf["earlyStopping"]=int(epoch/10)
+                            conf["len_inpout_seq"]=len_samples
+                            conf["MLP_conf"]={}
+                            conf["MLP_conf"]["hidden_dim_1"]=hidden_dim_1
+                            conf["MLP_conf"]["hidden_dim_2"]=hidden_dim_2
+                            conf["activation_function"]=activation_function
 
-n = count_parameters(model)
-print("Optimizer:", "Adam")
-print("Number of parameters: %s" % n)
-print(model)
-f = open('./saved_models/logs_save_models_new.txt', 'a', encoding='utf-8')
-f.write("Optimizer: Adam\n")
-f.write("Number of parameters: %s" % n)
-f.write("\n")
-f.write('Learning rate: ' + str(learning_rate))
-f.write("\n")
-f.write(str(model))
-f.write("\n")
-f.close()
+                            model = MLP(conf).to(device)
+                            if (optimizer == "Adam"):
+                                opt = torch.optim.Adam(model.parameters(), lr=learning_rate)
+                            elif (optimizer == "SGD"):
+                                opt = torch.optim.SGD(model.parameters(), lr=learning_rate)
+                            elif (optimizer == "Adagrad"):
+                                opt = torch.optim.Adagrad(model.parameters(), lr=learning_rate)
+                            elif (optimizer == "Adadelta"):
+                                opt = torch.optim.Adadelta(model.parameters(), lr=learning_rate)
+                            elif (optimizer == "RMSprop"):
+                                opt = torch.optim.RMSprop(model.parameters(), lr=learning_rate)
+
+                            def count_parameters(model):
+                                return sum(p.numel() for p in model.parameters() if p.requires_grad)
+
+                            n = count_parameters(model)
+                            
+                            print("Number of parameters: %s" % n)
+                            os.makedirs(conf["path_save"], exist_ok=True)
+                            f = open(f'{conf["path_save"]+" description"}.txt', 'a', encoding='utf-8')
+                            f.write(f"Model: MLP\nOptimizer: {optimizer}\nLearning rate: {learning_rate}\nHidden dimension layer 1: {hidden_dim_1}\nHidden dimension layer 2: {hidden_dim_2}\nBatch size: {batch_size}\nEpoch: {epoch}\nEarlystopping: {int(epoch/10)}\nNumber of parameters: {n}\nThe best score on DEV : ")
+                            f.close()
 
 
-best_epoch=model.train_all(trainSet,
-                       devSet,
-                       conf['epoch'],
-                       device, opt)
+                            best_epoch=model.train_all(trainSet,
+                                                devSet,
+                                                conf['epoch'],
+                                                device, opt)
 
 # model = torch.load(conf["path_save"] + '/model_2.pt')
 # model.eval()

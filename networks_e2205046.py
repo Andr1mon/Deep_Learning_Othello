@@ -41,14 +41,25 @@ class MLP(nn.Module):
         self.path_save=conf["path_save"]
         self.earlyStopping=conf["earlyStopping"]
         self.len_inpout_seq=conf["len_inpout_seq"]
+        self.hidden_dim_1=conf["MLP_conf"]["hidden_dim_1"]
+        self.hidden_dim_2=conf["MLP_conf"]["hidden_dim_2"]
+        self.activation_function=conf["activation_function"]
+
+
+
 
         # Define the layers of the MLP
-        self.lin1 = nn.Linear(self.board_size*self.board_size, 128) # self.lin1 = nn.Linear(self.board_size*self.board_size, 128)
-        self.lin2 = nn.Linear(128, 128)
-        #self.relu = nn.ReLU()
-        self.sigmoid = nn.Sigmoid()
-        #self.tanh = nn.Tanh()
-        self.lin3 = nn.Linear(128, self.board_size*self.board_size) # self.lin3 = nn.Linear(128, self.board_size*self.board_size)
+        self.lin1 = nn.Linear(self.board_size*self.board_size, self.hidden_dim_1) # self.lin1 = nn.Linear(self.board_size*self.board_size, 128)
+        self.lin2 = nn.Linear(self.hidden_dim_1, self.hidden_dim_2)
+        if (self.activation_function == "ReLU"):
+            self.act_function = nn.ReLU()
+        elif (self.activation_function == "Sigmoid"):
+            self.act_function = nn.Sigmoid()
+        elif (self.activation_function == "Tanh"):
+            self.act_function = nn.Tanh()
+        elif (self.activation_function == "Leaky ReLU"):
+            self.act_function = nn.LeakyReLU()
+        self.lin3 = nn.Linear(self.hidden_dim_2, self.board_size*self.board_size) # self.lin3 = nn.Linear(128, self.board_size*self.board_size)
         self.dropout = nn.Dropout(p=0.1)
         
     def forward(self, seq):
@@ -68,9 +79,8 @@ class MLP(nn.Module):
             seq=torch.flatten(seq, start_dim=0)
         x = self.lin1(seq)
         x = self.lin2(x)
-        #x = self.relu(x)
-        x = self.sigmoid(x)
-        # x = self.tanh(x)
+        if (self.activation_function != "Linear"):
+            x = self.act_function(x)
         outp = self.lin3(x)
         return F.softmax(outp, dim=-1)
     
@@ -155,6 +165,9 @@ class MLP(nn.Module):
         f.write(f"Recalculing the best DEV: WAcc: {100*_clas_rep['weighted avg']['recall']}%")
         f.write("\n")
         f.close()
+        f = open(f'{self.path_save} description.txt', 'a', encoding='utf-8')
+        f.write(f"{100*_clas_rep['weighted avg']['recall']}%")
+        f.close()
 
         
         return best_epoch
@@ -198,8 +211,8 @@ class LSTMs(nn.Module):
         self.path_save=conf["path_save"]
         self.earlyStopping=conf["earlyStopping"]
         self.len_inpout_seq=conf["len_inpout_seq"]
-        self.hidden_dim = conf["LSTM_conf"]["hidden_dim"]
-        self.activation_function = conf["activation_function"]
+        self.hidden_dim=conf["LSTM_conf"]["hidden_dim"]
+        self.activation_function=conf["activation_function"]
 
          # Define the layers of the LSTM model
         self.lstm = nn.LSTM(self.board_size*self.board_size, self.hidden_dim, batch_first=True) # self.lstm = nn.LSTM(self.board_size*self.board_size, self.hidden_dim,batch_first=True)
@@ -345,7 +358,7 @@ class LSTMs(nn.Module):
         f.write(f"Recalculing the best DEV: WAcc: {100*_clas_rep['weighted avg']['recall']}%")
         f.write("\n")
         f.close()
-        f = open(f'{self.path_save} desription.txt', 'a', encoding='utf-8')
+        f = open(f'{self.path_save} description.txt', 'a', encoding='utf-8')
         f.write(f"{100*_clas_rep['weighted avg']['recall']}%")
         f.close()
 
