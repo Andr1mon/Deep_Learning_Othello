@@ -200,7 +200,7 @@ for optimizer in ["Adam", "SGD", "Adagrad", "Adadelta", "RMSprop"]:
                             print('Running on ' + str(device))
                             
 
-                            len_samples=1
+                            len_samples=1 # Could be modified?
 
                             dataset_conf={}  
                             # self.filelist : a list of all games for train/dev/test
@@ -212,7 +212,7 @@ for optimizer in ["Adam", "SGD", "Adagrad", "Adadelta", "RMSprop"]:
 
                             print("Training Dataset... ")
                             ds_train = CustomDataset(dataset_conf,load_data_once4all=True)
-                            trainSet = DataLoader(ds_train, batch_size=dataset_conf['batch_size'])
+                            trainSet = DataLoader(ds_train, batch_size=dataset_conf['batch_size']) # shuffle = True - Could be modified? For the best model
 
                             dataset_conf={}  
                             # self.filelist : a list of all games for train/dev/test

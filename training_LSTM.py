@@ -199,7 +199,7 @@ for optimizer in ["Adam", "SGD", "Adagrad", "Adadelta", "RMSprop"]:
                             device = torch.device("cpu")
                         print('Running on ' + str(device))
 
-                        len_samples=5
+                        len_samples=5 # Could be modified?
 
                         dataset_conf={}  
                         # self.filelist : a list of all games for train/dev/test
@@ -211,7 +211,7 @@ for optimizer in ["Adam", "SGD", "Adagrad", "Adadelta", "RMSprop"]:
 
                         print("Training Dataset... ")
                         ds_train = CustomDataset(dataset_conf)
-                        trainSet = DataLoader(ds_train, batch_size=dataset_conf['batch_size']) # shuffle = True
+                        trainSet = DataLoader(ds_train, batch_size=dataset_conf['batch_size']) # shuffle = True - Could be modified? For the best model
 
                         dataset_conf={}  
                         # self.filelist : a list of all games for train/dev/test
