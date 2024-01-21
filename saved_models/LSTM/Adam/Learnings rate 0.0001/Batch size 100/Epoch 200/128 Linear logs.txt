@@ -565,3 +565,37 @@ Accuracy Train: 27.88%, Dev: 16.69% ; Time: 14903 (last_train: 42, last_pred: 12
 epoch: 189/200 - loss = 3.904637765381351
 Accuracy Train: 27.99%, Dev: 16.7% ; Time: 14957 (last_train: 42, last_pred: 13)
 *************** The best score on DEV 187: 16.703%
+epoch: 190/200 - loss = 3.904226790660623
+Accuracy Train: 28.02%, Dev: 16.77% ; Time: 15011 (last_train: 42, last_pred: 12)
+*************** The best score on DEV 190: 16.77%
+epoch: 191/200 - loss = 3.9038616656462795
+Accuracy Train: 28.08%, Dev: 16.72% ; Time: 15065 (last_train: 41, last_pred: 12)
+*************** The best score on DEV 190: 16.77%
+epoch: 192/200 - loss = 3.9037176471892363
+Accuracy Train: 28.11%, Dev: 16.77% ; Time: 15118 (last_train: 41, last_pred: 12)
+*************** The best score on DEV 192: 16.773%
+epoch: 193/200 - loss = 3.903282516469961
+Accuracy Train: 28.14%, Dev: 16.74% ; Time: 15172 (last_train: 41, last_pred: 12)
+*************** The best score on DEV 192: 16.773%
+epoch: 194/200 - loss = 3.9029312062303205
+Accuracy Train: 28.19%, Dev: 16.83% ; Time: 15225 (last_train: 41, last_pred: 12)
+*************** The best score on DEV 194: 16.827%
+epoch: 195/200 - loss = 3.902624488869751
+Accuracy Train: 28.16%, Dev: 16.79% ; Time: 15279 (last_train: 41, last_pred: 12)
+*************** The best score on DEV 194: 16.827%
+epoch: 196/200 - loss = 3.9021567956796295
+Accuracy Train: 28.24%, Dev: 16.8% ; Time: 15333 (last_train: 42, last_pred: 13)
+*************** The best score on DEV 194: 16.827%
+epoch: 197/200 - loss = 3.9018293156483517
+Accuracy Train: 28.25%, Dev: 16.74% ; Time: 15387 (last_train: 41, last_pred: 12)
+*************** The best score on DEV 194: 16.827%
+epoch: 198/200 - loss = 3.901707618650895
+Accuracy Train: 28.28%, Dev: 16.76% ; Time: 15440 (last_train: 41, last_pred: 12)
+*************** The best score on DEV 194: 16.827%
+epoch: 199/200 - loss = 3.9013613730520094
+Accuracy Train: 28.24%, Dev: 16.76% ; Time: 15494 (last_train: 41, last_pred: 12)
+*************** The best score on DEV 194: 16.827%
+epoch: 200/200 - loss = 3.901092774996421
+Accuracy Train: 28.35%, Dev: 16.79% ; Time: 15548 (last_train: 41, last_pred: 12)
+*************** The best score on DEV 194: 16.827%
+Recalculing the best DEV: WAcc: 16.826666666666668%
