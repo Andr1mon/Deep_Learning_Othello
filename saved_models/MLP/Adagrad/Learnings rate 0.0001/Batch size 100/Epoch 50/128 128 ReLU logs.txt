@@ -38,3 +38,11 @@ epoch: 13/50 - loss = 4.157043392693977
 Accuracy Train: 3.13%, Dev: 3.03% ; Time: 2942 (last_train: 187sec, last_pred: 78sec)
 *************** The best score on DEV 10: 3.11%
 epoch: 14/50 - loss = 4.156918205598008
+Accuracy Train: 3.13%, Dev: 3.06% ; Time: 3130 (last_train: 168sec, last_pred: 20sec)
+*************** The best score on DEV 10: 3.11%
+epoch: 15/50 - loss = 4.156787998076613
+Accuracy Train: 3.14%, Dev: 3.04% ; Time: 3237 (last_train: 32sec, last_pred: 74sec)
+*************** The best score on DEV 10: 3.11%
+epoch: 16/50 - loss = 4.156651945924309
+Accuracy Train: 2.73%, Dev: 2.7% ; Time: 3465 (last_train: 195sec, last_pred: 33sec)
+Recalculing the best DEV: WAcc: 3.11%
