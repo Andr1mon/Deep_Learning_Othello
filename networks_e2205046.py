@@ -274,7 +274,7 @@ class LSTMs(nn.Module):
                 outp = self.act_function(lstm_out[-1,:])
                 outp = self.hidden2output(outp)
 
-            outp = F.softmax(outp).squeeze()
+            outp = F.softmax(dim=outp).squeeze()
             
         
         return outp

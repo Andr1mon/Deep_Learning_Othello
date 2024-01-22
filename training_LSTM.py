@@ -195,6 +195,7 @@ for optimizer in ["Adam", "RMSprop", "Adagrad", "SGD", "Adadelta"]:
 
                         if torch.cuda.is_available():
                             device = torch.device("cuda:0")
+                            #device = torch.device("cpu")
                         else:
                             device = torch.device("cpu")
                         print('Running on ' + str(device))
