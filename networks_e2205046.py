@@ -140,7 +140,8 @@ class MLP(nn.Module):
 
             if acc_dev > best_dev or best_dev == 0.0:
                 notchange=0
-                
+                for filename in os.listdir(self.path_save):
+                    os.remove(self.path_save+'/'+filename)
                 torch.save(self, self.path_save + '/model_' + str(epoch) + '.pt')
                 best_dev = acc_dev
                 best_epoch = epoch
@@ -333,9 +334,8 @@ class LSTMs(nn.Module):
 
             if acc_dev > best_dev or best_dev == 0.0:
                 notchange=0
-                print(os.listdir(self.path_save))
-                    #print(filename)
-                    #print(self.path_save + '/' + filename)
+                for filename in os.listdir(self.path_save):
+                    os.remove(self.path_save+'/'+filename)
                 torch.save(self, self.path_save + '/model_' + str(epoch) + '.pt')
                 best_dev = acc_dev
                 best_epoch = epoch
