@@ -31,6 +31,9 @@ for optimizer in ["SGD", "Adam", "RMSprop", "Adagrad", "Adadelta"]:
                             conf={}
                             conf["path_save"]=f"saved_models/MLP/{optimizer}/Learnings rate {learning_rate}/Batch size {batch_size}/Epoch {epoch}/{hidden_dim_1} {hidden_dim_2} {activation_function}"
                             if os.path.exists(conf["path_save"]):
+                                if (len(os.listdir(conf["path_save"])) > 1):
+                                    print(conf["path_save"])
+
                                 f = open(f'{conf["path_save"]+" description"}.txt', encoding='utf-8')
                                 for line in f.readlines():
                                     if ("DEV : " in line):

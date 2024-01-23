@@ -180,7 +180,7 @@ class CustomDataset(Dataset):
             
         return features,y,self.len_samples
 
-for optimizer in ["SGD", "Adam", "RMSprop", "Adadelta", "Adagrad"]:
+for optimizer in ["RMSprop", "SGD", "Adam", "Adadelta", "Adagrad"]:
     for learning_rate in [0.0001, 0.001, 0.01, 0.1, 1]:
         for batch_size in [100, 1000, 5000, 15000, 30000]:
             for epoch in [50, 100, 200, 500]:
