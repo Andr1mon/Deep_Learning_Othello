@@ -35,8 +35,7 @@ for optimizer in ["SGD", "Adam", "RMSprop", "Adagrad", "Adadelta"]:
                         if (os.path.exists(conf["path_save"]+" description.txt")):
                             if (not os.path.exists(conf["path_save"])):
                                 print("LOST ERROR")
-                                print(conf["path_save"])
-                                    
+                                print(conf["path_save"])  
                             f.close()
                 for hidden_dim_1 in [128, 256]:
                     for hidden_dim_2 in [128, 256]:
