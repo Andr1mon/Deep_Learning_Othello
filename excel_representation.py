@@ -33,6 +33,7 @@ for optimizer in ["SGD", "Adam", "RMSprop", "Adagrad", "Adadelta"]:
                             if os.path.exists(conf["path_save"]):
                                 if (len(os.listdir(conf["path_save"])) > 1):
                                     print(conf["path_save"])
+                                
 
                                 f = open(f'{conf["path_save"]+" description"}.txt', encoding='utf-8')
                                 for line in f.readlines():
