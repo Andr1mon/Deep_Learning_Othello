@@ -43,14 +43,14 @@ class SampleManager():
         self.len_moves=len_moves
         self.isBlackPlayer=isBlackPlayer
     
-    def set_file_dir(file_dir):
-        self.file_dir=file_dir
-    def set_game_name(game_name):
-        self.game_name=game_name
-    def set_end_move(end_move):
-        self.end_move=end_move
-    def set_len_moves(len_moves):
-        self.len_moves=len_moves
+        def set_file_dir(file_dir):
+            self.file_dir=file_dir
+        def set_game_name(game_name):
+            self.game_name=game_name
+        def set_end_move(end_move):
+            self.end_move=end_move
+        def set_len_moves(len_moves):
+            self.len_moves=len_moves
         
 
 class CustomDataset(Dataset):
