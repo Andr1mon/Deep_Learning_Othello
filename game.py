@@ -103,12 +103,13 @@ for g in [0,1]:
     # First player1 starts game, and then Player2 starts the other game
     if g:
         conf={}
-        conf['player1']= sys.argv[1]
-        conf['player2']= sys.argv[2]
+        #conf['player1']= f"saved_models/LSTM/{optimizer}/Learnings rate {learning_rate}/Batch size {batch_size}/Epoch {epoch}/{hidden_dim} {activation_function}"
+        conf['player1']= "saved_models/LSTM/Adadelta/Learnings rate 0.0001/Batch size 100/Epoch 50/128 Linear/model_6.pt"
+        conf['player2']= "saved_models/LSTM/Adadelta/Learnings rate 0.0001/Batch size 100/Epoch 50/128 Linear/model_6.pt"
     else:
         conf={}
-        conf['player2']= sys.argv[1]
-        conf['player1']= sys.argv[2]    
+        conf['player2']= "saved_models/LSTM/Adadelta/Learnings rate 0.0001/Batch size 100/Epoch 50/128 Linear/model_6.pt"
+        conf['player1']= "saved_models/LSTM/Adadelta/Learnings rate 0.0001/Batch size 100/Epoch 50/128 Linear/model_6.pt"  
 
     board_stat=initialze_board()
 

@@ -43,14 +43,14 @@ class SampleManager():
         self.len_moves=len_moves
         self.isBlackPlayer=isBlackPlayer
     
-    def set_file_dir(file_dir):
-        self.file_dir=file_dir
-    def set_game_name(game_name):
-        self.game_name=game_name
-    def set_end_move(end_move):
-        self.end_move=end_move
-    def set_len_moves(len_moves):
-        self.len_moves=len_moves
+        def set_file_dir(file_dir):
+            self.file_dir=file_dir
+        def set_game_name(game_name):
+            self.game_name=game_name
+        def set_end_move(end_move):
+            self.end_move=end_move
+        def set_len_moves(len_moves):
+            self.len_moves=len_moves
 
 
 class CustomDataset(Dataset):
@@ -180,7 +180,7 @@ class CustomDataset(Dataset):
             y=np.array(game_log[1][self.samples[idx].end_move]).flatten()
             
         return features,y,self.len_samples
-for optimizer in ["RMSprop", "Adagrad", "Adam", "SGD", "Adadelta"]:
+for optimizer in ["SGD", "Adam", "RMSprop", "Adagrad", "Adadelta"]:
     for learning_rate in [0.0001, 0.001, 0.01, 0.1, 1]:
         for batch_size in [100, 1000, 5000, 15000, 30000]:
             for epoch in [50, 100, 200, 500]:
@@ -194,7 +194,8 @@ for optimizer in ["RMSprop", "Adagrad", "Adam", "SGD", "Adadelta"]:
                             continue
 
                         if torch.cuda.is_available():
-                            device = torch.device("cuda:0")
+                            #device = torch.device("cuda:0")
+                            device = torch.device("cpu")
                         else:
                             device = torch.device("cpu")
                         print('Running on ' + str(device))
