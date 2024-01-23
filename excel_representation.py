@@ -29,9 +29,9 @@ for optimizer in ["SGD", "Adam", "RMSprop", "Adagrad", "Adadelta"]:
                                         print(conf["path_save"])
                                     else: 
                                         number = float(line.split(": ")[1].split("%")[0])
-                                        if (number > max_MLP):
-                                            max_MLP = number
-                                            path_max_MLP = conf["path_save"]
+                                        if (number > max_LSTM):
+                                            max_LSTM = number
+                                            path_max_LSTM = conf["path_save"]
                         if (os.path.exists(conf["path_save"]+" description.txt")):
                             if (not os.path.exists(conf["path_save"])):
                                 print("LOST ERROR")
@@ -61,9 +61,9 @@ for optimizer in ["SGD", "Adam", "RMSprop", "Adagrad", "Adadelta"]:
                                             print(conf["path_save"])
                                         else: 
                                             number = float(line.split(": ")[1].split("%")[0])
-                                            if (number > max_LSTM):
-                                                max_LSTM = number
-                                                path_max_LSTM = conf["path_save"]
+                                            if (number > max_MLP):
+                                                max_MLP = number
+                                                path_max_MLP = conf["path_save"]
                                 f.close()
                             if (os.path.exists(conf["path_save"]+" description.txt")):
                                 if (not os.path.exists(conf["path_save"])):
