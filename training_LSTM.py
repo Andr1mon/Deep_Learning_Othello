@@ -180,7 +180,7 @@ class CustomDataset(Dataset):
             y=np.array(game_log[1][self.samples[idx].end_move]).flatten()
             
         return features,y,self.len_samples
-for optimizer in ["SGD", "Adam", "RMSprop", "Adagrad", "Adadelta"]:
+for optimizer in [ "Adam", "SGD", "RMSprop", "Adagrad", "Adadelta"]:
     for learning_rate in [0.0001, 0.001, 0.01, 0.1, 1]:
         for batch_size in [100, 1000, 5000, 15000, 30000]:
             for epoch in [50, 100, 200, 500]:
