@@ -568,3 +568,34 @@ Accuracy Train: 27.04%, Dev: 20.64% ; Time: 8349 (last_train: 27sec, last_pred: 
 epoch: 190/200 - loss = 3.9155375226744673
 Accuracy Train: 27.06%, Dev: 20.67% ; Time: 8393 (last_train: 27sec, last_pred: 17sec)
 *************** The best score on DEV 190: 20.667%
+epoch: 191/200 - loss = 3.9153072668538367
+Accuracy Train: 27.07%, Dev: 20.68% ; Time: 8437 (last_train: 29sec, last_pred: 16sec)
+*************** The best score on DEV 191: 20.68%
+epoch: 192/200 - loss = 3.9150887862104367
+Accuracy Train: 27.1%, Dev: 20.67% ; Time: 8485 (last_train: 30sec, last_pred: 18sec)
+*************** The best score on DEV 191: 20.68%
+epoch: 193/200 - loss = 3.914862669421063
+Accuracy Train: 27.12%, Dev: 20.68% ; Time: 8527 (last_train: 26sec, last_pred: 16sec)
+*************** The best score on DEV 191: 20.68%
+epoch: 194/200 - loss = 3.9146475801197838
+Accuracy Train: 27.13%, Dev: 20.7% ; Time: 8569 (last_train: 27sec, last_pred: 15sec)
+*************** The best score on DEV 194: 20.7%
+epoch: 195/200 - loss = 3.9144312068530414
+Accuracy Train: 27.15%, Dev: 20.7% ; Time: 8609 (last_train: 26sec, last_pred: 15sec)
+*************** The best score on DEV 194: 20.7%
+epoch: 196/200 - loss = 3.914210116711012
+Accuracy Train: 27.17%, Dev: 20.7% ; Time: 8654 (last_train: 28sec, last_pred: 17sec)
+*************** The best score on DEV 194: 20.7%
+epoch: 197/200 - loss = 3.9139858291653513
+Accuracy Train: 27.18%, Dev: 20.73% ; Time: 8697 (last_train: 27sec, last_pred: 16sec)
+*************** The best score on DEV 197: 20.727%
+epoch: 198/200 - loss = 3.913764416145524
+Accuracy Train: 27.19%, Dev: 20.71% ; Time: 8742 (last_train: 28sec, last_pred: 16sec)
+*************** The best score on DEV 197: 20.727%
+epoch: 199/200 - loss = 3.913555456756685
+Accuracy Train: 27.2%, Dev: 20.72% ; Time: 8785 (last_train: 27sec, last_pred: 16sec)
+*************** The best score on DEV 197: 20.727%
+epoch: 200/200 - loss = 3.9133506485781755
+Accuracy Train: 27.22%, Dev: 20.73% ; Time: 8828 (last_train: 27sec, last_pred: 16sec)
+*************** The best score on DEV 200: 20.73%
+Recalculing the best DEV: WAcc: 20.73%
