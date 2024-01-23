@@ -98,3 +98,5 @@ epoch: 33/50 - loss = 4.158782837987939
 Accuracy Train: 1.68%, Dev: 1.66% ; Time: 529 (last_train: 10sec, last_pred: 6sec)
 *************** The best score on DEV 28: 1.663%
 epoch: 34/50 - loss = 4.158782303432568
+Accuracy Train: 1.68%, Dev: 1.66% ; Time: 545 (last_train: 10sec, last_pred: 6sec)
+Recalculing the best DEV: WAcc: 1.6633333333333333%
