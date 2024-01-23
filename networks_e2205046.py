@@ -23,7 +23,7 @@ from datetime import datetime
 
 
 def loss_fnc(predictions, targets):
-    return nn.CrossEntropyLoss()(input=predictions,target=targets)
+    return nn.CrossEntropyLoss()(input=predictions,target=targets) # Could be improved?
 
 
 class MLP(nn.Module):
@@ -140,8 +140,7 @@ class MLP(nn.Module):
 
             if acc_dev > best_dev or best_dev == 0.0:
                 notchange=0
-                for filename in os.listdir(self.path_save):
-                    os.remove(self.path_save+'/'+filename)
+                
                 torch.save(self, self.path_save + '/model_' + str(epoch) + '.pt')
                 best_dev = acc_dev
                 best_epoch = epoch
@@ -275,7 +274,7 @@ class LSTMs(nn.Module):
                 outp = self.act_function(lstm_out[-1,:])
                 outp = self.hidden2output(outp)
 
-            outp = F.softmax(dim=outp).squeeze()
+            outp = F.softmax(outp).squeeze()
             
         
         return outp
@@ -334,8 +333,7 @@ class LSTMs(nn.Module):
 
             if acc_dev > best_dev or best_dev == 0.0:
                 notchange=0
-                for filename in os.listdir(self.path_save):
-                    os.remove(self.path_save+'/'+filename)
+                
                 torch.save(self, self.path_save + '/model_' + str(epoch) + '.pt')
                 best_dev = acc_dev
                 best_epoch = epoch
