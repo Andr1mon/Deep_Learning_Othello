@@ -487,3 +487,6 @@ Accuracy Train: 17.59%, Dev: 14.96% ; Time: 2491 (last_train: 10sec, last_pred: 
 epoch: 163/200 - loss = 4.010031717476218
 Accuracy Train: 17.59%, Dev: 14.95% ; Time: 2507 (last_train: 10sec, last_pred: 6sec)
 *************** The best score on DEV 143: 14.99%
+epoch: 164/200 - loss = 4.010056364873858
+Accuracy Train: 17.57%, Dev: 14.93% ; Time: 2524 (last_train: 10sec, last_pred: 6sec)
+Recalculing the best DEV: WAcc: 14.99%
