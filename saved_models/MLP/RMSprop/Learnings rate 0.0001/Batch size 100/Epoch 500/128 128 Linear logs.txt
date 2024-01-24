@@ -89,3 +89,5 @@ epoch: 30/500 - loss = 4.045753606089878
 Accuracy Train: 14.33%, Dev: 12.65% ; Time: 1104 (last_train: 24sec, last_pred: 14sec)
 *************** The best score on DEV 30: 12.65%
 epoch: 31/500 - loss = 4.045193121474297
+Accuracy Train: 14.38%, Dev: 12.67% ; Time: 1145 (last_train: 24sec, last_pred: 17sec)
+*************** The best score on DEV 31: 12.673%
