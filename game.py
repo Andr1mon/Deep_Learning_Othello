@@ -193,6 +193,8 @@ def start_game(conf):
         ani = animation.ArtistAnimation(fig, ims, interval=50, blit=True,
                                         repeat_delay=1000)   
         ani.save(f"games/game_{g}.gif", writer='imagemagick', fps=0.8)
+        if g:
+            conf['player1'], conf['player2'] = conf['player2'], conf['player1']
     
 
 if torch.cuda.is_available():
@@ -210,49 +212,47 @@ for model1 in ["LSTM", "MLP"]:
                         for hidden_dim_11 in [128, 256]:
                             for hidden_dim_21 in [128, 256]:
                                 for activation_function1 in ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]:
-                                    for hidden_dim1 in [128, 256]:
-                                        for activation_function1 in ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]:
-                                            conf['player1']=f"saved_models/MLP/{optimizer1}/Learnings rate {learning_rate1}/Batch size {batch_size1}/Epoch {epoch1}/{hidden_dim_11} {hidden_dim_21} {activation_function1}"+'//'+os.listdir(f"saved_models/MLP/{optimizer1}/Learnings rate {learning_rate1}/Batch size {batch_size1}/Epoch {epoch1}/{hidden_dim_11} {hidden_dim_21} {activation_function1}")[0]
-                                            for model2 in ["LSTM", "MLP"]:
-                                                for optimizer2 in [ "Adam", "RMSprop", "SGD", "Adadelta", "Adagrad"]:
-                                                    for learning_rate2 in [0.0001, 0.001, 0.01, 0.1, 1]:
-                                                        for batch_size2 in [100, 1000, 5000, 15000, 30000]:
-                                                            for epoch2 in [50, 100, 200, 500]:
-                                                                if (model2 == "MLP"):
-                                                                    for hidden_dim_12 in [128, 256]:
-                                                                        for hidden_dim_22 in [128, 256]:
+                                    conf['player1']=f"saved_models/MLP/{optimizer1}/Learnings rate {learning_rate1}/Batch size {batch_size1}/Epoch {epoch1}/{hidden_dim_11} {hidden_dim_21} {activation_function1}"+'//'+os.listdir(f"saved_models/MLP/{optimizer1}/Learnings rate {learning_rate1}/Batch size {batch_size1}/Epoch {epoch1}/{hidden_dim_11} {hidden_dim_21} {activation_function1}")[0]
+                                    for model2 in ["LSTM", "MLP"]:
+                                        for optimizer2 in [ "Adam", "RMSprop", "SGD", "Adadelta", "Adagrad"]:
+                                            for learning_rate2 in [0.0001, 0.001, 0.01, 0.1, 1]:
+                                                for batch_size2 in [100, 1000, 5000, 15000, 30000]:
+                                                    for epoch2 in [50, 100, 200, 500]:
+                                                        if (model2 == "MLP"):
+                                                            for hidden_dim_12 in [128, 256]:
+                                                                for hidden_dim_22 in [128, 256]:
+                                                                    for activation_function2 in ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]:
+                                                                        for hidden_dim2 in [128, 256]:
                                                                             for activation_function2 in ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]:
-                                                                                for hidden_dim2 in [128, 256]:
-                                                                                    for activation_function2 in ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]:
-                                                                                        conf['player2']=f"saved_models/MLP/{optimizer2}/Learnings rate {learning_rate2}/Batch size {batch_size2}/Epoch {epoch2}/{hidden_dim_12} {hidden_dim_22} {activation_function2}"+'//'+os.listdir(f"saved_models/MLP/{optimizer2}/Learnings rate {learning_rate2}/Batch size {batch_size2}/Epoch {epoch2}/{hidden_dim_12} {hidden_dim_22} {activation_function2}")[0]
-                                                                                        start_game(conf)
-                                                                elif (model2 == "LSTM"):
-                                                                    for hidden_dim2 in [128, 256]:
-                                                                        for activation_function2 in ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]:
-                                                                            conf['player2']=f"saved_models/LSTM/{optimizer2}/Learnings rate {learning_rate2}/Batch size {batch_size2}/Epoch {epoch2}/{hidden_dim2} {activation_function2}"+'//'+os.listdir(f"saved_models/LSTM/{optimizer2}/Learnings rate {learning_rate2}/Batch size {batch_size2}/Epoch {epoch2}/{hidden_dim2} {activation_function2}")[0]
-                                                                            start_game(conf)
+                                                                                conf['player2']=f"saved_models/MLP/{optimizer2}/Learnings rate {learning_rate2}/Batch size {batch_size2}/Epoch {epoch2}/{hidden_dim_12} {hidden_dim_22} {activation_function2}"+'//'+os.listdir(f"saved_models/MLP/{optimizer2}/Learnings rate {learning_rate2}/Batch size {batch_size2}/Epoch {epoch2}/{hidden_dim_12} {hidden_dim_22} {activation_function2}")[0]
+                                                                                start_game(conf)
+                                                        elif (model2 == "LSTM"):
+                                                            for hidden_dim2 in [128, 256]:
+                                                                for activation_function2 in ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]:
+                                                                    conf['player2']=f"saved_models/LSTM/{optimizer2}/Learnings rate {learning_rate2}/Batch size {batch_size2}/Epoch {epoch2}/{hidden_dim2} {activation_function2}"+'//'+os.listdir(f"saved_models/LSTM/{optimizer2}/Learnings rate {learning_rate2}/Batch size {batch_size2}/Epoch {epoch2}/{hidden_dim2} {activation_function2}")[0]
+                                                                    start_game(conf)
                     elif (model1 == "LSTM"):
                         for hidden_dim1 in [128, 256]:
                             for activation_function1 in ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]:
                                 conf['player1']=f"saved_models/LSTM/{optimizer1}/Learnings rate {learning_rate1}/Batch size {batch_size1}/Epoch {epoch1}/{hidden_dim1} {activation_function1}"+'//'+os.listdir(f"saved_models/LSTM/{optimizer1}/Learnings rate {learning_rate1}/Batch size {batch_size1}/Epoch {epoch1}/{hidden_dim1} {activation_function1}")[0]
                                 for model2 in ["LSTM", "MLP"]:
-                                    for optimizer2 in [ "Adam", "RMSprop", "SGD", "Adadelta", "Adagrad"]:
-                                        for learning_rate2 in [0.0001, 0.001, 0.01, 0.1, 1]:
-                                            for batch_size2 in [100, 1000, 5000, 15000, 30000]:
-                                                for epoch2 in [50, 100, 200, 500]:
-                                                    if (model2 == "MLP"):
-                                                        for hidden_dim_12 in [128, 256]:
-                                                            for hidden_dim_22 in [128, 256]:
+                                        for optimizer2 in [ "Adam", "RMSprop", "SGD", "Adadelta", "Adagrad"]:
+                                            for learning_rate2 in [0.0001, 0.001, 0.01, 0.1, 1]:
+                                                for batch_size2 in [100, 1000, 5000, 15000, 30000]:
+                                                    for epoch2 in [50, 100, 200, 500]:
+                                                        if (model2 == "MLP"):
+                                                            for hidden_dim_12 in [128, 256]:
+                                                                for hidden_dim_22 in [128, 256]:
+                                                                    for activation_function2 in ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]:
+                                                                        for hidden_dim2 in [128, 256]:
+                                                                            for activation_function2 in ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]:
+                                                                                conf['player2']=f"saved_models/MLP/{optimizer2}/Learnings rate {learning_rate2}/Batch size {batch_size2}/Epoch {epoch2}/{hidden_dim_12} {hidden_dim_22} {activation_function2}"+'//'+os.listdir(f"saved_models/MLP/{optimizer2}/Learnings rate {learning_rate2}/Batch size {batch_size2}/Epoch {epoch2}/{hidden_dim_12} {hidden_dim_22} {activation_function2}")[0]
+                                                                                start_game(conf)
+                                                        elif (model2 == "LSTM"):
+                                                            for hidden_dim2 in [128, 256]:
                                                                 for activation_function2 in ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]:
-                                                                    for hidden_dim2 in [128, 256]:
-                                                                        for activation_function2 in ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]:
-                                                                            conf['player2']=f"saved_models/MLP/{optimizer2}/Learnings rate {learning_rate2}/Batch size {batch_size2}/Epoch {epoch2}/{hidden_dim_12} {hidden_dim_21} {activation_function2}"+'//'+os.listdir(f"saved_models/MLP/{optimizer2}/Learnings rate {learning_rate2}/Batch size {batch_size2}/Epoch {epoch2}/{hidden_dim_12} {hidden_dim_21} {activation_function2}")[0]
-                                                                            start_game(conf)
-                                                    elif (model2 == "LSTM"):
-                                                        for hidden_dim2 in [128, 256]:
-                                                            for activation_function2 in ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]:
-                                                                conf['player2']=f"saved_models/LSTM/{optimizer2}/Learnings rate {learning_rate2}/Batch size {batch_size2}/Epoch {epoch2}/{hidden_dim2} {activation_function2}"+'//'+os.listdir(f"saved_models/LSTM/{optimizer2}/Learnings rate {learning_rate2}/Batch size {batch_size2}/Epoch {epoch2}/{hidden_dim2} {activation_function2}")[0]
-                                                                start_game(conf)
+                                                                    conf['player2']=f"saved_models/LSTM/{optimizer2}/Learnings rate {learning_rate2}/Batch size {batch_size2}/Epoch {epoch2}/{hidden_dim2} {activation_function2}"+'//'+os.listdir(f"saved_models/LSTM/{optimizer2}/Learnings rate {learning_rate2}/Batch size {batch_size2}/Epoch {epoch2}/{hidden_dim2} {activation_function2}")[0]
+                                                                    start_game(conf)
 
 
 
