@@ -8,7 +8,7 @@ import copy
 import time
 import matplotlib.pyplot as plt
 from datetime import datetime
-
+import h5py
 import torch
 import torch.nn as nn
 
@@ -98,7 +98,7 @@ def start_game(conf):
         if g:
             conf['player1'], conf['player2'] = conf['player2'], conf['player1']
         else:
-            data = np.zeros(2,60,8,8)
+            data = np.zeros((2,60,8,8))
         print(conf['player1'])
         print("VERSUS")
         print(conf['player2'])
@@ -197,7 +197,10 @@ def start_game(conf):
         ani.save(f"games/game_{g}.gif", writer='imagemagick', fps=0.8)
         if g:
             conf['player1'], conf['player2'] = conf['player2'], conf['player1']
-        data[0]=board_stats_seq
+        data[0]=board_stats_seq[:60]
+        with h5py.File(f"AI_dataset/{str(datetime.now()).replace('.','-').replace(':','-')}.h5", 'w') as h5f:
+            h5f.create_dataset('dataset', data=data)
+
         
     
 

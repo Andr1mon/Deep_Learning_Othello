@@ -6,5 +6,5 @@ game_log = np.array(h5f['16740'][:])
 print(game_log)
 h5f.close()
 
-np.savetxt('status.txt',game_log[0][2])
-np.savetxt('moves.txt',game_log[1][2])
+np.savetxt('status.txt',game_log[0][59])
+np.savetxt('moves.txt',game_log[1][0])
