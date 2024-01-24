@@ -1,0 +1,36 @@
+epoch: 1/50 - loss = 4.158258767739592
+Accuracy Train: 4.83%, Dev: 4.53% ; Time: 31 (last_train: 19sec, last_pred: 12sec)
+*************** The best score on DEV 1: 4.527%
+epoch: 2/50 - loss = 4.157662967520909
+Accuracy Train: 6.31%, Dev: 5.93% ; Time: 63 (last_train: 19sec, last_pred: 12sec)
+*************** The best score on DEV 2: 5.927%
+epoch: 3/50 - loss = 4.1572286371784966
+Accuracy Train: 6.35%, Dev: 6.05% ; Time: 94 (last_train: 19sec, last_pred: 12sec)
+*************** The best score on DEV 3: 6.05%
+epoch: 4/50 - loss = 4.156837443786485
+Accuracy Train: 6.53%, Dev: 6.2% ; Time: 125 (last_train: 19sec, last_pred: 12sec)
+*************** The best score on DEV 4: 6.203%
+epoch: 5/50 - loss = 4.156461488267304
+Accuracy Train: 6.57%, Dev: 6.25% ; Time: 157 (last_train: 19sec, last_pred: 12sec)
+*************** The best score on DEV 5: 6.247%
+epoch: 6/50 - loss = 4.156086892038501
+Accuracy Train: 6.69%, Dev: 6.37% ; Time: 188 (last_train: 19sec, last_pred: 12sec)
+*************** The best score on DEV 6: 6.367%
+epoch: 7/50 - loss = 4.155704335462114
+Accuracy Train: 6.47%, Dev: 6.2% ; Time: 219 (last_train: 19sec, last_pred: 12sec)
+*************** The best score on DEV 6: 6.367%
+epoch: 8/50 - loss = 4.1553058873144275
+Accuracy Train: 6.41%, Dev: 6.12% ; Time: 252 (last_train: 19sec, last_pred: 13sec)
+*************** The best score on DEV 6: 6.367%
+epoch: 9/50 - loss = 4.154883643907021
+Accuracy Train: 6.32%, Dev: 6.1% ; Time: 285 (last_train: 20sec, last_pred: 13sec)
+*************** The best score on DEV 6: 6.367%
+epoch: 10/50 - loss = 4.15442870498564
+Accuracy Train: 6.23%, Dev: 6.0% ; Time: 318 (last_train: 20sec, last_pred: 13sec)
+*************** The best score on DEV 6: 6.367%
+epoch: 11/50 - loss = 4.153929957146779
+Accuracy Train: 5.93%, Dev: 5.78% ; Time: 351 (last_train: 20sec, last_pred: 13sec)
+*************** The best score on DEV 6: 6.367%
+epoch: 12/50 - loss = 4.153372473348716
+Accuracy Train: 5.7%, Dev: 5.57% ; Time: 383 (last_train: 20sec, last_pred: 12sec)
+Recalculing the best DEV: WAcc: 6.366666666666666%
