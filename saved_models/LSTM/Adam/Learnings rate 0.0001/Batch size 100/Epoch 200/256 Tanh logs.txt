@@ -184,3 +184,9 @@ Accuracy Train: 23.29%, Dev: 15.33% ; Time: 1987 (last_train: 22, last_pred: 11)
 epoch: 62/200 - loss = 3.9506359522637893
 Accuracy Train: 23.56%, Dev: 15.51% ; Time: 2020 (last_train: 22, last_pred: 11)
 *************** The best score on DEV 62: 15.513%
+epoch: 63/200 - loss = 3.948887501737265
+Accuracy Train: 23.66%, Dev: 15.59% ; Time: 2054 (last_train: 23, last_pred: 11)
+*************** The best score on DEV 63: 15.59%
+epoch: 64/200 - loss = 3.947349449053928
+Accuracy Train: 23.84%, Dev: 15.62% ; Time: 2088 (last_train: 23, last_pred: 11)
+*************** The best score on DEV 64: 15.617%
