@@ -86,6 +86,7 @@ class CustomDataset(Dataset):
             for gm_idx,gm_name in tqdm(enumerate(self.game_files_name)):
                 h5f = h5py.File(self.path_dataset+gm_name,'r')
                 game_log = np.array(h5f[gm_name.replace(".h5","")][:])
+                print(game_log)
                 h5f.close()
                 last_board_state=copy.copy(game_log[0][-1])
                 is_black_winner=isBlackWinner(game_log[1][-1],last_board_state)
