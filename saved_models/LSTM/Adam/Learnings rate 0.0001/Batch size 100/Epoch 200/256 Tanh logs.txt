@@ -128,3 +128,8 @@ epoch: 43/200 - loss = 3.976960155051791
 Accuracy Train: 20.87%, Dev: 14.96% ; Time: 4285 (last_train: 25, last_pred: 12)
 *************** The best score on DEV 43: 14.957%
 epoch: 44/200 - loss = 3.975125844051016
+Accuracy Train: 21.06%, Dev: 14.93% ; Time: 4322 (last_train: 25, last_pred: 12)
+*************** The best score on DEV 43: 14.957%
+epoch: 45/200 - loss = 3.973313623107453
+Accuracy Train: 21.21%, Dev: 15.02% ; Time: 4359 (last_train: 25, last_pred: 12)
+*************** The best score on DEV 45: 15.023%
