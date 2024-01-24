@@ -97,7 +97,8 @@ def start_game(conf):
         # First player1 starts game, and then Player2 starts the other game
         if g:
             conf['player1'], conf['player2'] = conf['player2'], conf['player1']
-
+        else:
+            data = np.zeros(2,60,8,8)
         print(conf['player1'])
         print("VERSUS")
         print(conf['player2'])
@@ -127,7 +128,7 @@ def start_game(conf):
                 
                 best_move=find_best_move(move1_prob,legal_moves)
                 print(f"Black: {best_move} < from possible move {legal_moves}")
-
+                data[1][len(board_stats_seq)-1][best_move[0]][best_move[1]] = 1
                 board_stat[best_move[0],best_move[1]]=NgBlackPsWhith
                 moves_log+=str(best_move[0]+1)+str(best_move[1]+1)
                 
@@ -172,6 +173,7 @@ def start_game(conf):
                 moves_log+="__"
 
         board_stats_seq.append(copy.copy(board_stat))
+        
         print("Moves log:",moves_log)
 
         if np.sum(board_stat)<0:
@@ -195,6 +197,8 @@ def start_game(conf):
         ani.save(f"games/game_{g}.gif", writer='imagemagick', fps=0.8)
         if g:
             conf['player1'], conf['player2'] = conf['player2'], conf['player1']
+        data[0]=board_stats_seq
+        
     
 
 if torch.cuda.is_available():
