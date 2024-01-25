@@ -1,0 +1,9 @@
+Model: LSTM
+Optimizer: SGD
+Learning rate: 0.0001
+Hidden dimension layer: 256
+Batch size: 1000
+Epoch: 500
+Earlystopping: 50
+Number of parameters: 346176
+The best score on DEV : 1.5566666666666666%

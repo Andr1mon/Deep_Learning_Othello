@@ -1,0 +1,1501 @@
+epoch: 1/500 - loss = 4.142411971211367
+Accuracy Train: 6.53%, Dev: 6.19% ; Time: 32 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 1: 6.193%
+epoch: 2/500 - loss = 4.112729288087428
+Accuracy Train: 8.87%, Dev: 8.49% ; Time: 65 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 2: 8.493%
+epoch: 3/500 - loss = 4.094571482400507
+Accuracy Train: 10.32%, Dev: 9.71% ; Time: 97 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 3: 9.713%
+epoch: 4/500 - loss = 4.083709267759773
+Accuracy Train: 11.06%, Dev: 10.1% ; Time: 129 (last_train: 20sec, last_pred: 11sec)
+*************** The best score on DEV 4: 10.103%
+epoch: 5/500 - loss = 4.07502343137022
+Accuracy Train: 12.04%, Dev: 11.07% ; Time: 161 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 5: 11.07%
+epoch: 6/500 - loss = 4.06805775418406
+Accuracy Train: 12.6%, Dev: 11.49% ; Time: 193 (last_train: 20sec, last_pred: 11sec)
+*************** The best score on DEV 6: 11.493%
+epoch: 7/500 - loss = 4.06239381596355
+Accuracy Train: 13.12%, Dev: 11.82% ; Time: 226 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 7: 11.823%
+epoch: 8/500 - loss = 4.057800151320843
+Accuracy Train: 13.47%, Dev: 12.15% ; Time: 258 (last_train: 20sec, last_pred: 11sec)
+*************** The best score on DEV 8: 12.147%
+epoch: 9/500 - loss = 4.054068543260988
+Accuracy Train: 13.84%, Dev: 12.5% ; Time: 290 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 9: 12.497%
+epoch: 10/500 - loss = 4.050796752370509
+Accuracy Train: 14.08%, Dev: 12.71% ; Time: 322 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 10: 12.707%
+epoch: 11/500 - loss = 4.047923470655459
+Accuracy Train: 14.34%, Dev: 12.86% ; Time: 355 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 11: 12.86%
+epoch: 12/500 - loss = 4.0453100040315055
+Accuracy Train: 14.6%, Dev: 13.07% ; Time: 387 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 12: 13.07%
+epoch: 13/500 - loss = 4.042854784992521
+Accuracy Train: 14.81%, Dev: 13.28% ; Time: 419 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 13: 13.283%
+epoch: 14/500 - loss = 4.040505522161904
+Accuracy Train: 15.05%, Dev: 13.45% ; Time: 451 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 14: 13.453%
+epoch: 15/500 - loss = 4.0382609000674625
+Accuracy Train: 15.29%, Dev: 13.66% ; Time: 484 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 15: 13.657%
+epoch: 16/500 - loss = 4.036079494507031
+Accuracy Train: 15.53%, Dev: 13.83% ; Time: 516 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 16: 13.833%
+epoch: 17/500 - loss = 4.033971985070855
+Accuracy Train: 15.77%, Dev: 14.03% ; Time: 549 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 17: 14.03%
+epoch: 18/500 - loss = 4.032007234219642
+Accuracy Train: 15.93%, Dev: 14.14% ; Time: 581 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 18: 14.137%
+epoch: 19/500 - loss = 4.030182531050746
+Accuracy Train: 16.15%, Dev: 14.27% ; Time: 614 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 19: 14.267%
+epoch: 20/500 - loss = 4.0284292662163566
+Accuracy Train: 16.34%, Dev: 14.42% ; Time: 647 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 20: 14.42%
+epoch: 21/500 - loss = 4.026451226011506
+Accuracy Train: 16.64%, Dev: 14.71% ; Time: 679 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 21: 14.71%
+epoch: 22/500 - loss = 4.024234369289603
+Accuracy Train: 16.76%, Dev: 14.84% ; Time: 712 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 22: 14.84%
+epoch: 23/500 - loss = 4.022515827387588
+Accuracy Train: 16.94%, Dev: 14.92% ; Time: 745 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 23: 14.917%
+epoch: 24/500 - loss = 4.020889541296612
+Accuracy Train: 17.08%, Dev: 15.02% ; Time: 777 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 24: 15.017%
+epoch: 25/500 - loss = 4.019322348858898
+Accuracy Train: 17.24%, Dev: 15.18% ; Time: 810 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 25: 15.18%
+epoch: 26/500 - loss = 4.017793329075798
+Accuracy Train: 17.41%, Dev: 15.36% ; Time: 841 (last_train: 19sec, last_pred: 13sec)
+*************** The best score on DEV 26: 15.363%
+epoch: 27/500 - loss = 4.016309551236896
+Accuracy Train: 17.54%, Dev: 15.46% ; Time: 873 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 27: 15.457%
+epoch: 28/500 - loss = 4.014903704634247
+Accuracy Train: 17.7%, Dev: 15.53% ; Time: 908 (last_train: 22sec, last_pred: 12sec)
+*************** The best score on DEV 28: 15.53%
+epoch: 29/500 - loss = 4.0135593757174
+Accuracy Train: 17.82%, Dev: 15.62% ; Time: 940 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 29: 15.62%
+epoch: 30/500 - loss = 4.012242172771795
+Accuracy Train: 17.96%, Dev: 15.7% ; Time: 972 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 30: 15.7%
+epoch: 31/500 - loss = 4.010930001636401
+Accuracy Train: 18.13%, Dev: 15.87% ; Time: 1004 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 31: 15.873%
+epoch: 32/500 - loss = 4.009665129119856
+Accuracy Train: 18.26%, Dev: 15.98% ; Time: 1037 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 32: 15.977%
+epoch: 33/500 - loss = 4.008451080798838
+Accuracy Train: 18.36%, Dev: 16.01% ; Time: 1069 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 33: 16.01%
+epoch: 34/500 - loss = 4.007265166267298
+Accuracy Train: 18.49%, Dev: 16.14% ; Time: 1102 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 34: 16.137%
+epoch: 35/500 - loss = 4.006099622690432
+Accuracy Train: 18.59%, Dev: 16.22% ; Time: 1135 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 35: 16.223%
+epoch: 36/500 - loss = 4.004967983665233
+Accuracy Train: 18.69%, Dev: 16.27% ; Time: 1167 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 36: 16.27%
+epoch: 37/500 - loss = 4.003867150941602
+Accuracy Train: 18.79%, Dev: 16.36% ; Time: 1200 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 37: 16.363%
+epoch: 38/500 - loss = 4.002794908987424
+Accuracy Train: 18.9%, Dev: 16.4% ; Time: 1232 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 38: 16.4%
+epoch: 39/500 - loss = 4.001725582597257
+Accuracy Train: 19.01%, Dev: 16.49% ; Time: 1264 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 39: 16.487%
+epoch: 40/500 - loss = 4.000624993719835
+Accuracy Train: 19.14%, Dev: 16.53% ; Time: 1296 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 40: 16.53%
+epoch: 41/500 - loss = 3.9995732554986967
+Accuracy Train: 19.26%, Dev: 16.61% ; Time: 1329 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 41: 16.607%
+epoch: 42/500 - loss = 3.998559641745407
+Accuracy Train: 19.38%, Dev: 16.7% ; Time: 1361 (last_train: 20sec, last_pred: 11sec)
+*************** The best score on DEV 42: 16.697%
+epoch: 43/500 - loss = 3.997567737453319
+Accuracy Train: 19.48%, Dev: 16.78% ; Time: 1393 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 43: 16.777%
+epoch: 44/500 - loss = 3.9965855364399707
+Accuracy Train: 19.56%, Dev: 16.81% ; Time: 1425 (last_train: 20sec, last_pred: 11sec)
+*************** The best score on DEV 44: 16.81%
+epoch: 45/500 - loss = 3.9956190284260904
+Accuracy Train: 19.65%, Dev: 16.86% ; Time: 1458 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 45: 16.86%
+epoch: 46/500 - loss = 3.994687871096334
+Accuracy Train: 19.74%, Dev: 16.85% ; Time: 1490 (last_train: 20sec, last_pred: 11sec)
+*************** The best score on DEV 45: 16.86%
+epoch: 47/500 - loss = 3.993790075025712
+Accuracy Train: 19.83%, Dev: 16.95% ; Time: 1522 (last_train: 20sec, last_pred: 13sec)
+*************** The best score on DEV 47: 16.947%
+epoch: 48/500 - loss = 3.992891384719942
+Accuracy Train: 19.93%, Dev: 16.98% ; Time: 1554 (last_train: 20sec, last_pred: 11sec)
+*************** The best score on DEV 48: 16.983%
+epoch: 49/500 - loss = 3.9919981060261067
+Accuracy Train: 20.0%, Dev: 17.05% ; Time: 1587 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 49: 17.05%
+epoch: 50/500 - loss = 3.9911370793691545
+Accuracy Train: 20.08%, Dev: 17.07% ; Time: 1618 (last_train: 20sec, last_pred: 11sec)
+*************** The best score on DEV 50: 17.073%
+epoch: 51/500 - loss = 3.990298597896053
+Accuracy Train: 20.16%, Dev: 17.14% ; Time: 1652 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 51: 17.137%
+epoch: 52/500 - loss = 3.9894800821587086
+Accuracy Train: 20.24%, Dev: 17.2% ; Time: 1684 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 52: 17.203%
+epoch: 53/500 - loss = 3.988648650912296
+Accuracy Train: 20.33%, Dev: 17.25% ; Time: 1716 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 53: 17.253%
+epoch: 54/500 - loss = 3.987848890681587
+Accuracy Train: 20.42%, Dev: 17.27% ; Time: 1749 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 54: 17.27%
+epoch: 55/500 - loss = 3.987080719787369
+Accuracy Train: 20.5%, Dev: 17.27% ; Time: 1781 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 55: 17.273%
+epoch: 56/500 - loss = 3.986333064143357
+Accuracy Train: 20.56%, Dev: 17.34% ; Time: 1813 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 56: 17.343%
+epoch: 57/500 - loss = 3.9856021905991184
+Accuracy Train: 20.64%, Dev: 17.42% ; Time: 1846 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 57: 17.423%
+epoch: 58/500 - loss = 3.9848992292381933
+Accuracy Train: 20.69%, Dev: 17.45% ; Time: 1878 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 58: 17.45%
+epoch: 59/500 - loss = 3.9841971464914323
+Accuracy Train: 20.76%, Dev: 17.48% ; Time: 1911 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 59: 17.483%
+epoch: 60/500 - loss = 3.9835069000820265
+Accuracy Train: 20.83%, Dev: 17.5% ; Time: 1941 (last_train: 20sec, last_pred: 10sec)
+*************** The best score on DEV 60: 17.5%
+epoch: 61/500 - loss = 3.9828410842298205
+Accuracy Train: 20.89%, Dev: 17.57% ; Time: 1974 (last_train: 20sec, last_pred: 13sec)
+*************** The best score on DEV 61: 17.567%
+epoch: 62/500 - loss = 3.9821884900844475
+Accuracy Train: 20.95%, Dev: 17.62% ; Time: 2006 (last_train: 20sec, last_pred: 11sec)
+*************** The best score on DEV 62: 17.617%
+epoch: 63/500 - loss = 3.98154589032412
+Accuracy Train: 21.02%, Dev: 17.66% ; Time: 2039 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 63: 17.663%
+epoch: 64/500 - loss = 3.980907638095472
+Accuracy Train: 21.08%, Dev: 17.68% ; Time: 2070 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 64: 17.677%
+epoch: 65/500 - loss = 3.980266806551114
+Accuracy Train: 21.14%, Dev: 17.71% ; Time: 2103 (last_train: 20sec, last_pred: 13sec)
+*************** The best score on DEV 65: 17.713%
+epoch: 66/500 - loss = 3.9796319518865046
+Accuracy Train: 21.19%, Dev: 17.73% ; Time: 2135 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 66: 17.73%
+epoch: 67/500 - loss = 3.9790112175324572
+Accuracy Train: 21.26%, Dev: 17.76% ; Time: 2168 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 67: 17.76%
+epoch: 68/500 - loss = 3.9784028420244435
+Accuracy Train: 21.3%, Dev: 17.81% ; Time: 2200 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 68: 17.807%
+epoch: 69/500 - loss = 3.9778131357105093
+Accuracy Train: 21.35%, Dev: 17.86% ; Time: 2233 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 69: 17.857%
+epoch: 70/500 - loss = 3.9772309805538044
+Accuracy Train: 21.39%, Dev: 17.89% ; Time: 2266 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 70: 17.893%
+epoch: 71/500 - loss = 3.9766671083027756
+Accuracy Train: 21.43%, Dev: 17.92% ; Time: 2298 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 71: 17.92%
+epoch: 72/500 - loss = 3.976113781275053
+Accuracy Train: 21.49%, Dev: 17.96% ; Time: 2330 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 72: 17.96%
+epoch: 73/500 - loss = 3.9755653395115305
+Accuracy Train: 21.52%, Dev: 18.0% ; Time: 2363 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 73: 18.003%
+epoch: 74/500 - loss = 3.975023647336944
+Accuracy Train: 21.57%, Dev: 18.03% ; Time: 2395 (last_train: 20sec, last_pred: 11sec)
+*************** The best score on DEV 74: 18.03%
+epoch: 75/500 - loss = 3.9744969675899675
+Accuracy Train: 21.62%, Dev: 18.08% ; Time: 2427 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 75: 18.077%
+epoch: 76/500 - loss = 3.973973157338339
+Accuracy Train: 21.65%, Dev: 18.08% ; Time: 2459 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 76: 18.08%
+epoch: 77/500 - loss = 3.973354809950088
+Accuracy Train: 21.73%, Dev: 18.14% ; Time: 2492 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 77: 18.14%
+epoch: 78/500 - loss = 3.9728111339105228
+Accuracy Train: 21.78%, Dev: 18.14% ; Time: 2524 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 77: 18.14%
+epoch: 79/500 - loss = 3.9723100212135294
+Accuracy Train: 21.83%, Dev: 18.14% ; Time: 2556 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 79: 18.143%
+epoch: 80/500 - loss = 3.9718262910975275
+Accuracy Train: 21.86%, Dev: 18.17% ; Time: 2589 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 80: 18.173%
+epoch: 81/500 - loss = 3.971348627615743
+Accuracy Train: 21.9%, Dev: 18.2% ; Time: 2621 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 81: 18.2%
+epoch: 82/500 - loss = 3.970881402128475
+Accuracy Train: 21.93%, Dev: 18.23% ; Time: 2653 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 82: 18.233%
+epoch: 83/500 - loss = 3.9704212988832803
+Accuracy Train: 21.98%, Dev: 18.25% ; Time: 2686 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 83: 18.253%
+epoch: 84/500 - loss = 3.9699686211655365
+Accuracy Train: 22.01%, Dev: 18.27% ; Time: 2717 (last_train: 20sec, last_pred: 11sec)
+*************** The best score on DEV 84: 18.273%
+epoch: 85/500 - loss = 3.9695223836618156
+Accuracy Train: 22.05%, Dev: 18.28% ; Time: 2750 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 85: 18.277%
+epoch: 86/500 - loss = 3.9690842823079397
+Accuracy Train: 22.09%, Dev: 18.31% ; Time: 2782 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 86: 18.313%
+epoch: 87/500 - loss = 3.9686534230011428
+Accuracy Train: 22.14%, Dev: 18.35% ; Time: 2814 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 87: 18.353%
+epoch: 88/500 - loss = 3.9682297277688847
+Accuracy Train: 22.17%, Dev: 18.4% ; Time: 2846 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 88: 18.4%
+epoch: 89/500 - loss = 3.9678029694999344
+Accuracy Train: 22.22%, Dev: 18.42% ; Time: 2879 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 89: 18.417%
+epoch: 90/500 - loss = 3.9673744912017788
+Accuracy Train: 22.25%, Dev: 18.43% ; Time: 2911 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 90: 18.427%
+epoch: 91/500 - loss = 3.9669525750407506
+Accuracy Train: 22.28%, Dev: 18.44% ; Time: 2943 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 91: 18.437%
+epoch: 92/500 - loss = 3.96652858353932
+Accuracy Train: 22.31%, Dev: 18.46% ; Time: 2975 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 92: 18.46%
+epoch: 93/500 - loss = 3.9661125993808066
+Accuracy Train: 22.35%, Dev: 18.44% ; Time: 3008 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 92: 18.46%
+epoch: 94/500 - loss = 3.965711498445832
+Accuracy Train: 22.39%, Dev: 18.46% ; Time: 3040 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 94: 18.463%
+epoch: 95/500 - loss = 3.9653200527352137
+Accuracy Train: 22.4%, Dev: 18.49% ; Time: 3071 (last_train: 19sec, last_pred: 12sec)
+*************** The best score on DEV 95: 18.487%
+epoch: 96/500 - loss = 3.9648237037764598
+Accuracy Train: 22.5%, Dev: 18.51% ; Time: 3103 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 96: 18.513%
+epoch: 97/500 - loss = 3.9640911579926366
+Accuracy Train: 22.54%, Dev: 18.54% ; Time: 3135 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 97: 18.537%
+epoch: 98/500 - loss = 3.96368511632573
+Accuracy Train: 22.58%, Dev: 18.53% ; Time: 3167 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 97: 18.537%
+epoch: 99/500 - loss = 3.9632957987756217
+Accuracy Train: 22.63%, Dev: 18.55% ; Time: 3200 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 99: 18.553%
+epoch: 100/500 - loss = 3.96292313796027
+Accuracy Train: 22.66%, Dev: 18.57% ; Time: 3232 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 100: 18.57%
+epoch: 101/500 - loss = 3.9625558555291667
+Accuracy Train: 22.7%, Dev: 18.56% ; Time: 3265 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 100: 18.57%
+epoch: 102/500 - loss = 3.962193741128552
+Accuracy Train: 22.73%, Dev: 18.6% ; Time: 3297 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 102: 18.597%
+epoch: 103/500 - loss = 3.961829941382612
+Accuracy Train: 22.75%, Dev: 18.61% ; Time: 3330 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 103: 18.61%
+epoch: 104/500 - loss = 3.9614645603429866
+Accuracy Train: 22.8%, Dev: 18.61% ; Time: 3361 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 104: 18.613%
+epoch: 105/500 - loss = 3.9610907994396882
+Accuracy Train: 22.82%, Dev: 18.66% ; Time: 3394 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 105: 18.657%
+epoch: 106/500 - loss = 3.9607389840333083
+Accuracy Train: 22.85%, Dev: 18.67% ; Time: 3426 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 106: 18.667%
+epoch: 107/500 - loss = 3.9603957294557306
+Accuracy Train: 22.89%, Dev: 18.69% ; Time: 3459 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 107: 18.69%
+epoch: 108/500 - loss = 3.9600621870264354
+Accuracy Train: 22.92%, Dev: 18.71% ; Time: 3490 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 108: 18.71%
+epoch: 109/500 - loss = 3.959733638413941
+Accuracy Train: 22.94%, Dev: 18.71% ; Time: 3523 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 109: 18.713%
+epoch: 110/500 - loss = 3.9594079238186275
+Accuracy Train: 22.97%, Dev: 18.73% ; Time: 3555 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 110: 18.73%
+epoch: 111/500 - loss = 3.959085867578357
+Accuracy Train: 22.99%, Dev: 18.74% ; Time: 3588 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 111: 18.737%
+epoch: 112/500 - loss = 3.9587653636402846
+Accuracy Train: 23.02%, Dev: 18.73% ; Time: 3620 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 111: 18.737%
+epoch: 113/500 - loss = 3.9584481737337
+Accuracy Train: 23.05%, Dev: 18.73% ; Time: 3653 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 111: 18.737%
+epoch: 114/500 - loss = 3.9581324544501
+Accuracy Train: 23.08%, Dev: 18.74% ; Time: 3685 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 114: 18.743%
+epoch: 115/500 - loss = 3.9578206784059313
+Accuracy Train: 23.12%, Dev: 18.75% ; Time: 3717 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 115: 18.75%
+epoch: 116/500 - loss = 3.9575160394305327
+Accuracy Train: 23.15%, Dev: 18.76% ; Time: 3749 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 116: 18.757%
+epoch: 117/500 - loss = 3.9572160773512923
+Accuracy Train: 23.18%, Dev: 18.79% ; Time: 3782 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 117: 18.787%
+epoch: 118/500 - loss = 3.9569204864999707
+Accuracy Train: 23.19%, Dev: 18.77% ; Time: 3814 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 117: 18.787%
+epoch: 119/500 - loss = 3.956631516430657
+Accuracy Train: 23.21%, Dev: 18.77% ; Time: 3846 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 117: 18.787%
+epoch: 120/500 - loss = 3.9563515206166997
+Accuracy Train: 23.25%, Dev: 18.79% ; Time: 3879 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 120: 18.793%
+epoch: 121/500 - loss = 3.9560745620250968
+Accuracy Train: 23.27%, Dev: 18.79% ; Time: 3911 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 120: 18.793%
+epoch: 122/500 - loss = 3.9558014328250746
+Accuracy Train: 23.3%, Dev: 18.78% ; Time: 3944 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 120: 18.793%
+epoch: 123/500 - loss = 3.9555348816479263
+Accuracy Train: 23.32%, Dev: 18.76% ; Time: 3976 (last_train: 20sec, last_pred: 11sec)
+*************** The best score on DEV 120: 18.793%
+epoch: 124/500 - loss = 3.9552690294436252
+Accuracy Train: 23.35%, Dev: 18.77% ; Time: 4009 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 120: 18.793%
+epoch: 125/500 - loss = 3.9550061466824937
+Accuracy Train: 23.37%, Dev: 18.79% ; Time: 4041 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 120: 18.793%
+epoch: 126/500 - loss = 3.9547478304115815
+Accuracy Train: 23.38%, Dev: 18.8% ; Time: 4074 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 126: 18.803%
+epoch: 127/500 - loss = 3.954490634747706
+Accuracy Train: 23.41%, Dev: 18.81% ; Time: 4106 (last_train: 20sec, last_pred: 11sec)
+*************** The best score on DEV 127: 18.81%
+epoch: 128/500 - loss = 3.954240501621973
+Accuracy Train: 23.43%, Dev: 18.85% ; Time: 4139 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 128: 18.847%
+epoch: 129/500 - loss = 3.9539887404719836
+Accuracy Train: 23.46%, Dev: 18.83% ; Time: 4170 (last_train: 21sec, last_pred: 10sec)
+*************** The best score on DEV 128: 18.847%
+epoch: 130/500 - loss = 3.953745217802523
+Accuracy Train: 23.49%, Dev: 18.84% ; Time: 4202 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 128: 18.847%
+epoch: 131/500 - loss = 3.9535016208671983
+Accuracy Train: 23.51%, Dev: 18.82% ; Time: 4234 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 128: 18.847%
+epoch: 132/500 - loss = 3.9532619011130747
+Accuracy Train: 23.53%, Dev: 18.82% ; Time: 4267 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 128: 18.847%
+epoch: 133/500 - loss = 3.9530298519240428
+Accuracy Train: 23.56%, Dev: 18.82% ; Time: 4299 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 128: 18.847%
+epoch: 134/500 - loss = 3.9527908670180776
+Accuracy Train: 23.58%, Dev: 18.84% ; Time: 4332 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 128: 18.847%
+epoch: 135/500 - loss = 3.9525643214459287
+Accuracy Train: 23.6%, Dev: 18.87% ; Time: 4364 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 135: 18.867%
+epoch: 136/500 - loss = 3.952338414745553
+Accuracy Train: 23.62%, Dev: 18.89% ; Time: 4396 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 136: 18.893%
+epoch: 137/500 - loss = 3.9521158269747705
+Accuracy Train: 23.63%, Dev: 18.89% ; Time: 4428 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 136: 18.893%
+epoch: 138/500 - loss = 3.951896349633157
+Accuracy Train: 23.65%, Dev: 18.89% ; Time: 4461 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 136: 18.893%
+epoch: 139/500 - loss = 3.951674961898143
+Accuracy Train: 23.67%, Dev: 18.9% ; Time: 4493 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 139: 18.897%
+epoch: 140/500 - loss = 3.951458894696784
+Accuracy Train: 23.68%, Dev: 18.9% ; Time: 4526 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 139: 18.897%
+epoch: 141/500 - loss = 3.9512398648036977
+Accuracy Train: 23.71%, Dev: 18.9% ; Time: 4557 (last_train: 20sec, last_pred: 11sec)
+*************** The best score on DEV 141: 18.903%
+epoch: 142/500 - loss = 3.951022810435573
+Accuracy Train: 23.73%, Dev: 18.9% ; Time: 4590 (last_train: 20sec, last_pred: 13sec)
+*************** The best score on DEV 141: 18.903%
+epoch: 143/500 - loss = 3.9508048308550947
+Accuracy Train: 23.76%, Dev: 18.93% ; Time: 4622 (last_train: 20sec, last_pred: 11sec)
+*************** The best score on DEV 143: 18.927%
+epoch: 144/500 - loss = 3.950588099364768
+Accuracy Train: 23.77%, Dev: 18.92% ; Time: 4655 (last_train: 20sec, last_pred: 13sec)
+*************** The best score on DEV 143: 18.927%
+epoch: 145/500 - loss = 3.9503747841042323
+Accuracy Train: 23.79%, Dev: 18.94% ; Time: 4686 (last_train: 20sec, last_pred: 11sec)
+*************** The best score on DEV 145: 18.94%
+epoch: 146/500 - loss = 3.9501622246080874
+Accuracy Train: 23.8%, Dev: 18.93% ; Time: 4719 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 145: 18.94%
+epoch: 147/500 - loss = 3.9499546242448638
+Accuracy Train: 23.82%, Dev: 18.95% ; Time: 4751 (last_train: 20sec, last_pred: 11sec)
+*************** The best score on DEV 147: 18.947%
+epoch: 148/500 - loss = 3.9497525153194513
+Accuracy Train: 23.83%, Dev: 18.97% ; Time: 4784 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 148: 18.97%
+epoch: 149/500 - loss = 3.949549188089662
+Accuracy Train: 23.84%, Dev: 18.98% ; Time: 4815 (last_train: 20sec, last_pred: 11sec)
+*************** The best score on DEV 149: 18.98%
+epoch: 150/500 - loss = 3.9493554390383587
+Accuracy Train: 23.85%, Dev: 18.99% ; Time: 4848 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 150: 18.99%
+epoch: 151/500 - loss = 3.949158853322251
+Accuracy Train: 23.86%, Dev: 18.99% ; Time: 4880 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 150: 18.99%
+epoch: 152/500 - loss = 3.948965227385483
+Accuracy Train: 23.87%, Dev: 18.99% ; Time: 4913 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 152: 18.993%
+epoch: 153/500 - loss = 3.948771536979061
+Accuracy Train: 23.89%, Dev: 18.99% ; Time: 4944 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 152: 18.993%
+epoch: 154/500 - loss = 3.9485792053334916
+Accuracy Train: 23.9%, Dev: 18.97% ; Time: 4977 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 152: 18.993%
+epoch: 155/500 - loss = 3.9483909062846774
+Accuracy Train: 23.92%, Dev: 18.97% ; Time: 5009 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 152: 18.993%
+epoch: 156/500 - loss = 3.948205242548831
+Accuracy Train: 23.94%, Dev: 18.96% ; Time: 5041 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 152: 18.993%
+epoch: 157/500 - loss = 3.9480225949867243
+Accuracy Train: 23.95%, Dev: 18.98% ; Time: 5073 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 152: 18.993%
+epoch: 158/500 - loss = 3.9478421347595334
+Accuracy Train: 23.96%, Dev: 19.0% ; Time: 5106 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 158: 19.003%
+epoch: 159/500 - loss = 3.9476663502370695
+Accuracy Train: 23.97%, Dev: 19.02% ; Time: 5139 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 159: 19.023%
+epoch: 160/500 - loss = 3.9474867093172556
+Accuracy Train: 23.98%, Dev: 19.04% ; Time: 5171 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 160: 19.04%
+epoch: 161/500 - loss = 3.947307181318623
+Accuracy Train: 23.99%, Dev: 19.04% ; Time: 5203 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 160: 19.04%
+epoch: 162/500 - loss = 3.9471228656207504
+Accuracy Train: 24.01%, Dev: 19.04% ; Time: 5235 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 160: 19.04%
+epoch: 163/500 - loss = 3.9469460415085575
+Accuracy Train: 24.03%, Dev: 19.04% ; Time: 5268 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 163: 19.043%
+epoch: 164/500 - loss = 3.9467683352079077
+Accuracy Train: 24.04%, Dev: 19.04% ; Time: 5300 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 163: 19.043%
+epoch: 165/500 - loss = 3.9465965553497617
+Accuracy Train: 24.05%, Dev: 19.05% ; Time: 5333 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 165: 19.047%
+epoch: 166/500 - loss = 3.9464270169704507
+Accuracy Train: 24.08%, Dev: 19.05% ; Time: 5365 (last_train: 20sec, last_pred: 11sec)
+*************** The best score on DEV 166: 19.053%
+epoch: 167/500 - loss = 3.9462567767059054
+Accuracy Train: 24.09%, Dev: 19.04% ; Time: 5397 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 166: 19.053%
+epoch: 168/500 - loss = 3.9460909697560718
+Accuracy Train: 24.1%, Dev: 19.05% ; Time: 5429 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 166: 19.053%
+epoch: 169/500 - loss = 3.9459234977152398
+Accuracy Train: 24.11%, Dev: 19.07% ; Time: 5462 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 169: 19.07%
+epoch: 170/500 - loss = 3.945754732045116
+Accuracy Train: 24.12%, Dev: 19.09% ; Time: 5493 (last_train: 20sec, last_pred: 11sec)
+*************** The best score on DEV 170: 19.09%
+epoch: 171/500 - loss = 3.94558761624215
+Accuracy Train: 24.14%, Dev: 19.07% ; Time: 5526 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 170: 19.09%
+epoch: 172/500 - loss = 3.945425917081605
+Accuracy Train: 24.16%, Dev: 19.06% ; Time: 5558 (last_train: 20sec, last_pred: 11sec)
+*************** The best score on DEV 170: 19.09%
+epoch: 173/500 - loss = 3.9452662170098796
+Accuracy Train: 24.18%, Dev: 19.06% ; Time: 5591 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 170: 19.09%
+epoch: 174/500 - loss = 3.9451062405261643
+Accuracy Train: 24.2%, Dev: 19.05% ; Time: 5622 (last_train: 20sec, last_pred: 11sec)
+*************** The best score on DEV 170: 19.09%
+epoch: 175/500 - loss = 3.944948948733612
+Accuracy Train: 24.21%, Dev: 19.07% ; Time: 5655 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 170: 19.09%
+epoch: 176/500 - loss = 3.944786843162719
+Accuracy Train: 24.23%, Dev: 19.06% ; Time: 5686 (last_train: 20sec, last_pred: 11sec)
+*************** The best score on DEV 170: 19.09%
+epoch: 177/500 - loss = 3.9446312161964023
+Accuracy Train: 24.25%, Dev: 19.08% ; Time: 5719 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 170: 19.09%
+epoch: 178/500 - loss = 3.9444766804484908
+Accuracy Train: 24.26%, Dev: 19.07% ; Time: 5751 (last_train: 20sec, last_pred: 11sec)
+*************** The best score on DEV 170: 19.09%
+epoch: 179/500 - loss = 3.9443207405329677
+Accuracy Train: 24.27%, Dev: 19.1% ; Time: 5783 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 179: 19.1%
+epoch: 180/500 - loss = 3.944161369693339
+Accuracy Train: 24.29%, Dev: 19.09% ; Time: 5815 (last_train: 20sec, last_pred: 11sec)
+*************** The best score on DEV 179: 19.1%
+epoch: 181/500 - loss = 3.944007133921274
+Accuracy Train: 24.31%, Dev: 19.08% ; Time: 5848 (last_train: 20sec, last_pred: 13sec)
+*************** The best score on DEV 179: 19.1%
+epoch: 182/500 - loss = 3.943849982982341
+Accuracy Train: 24.32%, Dev: 19.08% ; Time: 5880 (last_train: 20sec, last_pred: 11sec)
+*************** The best score on DEV 179: 19.1%
+epoch: 183/500 - loss = 3.9436998131670995
+Accuracy Train: 24.33%, Dev: 19.07% ; Time: 5912 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 179: 19.1%
+epoch: 184/500 - loss = 3.9435484061169666
+Accuracy Train: 24.34%, Dev: 19.08% ; Time: 5944 (last_train: 20sec, last_pred: 11sec)
+*************** The best score on DEV 179: 19.1%
+epoch: 185/500 - loss = 3.9434022927271
+Accuracy Train: 24.35%, Dev: 19.08% ; Time: 5973 (last_train: 20sec, last_pred: 9sec)
+*************** The best score on DEV 179: 19.1%
+epoch: 186/500 - loss = 3.943257974823735
+Accuracy Train: 24.37%, Dev: 19.07% ; Time: 6000 (last_train: 16sec, last_pred: 11sec)
+*************** The best score on DEV 179: 19.1%
+epoch: 187/500 - loss = 3.9431130919173185
+Accuracy Train: 24.38%, Dev: 19.08% ; Time: 6032 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 179: 19.1%
+epoch: 188/500 - loss = 3.942969988744038
+Accuracy Train: 24.4%, Dev: 19.09% ; Time: 6064 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 179: 19.1%
+epoch: 189/500 - loss = 3.9428256954635796
+Accuracy Train: 24.4%, Dev: 19.1% ; Time: 6095 (last_train: 19sec, last_pred: 12sec)
+*************** The best score on DEV 179: 19.1%
+epoch: 190/500 - loss = 3.9426794414848567
+Accuracy Train: 24.42%, Dev: 19.1% ; Time: 6127 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 179: 19.1%
+epoch: 191/500 - loss = 3.9425323401339383
+Accuracy Train: 24.44%, Dev: 19.1% ; Time: 6157 (last_train: 20sec, last_pred: 10sec)
+*************** The best score on DEV 179: 19.1%
+epoch: 192/500 - loss = 3.942390293759945
+Accuracy Train: 24.44%, Dev: 19.11% ; Time: 6189 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 192: 19.11%
+epoch: 193/500 - loss = 3.9422488845367685
+Accuracy Train: 24.45%, Dev: 19.12% ; Time: 6221 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 193: 19.117%
+epoch: 194/500 - loss = 3.9421032139620866
+Accuracy Train: 24.46%, Dev: 19.12% ; Time: 6252 (last_train: 19sec, last_pred: 12sec)
+*************** The best score on DEV 193: 19.117%
+epoch: 195/500 - loss = 3.9419736351191106
+Accuracy Train: 24.46%, Dev: 19.12% ; Time: 6284 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 195: 19.12%
+epoch: 196/500 - loss = 3.941833589554892
+Accuracy Train: 24.47%, Dev: 19.13% ; Time: 6316 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 196: 19.13%
+epoch: 197/500 - loss = 3.9417084754009766
+Accuracy Train: 24.48%, Dev: 19.13% ; Time: 6349 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 196: 19.13%
+epoch: 198/500 - loss = 3.941577491331339
+Accuracy Train: 24.48%, Dev: 19.12% ; Time: 6379 (last_train: 19sec, last_pred: 12sec)
+*************** The best score on DEV 196: 19.13%
+epoch: 199/500 - loss = 3.9414535408083564
+Accuracy Train: 24.5%, Dev: 19.16% ; Time: 6411 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 199: 19.157%
+epoch: 200/500 - loss = 3.941325254668003
+Accuracy Train: 24.5%, Dev: 19.15% ; Time: 6443 (last_train: 21sec, last_pred: 11sec)
+*************** The best score on DEV 199: 19.157%
+epoch: 201/500 - loss = 3.9411991653940137
+Accuracy Train: 24.52%, Dev: 19.16% ; Time: 6477 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 199: 19.157%
+epoch: 202/500 - loss = 3.941078665519939
+Accuracy Train: 24.53%, Dev: 19.15% ; Time: 6511 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 199: 19.157%
+epoch: 203/500 - loss = 3.9409578842033883
+Accuracy Train: 24.54%, Dev: 19.17% ; Time: 6544 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 203: 19.173%
+epoch: 204/500 - loss = 3.940834236303877
+Accuracy Train: 24.55%, Dev: 19.16% ; Time: 6578 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 203: 19.173%
+epoch: 205/500 - loss = 3.940716827001789
+Accuracy Train: 24.57%, Dev: 19.17% ; Time: 6610 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 203: 19.173%
+epoch: 206/500 - loss = 3.940596172506448
+Accuracy Train: 24.58%, Dev: 19.17% ; Time: 6644 (last_train: 22sec, last_pred: 13sec)
+*************** The best score on DEV 203: 19.173%
+epoch: 207/500 - loss = 3.9404815424157142
+Accuracy Train: 24.59%, Dev: 19.16% ; Time: 6678 (last_train: 22sec, last_pred: 12sec)
+*************** The best score on DEV 203: 19.173%
+epoch: 208/500 - loss = 3.9403637619166823
+Accuracy Train: 24.59%, Dev: 19.15% ; Time: 6711 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 203: 19.173%
+epoch: 209/500 - loss = 3.940249590924023
+Accuracy Train: 24.6%, Dev: 19.18% ; Time: 6744 (last_train: 21sec, last_pred: 11sec)
+*************** The best score on DEV 209: 19.18%
+epoch: 210/500 - loss = 3.9401299025468335
+Accuracy Train: 24.62%, Dev: 19.17% ; Time: 6778 (last_train: 22sec, last_pred: 13sec)
+*************** The best score on DEV 209: 19.18%
+epoch: 211/500 - loss = 3.9400086478350365
+Accuracy Train: 24.63%, Dev: 19.18% ; Time: 6812 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 209: 19.18%
+epoch: 212/500 - loss = 3.9398862853571814
+Accuracy Train: 24.64%, Dev: 19.19% ; Time: 6846 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 212: 19.19%
+epoch: 213/500 - loss = 3.9397738782119114
+Accuracy Train: 24.66%, Dev: 19.19% ; Time: 6880 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 212: 19.19%
+epoch: 214/500 - loss = 3.93965735321638
+Accuracy Train: 24.67%, Dev: 19.18% ; Time: 6912 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 212: 19.19%
+epoch: 215/500 - loss = 3.9395427705181234
+Accuracy Train: 24.68%, Dev: 19.17% ; Time: 6947 (last_train: 22sec, last_pred: 13sec)
+*************** The best score on DEV 212: 19.19%
+epoch: 216/500 - loss = 3.939424519139088
+Accuracy Train: 24.69%, Dev: 19.17% ; Time: 6980 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 212: 19.19%
+epoch: 217/500 - loss = 3.9393116916834416
+Accuracy Train: 24.7%, Dev: 19.17% ; Time: 7014 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 212: 19.19%
+epoch: 218/500 - loss = 3.939193545547477
+Accuracy Train: 24.7%, Dev: 19.17% ; Time: 7047 (last_train: 21sec, last_pred: 11sec)
+*************** The best score on DEV 212: 19.19%
+epoch: 219/500 - loss = 3.939078812464153
+Accuracy Train: 24.72%, Dev: 19.18% ; Time: 7081 (last_train: 22sec, last_pred: 12sec)
+*************** The best score on DEV 212: 19.19%
+epoch: 220/500 - loss = 3.9389639240976573
+Accuracy Train: 24.73%, Dev: 19.19% ; Time: 7115 (last_train: 22sec, last_pred: 13sec)
+*************** The best score on DEV 212: 19.19%
+epoch: 221/500 - loss = 3.938850206113537
+Accuracy Train: 24.74%, Dev: 19.19% ; Time: 7149 (last_train: 22sec, last_pred: 12sec)
+*************** The best score on DEV 212: 19.19%
+epoch: 222/500 - loss = 3.9387360830428797
+Accuracy Train: 24.75%, Dev: 19.21% ; Time: 7183 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 222: 19.207%
+epoch: 223/500 - loss = 3.938624995473621
+Accuracy Train: 24.76%, Dev: 19.2% ; Time: 7214 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 222: 19.207%
+epoch: 224/500 - loss = 3.938508452739006
+Accuracy Train: 24.76%, Dev: 19.21% ; Time: 7246 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 224: 19.21%
+epoch: 225/500 - loss = 3.9383952113272813
+Accuracy Train: 24.77%, Dev: 19.21% ; Time: 7279 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 224: 19.21%
+epoch: 226/500 - loss = 3.93828060969851
+Accuracy Train: 24.78%, Dev: 19.22% ; Time: 7311 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 226: 19.217%
+epoch: 227/500 - loss = 3.9381680492557862
+Accuracy Train: 24.78%, Dev: 19.21% ; Time: 7342 (last_train: 19sec, last_pred: 12sec)
+*************** The best score on DEV 226: 19.217%
+epoch: 228/500 - loss = 3.9380584278085506
+Accuracy Train: 24.78%, Dev: 19.21% ; Time: 7375 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 226: 19.217%
+epoch: 229/500 - loss = 3.9379497724794668
+Accuracy Train: 24.8%, Dev: 19.21% ; Time: 7407 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 226: 19.217%
+epoch: 230/500 - loss = 3.9378406253541463
+Accuracy Train: 24.81%, Dev: 19.22% ; Time: 7439 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 230: 19.22%
+epoch: 231/500 - loss = 3.9377283770663416
+Accuracy Train: 24.82%, Dev: 19.23% ; Time: 7470 (last_train: 20sec, last_pred: 11sec)
+*************** The best score on DEV 231: 19.23%
+epoch: 232/500 - loss = 3.9376265653168607
+Accuracy Train: 24.82%, Dev: 19.22% ; Time: 7503 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 231: 19.23%
+epoch: 233/500 - loss = 3.9375282673621297
+Accuracy Train: 24.84%, Dev: 19.23% ; Time: 7535 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 231: 19.23%
+epoch: 234/500 - loss = 3.9374259284706263
+Accuracy Train: 24.85%, Dev: 19.23% ; Time: 7567 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 231: 19.23%
+epoch: 235/500 - loss = 3.9373282730943426
+Accuracy Train: 24.86%, Dev: 19.21% ; Time: 7598 (last_train: 20sec, last_pred: 11sec)
+*************** The best score on DEV 231: 19.23%
+epoch: 236/500 - loss = 3.9372243600577397
+Accuracy Train: 24.86%, Dev: 19.21% ; Time: 7631 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 231: 19.23%
+epoch: 237/500 - loss = 3.9371201756396337
+Accuracy Train: 24.88%, Dev: 19.22% ; Time: 7663 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 231: 19.23%
+epoch: 238/500 - loss = 3.937017692584981
+Accuracy Train: 24.88%, Dev: 19.22% ; Time: 7696 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 231: 19.23%
+epoch: 239/500 - loss = 3.9369083467554478
+Accuracy Train: 24.9%, Dev: 19.24% ; Time: 7728 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 239: 19.237%
+epoch: 240/500 - loss = 3.9367984679591186
+Accuracy Train: 24.9%, Dev: 19.24% ; Time: 7760 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 240: 19.24%
+epoch: 241/500 - loss = 3.936691513861106
+Accuracy Train: 24.91%, Dev: 19.23% ; Time: 7792 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 240: 19.24%
+epoch: 242/500 - loss = 3.9365854491001366
+Accuracy Train: 24.92%, Dev: 19.24% ; Time: 7824 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 240: 19.24%
+epoch: 243/500 - loss = 3.9364791811339925
+Accuracy Train: 24.92%, Dev: 19.25% ; Time: 7857 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 243: 19.253%
+epoch: 244/500 - loss = 3.936374335074544
+Accuracy Train: 24.93%, Dev: 19.26% ; Time: 7889 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 244: 19.257%
+epoch: 245/500 - loss = 3.9362744832290404
+Accuracy Train: 24.94%, Dev: 19.26% ; Time: 7921 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 244: 19.257%
+epoch: 246/500 - loss = 3.936170430927393
+Accuracy Train: 24.95%, Dev: 19.25% ; Time: 7954 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 244: 19.257%
+epoch: 247/500 - loss = 3.9360715299762004
+Accuracy Train: 24.95%, Dev: 19.27% ; Time: 7987 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 247: 19.27%
+epoch: 248/500 - loss = 3.9359783457756574
+Accuracy Train: 24.96%, Dev: 19.26% ; Time: 8019 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 247: 19.27%
+epoch: 249/500 - loss = 3.9358832649493602
+Accuracy Train: 24.96%, Dev: 19.26% ; Time: 8051 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 247: 19.27%
+epoch: 250/500 - loss = 3.9357909463896212
+Accuracy Train: 24.97%, Dev: 19.27% ; Time: 8083 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 247: 19.27%
+epoch: 251/500 - loss = 3.935703262893575
+Accuracy Train: 24.98%, Dev: 19.27% ; Time: 8116 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 247: 19.27%
+epoch: 252/500 - loss = 3.935612952821722
+Accuracy Train: 24.99%, Dev: 19.25% ; Time: 8148 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 247: 19.27%
+epoch: 253/500 - loss = 3.9355206828458913
+Accuracy Train: 24.99%, Dev: 19.26% ; Time: 8180 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 247: 19.27%
+epoch: 254/500 - loss = 3.9354299165883506
+Accuracy Train: 25.0%, Dev: 19.25% ; Time: 8212 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 247: 19.27%
+epoch: 255/500 - loss = 3.935340463022998
+Accuracy Train: 25.01%, Dev: 19.26% ; Time: 8244 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 247: 19.27%
+epoch: 256/500 - loss = 3.93525607846698
+Accuracy Train: 25.02%, Dev: 19.26% ; Time: 8277 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 247: 19.27%
+epoch: 257/500 - loss = 3.9351678500898277
+Accuracy Train: 25.02%, Dev: 19.25% ; Time: 8309 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 247: 19.27%
+epoch: 258/500 - loss = 3.9350831977265996
+Accuracy Train: 25.03%, Dev: 19.24% ; Time: 8341 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 247: 19.27%
+epoch: 259/500 - loss = 3.9350009983873977
+Accuracy Train: 25.04%, Dev: 19.25% ; Time: 8373 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 247: 19.27%
+epoch: 260/500 - loss = 3.9349153205992313
+Accuracy Train: 25.04%, Dev: 19.27% ; Time: 8405 (last_train: 19sec, last_pred: 12sec)
+*************** The best score on DEV 247: 19.27%
+epoch: 261/500 - loss = 3.9348313306716336
+Accuracy Train: 25.05%, Dev: 19.25% ; Time: 8437 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 247: 19.27%
+epoch: 262/500 - loss = 3.9347475230329767
+Accuracy Train: 25.05%, Dev: 19.24% ; Time: 8469 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 247: 19.27%
+epoch: 263/500 - loss = 3.9346639527538496
+Accuracy Train: 25.06%, Dev: 19.24% ; Time: 8502 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 247: 19.27%
+epoch: 264/500 - loss = 3.9345744683436723
+Accuracy Train: 25.06%, Dev: 19.22% ; Time: 8533 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 247: 19.27%
+epoch: 265/500 - loss = 3.9344967453430786
+Accuracy Train: 25.07%, Dev: 19.23% ; Time: 8567 (last_train: 22sec, last_pred: 12sec)
+*************** The best score on DEV 247: 19.27%
+epoch: 266/500 - loss = 3.9344166441138486
+Accuracy Train: 25.07%, Dev: 19.22% ; Time: 8601 (last_train: 22sec, last_pred: 13sec)
+*************** The best score on DEV 247: 19.27%
+epoch: 267/500 - loss = 3.934339792446452
+Accuracy Train: 25.08%, Dev: 19.23% ; Time: 8635 (last_train: 22sec, last_pred: 12sec)
+*************** The best score on DEV 247: 19.27%
+epoch: 268/500 - loss = 3.9342590948398217
+Accuracy Train: 25.08%, Dev: 19.23% ; Time: 8669 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 247: 19.27%
+epoch: 269/500 - loss = 3.934180537043248
+Accuracy Train: 25.09%, Dev: 19.23% ; Time: 8703 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 247: 19.27%
+epoch: 270/500 - loss = 3.9341026137498667
+Accuracy Train: 25.1%, Dev: 19.23% ; Time: 8737 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 247: 19.27%
+epoch: 271/500 - loss = 3.9340279404154623
+Accuracy Train: 25.11%, Dev: 19.24% ; Time: 8771 (last_train: 22sec, last_pred: 12sec)
+*************** The best score on DEV 247: 19.27%
+epoch: 272/500 - loss = 3.9339476296267595
+Accuracy Train: 25.11%, Dev: 19.27% ; Time: 8803 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 247: 19.27%
+epoch: 273/500 - loss = 3.93387139128156
+Accuracy Train: 25.11%, Dev: 19.28% ; Time: 8837 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 273: 19.283%
+epoch: 274/500 - loss = 3.9337984595544997
+Accuracy Train: 25.12%, Dev: 19.28% ; Time: 8872 (last_train: 22sec, last_pred: 13sec)
+*************** The best score on DEV 273: 19.283%
+epoch: 275/500 - loss = 3.933717846274707
+Accuracy Train: 25.13%, Dev: 19.29% ; Time: 8906 (last_train: 22sec, last_pred: 12sec)
+*************** The best score on DEV 275: 19.287%
+epoch: 276/500 - loss = 3.933636047653461
+Accuracy Train: 25.13%, Dev: 19.29% ; Time: 8940 (last_train: 22sec, last_pred: 12sec)
+*************** The best score on DEV 275: 19.287%
+epoch: 277/500 - loss = 3.933551742129032
+Accuracy Train: 25.14%, Dev: 19.3% ; Time: 8974 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 277: 19.3%
+epoch: 278/500 - loss = 3.9334627818161088
+Accuracy Train: 25.15%, Dev: 19.33% ; Time: 9008 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 278: 19.327%
+epoch: 279/500 - loss = 3.9333676672326003
+Accuracy Train: 25.16%, Dev: 19.32% ; Time: 9040 (last_train: 20sec, last_pred: 13sec)
+*************** The best score on DEV 278: 19.327%
+epoch: 280/500 - loss = 3.9332828527023764
+Accuracy Train: 25.17%, Dev: 19.32% ; Time: 9074 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 278: 19.327%
+epoch: 281/500 - loss = 3.933205149823728
+Accuracy Train: 25.18%, Dev: 19.31% ; Time: 9108 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 278: 19.327%
+epoch: 282/500 - loss = 3.933124784891106
+Accuracy Train: 25.18%, Dev: 19.32% ; Time: 9142 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 278: 19.327%
+epoch: 283/500 - loss = 3.933050315688545
+Accuracy Train: 25.18%, Dev: 19.29% ; Time: 9176 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 278: 19.327%
+epoch: 284/500 - loss = 3.9329712078479977
+Accuracy Train: 25.19%, Dev: 19.3% ; Time: 9210 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 278: 19.327%
+epoch: 285/500 - loss = 3.9329012423869574
+Accuracy Train: 25.19%, Dev: 19.3% ; Time: 9244 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 278: 19.327%
+epoch: 286/500 - loss = 3.932819778425438
+Accuracy Train: 25.19%, Dev: 19.31% ; Time: 9277 (last_train: 22sec, last_pred: 12sec)
+*************** The best score on DEV 278: 19.327%
+epoch: 287/500 - loss = 3.932744974827912
+Accuracy Train: 25.19%, Dev: 19.31% ; Time: 9310 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 278: 19.327%
+epoch: 288/500 - loss = 3.932672217579301
+Accuracy Train: 25.2%, Dev: 19.3% ; Time: 9344 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 278: 19.327%
+epoch: 289/500 - loss = 3.932601618806499
+Accuracy Train: 25.2%, Dev: 19.3% ; Time: 9378 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 278: 19.327%
+epoch: 290/500 - loss = 3.932527613335355
+Accuracy Train: 25.2%, Dev: 19.3% ; Time: 9412 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 278: 19.327%
+epoch: 291/500 - loss = 3.932455040361403
+Accuracy Train: 25.21%, Dev: 19.33% ; Time: 9446 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 278: 19.327%
+epoch: 292/500 - loss = 3.9323829925437557
+Accuracy Train: 25.22%, Dev: 19.31% ; Time: 9480 (last_train: 22sec, last_pred: 13sec)
+*************** The best score on DEV 278: 19.327%
+epoch: 293/500 - loss = 3.9323146597403147
+Accuracy Train: 25.23%, Dev: 19.33% ; Time: 9514 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 293: 19.33%
+epoch: 294/500 - loss = 3.932245490155175
+Accuracy Train: 25.23%, Dev: 19.33% ; Time: 9546 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 294: 19.333%
+epoch: 295/500 - loss = 3.9321721918645136
+Accuracy Train: 25.23%, Dev: 19.33% ; Time: 9579 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 294: 19.333%
+epoch: 296/500 - loss = 3.932104938100405
+Accuracy Train: 25.24%, Dev: 19.34% ; Time: 9614 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 296: 19.337%
+epoch: 297/500 - loss = 3.9320320764030106
+Accuracy Train: 25.25%, Dev: 19.33% ; Time: 9648 (last_train: 22sec, last_pred: 12sec)
+*************** The best score on DEV 296: 19.337%
+epoch: 298/500 - loss = 3.9319634694380605
+Accuracy Train: 25.25%, Dev: 19.34% ; Time: 9682 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 298: 19.34%
+epoch: 299/500 - loss = 3.931896008100197
+Accuracy Train: 25.26%, Dev: 19.35% ; Time: 9716 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 299: 19.347%
+epoch: 300/500 - loss = 3.9318298369497144
+Accuracy Train: 25.27%, Dev: 19.35% ; Time: 9750 (last_train: 22sec, last_pred: 12sec)
+*************** The best score on DEV 299: 19.347%
+epoch: 301/500 - loss = 3.931755853056709
+Accuracy Train: 25.27%, Dev: 19.35% ; Time: 9785 (last_train: 22sec, last_pred: 13sec)
+*************** The best score on DEV 299: 19.347%
+epoch: 302/500 - loss = 3.931687855177757
+Accuracy Train: 25.27%, Dev: 19.36% ; Time: 9816 (last_train: 19sec, last_pred: 12sec)
+*************** The best score on DEV 302: 19.357%
+epoch: 303/500 - loss = 3.9316189964237247
+Accuracy Train: 25.28%, Dev: 19.36% ; Time: 9848 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 302: 19.357%
+epoch: 304/500 - loss = 3.931547645196062
+Accuracy Train: 25.29%, Dev: 19.35% ; Time: 9880 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 302: 19.357%
+epoch: 305/500 - loss = 3.931480115152345
+Accuracy Train: 25.3%, Dev: 19.36% ; Time: 9912 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 302: 19.357%
+epoch: 306/500 - loss = 3.9314093015248215
+Accuracy Train: 25.3%, Dev: 19.36% ; Time: 9944 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 306: 19.363%
+epoch: 307/500 - loss = 3.931340160798788
+Accuracy Train: 25.31%, Dev: 19.38% ; Time: 9976 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 307: 19.377%
+epoch: 308/500 - loss = 3.93126558569125
+Accuracy Train: 25.32%, Dev: 19.38% ; Time: 10008 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 308: 19.383%
+epoch: 309/500 - loss = 3.9311936639005247
+Accuracy Train: 25.33%, Dev: 19.39% ; Time: 10039 (last_train: 20sec, last_pred: 10sec)
+*************** The best score on DEV 309: 19.39%
+epoch: 310/500 - loss = 3.9311119109508
+Accuracy Train: 25.33%, Dev: 19.39% ; Time: 10070 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 309: 19.39%
+epoch: 311/500 - loss = 3.931037175794365
+Accuracy Train: 25.34%, Dev: 19.42% ; Time: 10103 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 311: 19.417%
+epoch: 312/500 - loss = 3.9309658237724157
+Accuracy Train: 25.34%, Dev: 19.41% ; Time: 10135 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 311: 19.417%
+epoch: 313/500 - loss = 3.9309147464639937
+Accuracy Train: 25.34%, Dev: 19.43% ; Time: 10167 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 313: 19.43%
+epoch: 314/500 - loss = 3.9307159199309574
+Accuracy Train: 25.39%, Dev: 19.5% ; Time: 10199 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 314: 19.497%
+epoch: 315/500 - loss = 3.9304879081044044
+Accuracy Train: 25.39%, Dev: 19.49% ; Time: 10232 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 314: 19.497%
+epoch: 316/500 - loss = 3.930388270451717
+Accuracy Train: 25.39%, Dev: 19.5% ; Time: 10264 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 314: 19.497%
+epoch: 317/500 - loss = 3.930295601478886
+Accuracy Train: 25.4%, Dev: 19.47% ; Time: 10295 (last_train: 19sec, last_pred: 11sec)
+*************** The best score on DEV 314: 19.497%
+epoch: 318/500 - loss = 3.930219201363834
+Accuracy Train: 25.41%, Dev: 19.46% ; Time: 10327 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 314: 19.497%
+epoch: 319/500 - loss = 3.930147591728028
+Accuracy Train: 25.41%, Dev: 19.46% ; Time: 10359 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 314: 19.497%
+epoch: 320/500 - loss = 3.9300729473851113
+Accuracy Train: 25.41%, Dev: 19.46% ; Time: 10391 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 314: 19.497%
+epoch: 321/500 - loss = 3.929999317876635
+Accuracy Train: 25.41%, Dev: 19.47% ; Time: 10423 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 314: 19.497%
+epoch: 322/500 - loss = 3.9299319493380076
+Accuracy Train: 25.41%, Dev: 19.48% ; Time: 10455 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 314: 19.497%
+epoch: 323/500 - loss = 3.9298581096081517
+Accuracy Train: 25.41%, Dev: 19.49% ; Time: 10487 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 314: 19.497%
+epoch: 324/500 - loss = 3.9297981059663765
+Accuracy Train: 25.42%, Dev: 19.5% ; Time: 10519 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 314: 19.497%
+epoch: 325/500 - loss = 3.9297273475418217
+Accuracy Train: 25.43%, Dev: 19.48% ; Time: 10551 (last_train: 19sec, last_pred: 12sec)
+*************** The best score on DEV 314: 19.497%
+epoch: 326/500 - loss = 3.9296646376307445
+Accuracy Train: 25.44%, Dev: 19.48% ; Time: 10583 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 314: 19.497%
+epoch: 327/500 - loss = 3.9295961037402285
+Accuracy Train: 25.45%, Dev: 19.49% ; Time: 10615 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 314: 19.497%
+epoch: 328/500 - loss = 3.9295266723050335
+Accuracy Train: 25.45%, Dev: 19.51% ; Time: 10647 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 328: 19.507%
+epoch: 329/500 - loss = 3.9294630469778125
+Accuracy Train: 25.46%, Dev: 19.51% ; Time: 10680 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 328: 19.507%
+epoch: 330/500 - loss = 3.9293945377102037
+Accuracy Train: 25.47%, Dev: 19.5% ; Time: 10712 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 328: 19.507%
+epoch: 331/500 - loss = 3.9293198663615176
+Accuracy Train: 25.48%, Dev: 19.5% ; Time: 10744 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 328: 19.507%
+epoch: 332/500 - loss = 3.9292436468144514
+Accuracy Train: 25.48%, Dev: 19.49% ; Time: 10776 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 328: 19.507%
+epoch: 333/500 - loss = 3.9291709544326383
+Accuracy Train: 25.48%, Dev: 19.47% ; Time: 10808 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 328: 19.507%
+epoch: 334/500 - loss = 3.92910131012844
+Accuracy Train: 25.49%, Dev: 19.47% ; Time: 10840 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 328: 19.507%
+epoch: 335/500 - loss = 3.929024938607732
+Accuracy Train: 25.49%, Dev: 19.48% ; Time: 10872 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 328: 19.507%
+epoch: 336/500 - loss = 3.9289591136341424
+Accuracy Train: 25.5%, Dev: 19.48% ; Time: 10905 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 328: 19.507%
+epoch: 337/500 - loss = 3.9288907158315216
+Accuracy Train: 25.51%, Dev: 19.51% ; Time: 10937 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 337: 19.513%
+epoch: 338/500 - loss = 3.9288235295818357
+Accuracy Train: 25.52%, Dev: 19.51% ; Time: 10969 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 337: 19.513%
+epoch: 339/500 - loss = 3.928760704631477
+Accuracy Train: 25.52%, Dev: 19.52% ; Time: 11002 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 339: 19.523%
+epoch: 340/500 - loss = 3.9286904755994256
+Accuracy Train: 25.52%, Dev: 19.52% ; Time: 11033 (last_train: 21sec, last_pred: 11sec)
+*************** The best score on DEV 339: 19.523%
+epoch: 341/500 - loss = 3.9286210762004865
+Accuracy Train: 25.53%, Dev: 19.54% ; Time: 11067 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 341: 19.537%
+epoch: 342/500 - loss = 3.928554979713012
+Accuracy Train: 25.53%, Dev: 19.54% ; Time: 11101 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 342: 19.543%
+epoch: 343/500 - loss = 3.9284880689486474
+Accuracy Train: 25.54%, Dev: 19.57% ; Time: 11135 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 343: 19.567%
+epoch: 344/500 - loss = 3.9284283241121587
+Accuracy Train: 25.54%, Dev: 19.56% ; Time: 11169 (last_train: 22sec, last_pred: 13sec)
+*************** The best score on DEV 343: 19.567%
+epoch: 345/500 - loss = 3.928357488906496
+Accuracy Train: 25.54%, Dev: 19.54% ; Time: 11203 (last_train: 22sec, last_pred: 13sec)
+*************** The best score on DEV 343: 19.567%
+epoch: 346/500 - loss = 3.9282899039245724
+Accuracy Train: 25.54%, Dev: 19.53% ; Time: 11237 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 343: 19.567%
+epoch: 347/500 - loss = 3.9282233535018913
+Accuracy Train: 25.54%, Dev: 19.52% ; Time: 11271 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 343: 19.567%
+epoch: 348/500 - loss = 3.9281587780746468
+Accuracy Train: 25.55%, Dev: 19.55% ; Time: 11305 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 343: 19.567%
+epoch: 349/500 - loss = 3.9280987667547604
+Accuracy Train: 25.57%, Dev: 19.56% ; Time: 11339 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 343: 19.567%
+epoch: 350/500 - loss = 3.928034321193494
+Accuracy Train: 25.57%, Dev: 19.54% ; Time: 11373 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 343: 19.567%
+epoch: 351/500 - loss = 3.927970213866247
+Accuracy Train: 25.58%, Dev: 19.54% ; Time: 11407 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 343: 19.567%
+epoch: 352/500 - loss = 3.927907568160062
+Accuracy Train: 25.58%, Dev: 19.57% ; Time: 11441 (last_train: 22sec, last_pred: 12sec)
+*************** The best score on DEV 343: 19.567%
+epoch: 353/500 - loss = 3.9278508303630093
+Accuracy Train: 25.59%, Dev: 19.57% ; Time: 11476 (last_train: 22sec, last_pred: 13sec)
+*************** The best score on DEV 353: 19.57%
+epoch: 354/500 - loss = 3.9277912054639073
+Accuracy Train: 25.59%, Dev: 19.61% ; Time: 11508 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 354: 19.607%
+epoch: 355/500 - loss = 3.9277355265842417
+Accuracy Train: 25.59%, Dev: 19.61% ; Time: 11542 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 355: 19.613%
+epoch: 356/500 - loss = 3.927676630708524
+Accuracy Train: 25.6%, Dev: 19.63% ; Time: 11576 (last_train: 22sec, last_pred: 12sec)
+*************** The best score on DEV 356: 19.627%
+epoch: 357/500 - loss = 3.92762177378386
+Accuracy Train: 25.6%, Dev: 19.62% ; Time: 11610 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 356: 19.627%
+epoch: 358/500 - loss = 3.9275676428378126
+Accuracy Train: 25.61%, Dev: 19.6% ; Time: 11644 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 356: 19.627%
+epoch: 359/500 - loss = 3.9275136522158594
+Accuracy Train: 25.61%, Dev: 19.62% ; Time: 11678 (last_train: 22sec, last_pred: 12sec)
+*************** The best score on DEV 356: 19.627%
+epoch: 360/500 - loss = 3.9274508033044997
+Accuracy Train: 25.62%, Dev: 19.62% ; Time: 11712 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 356: 19.627%
+epoch: 361/500 - loss = 3.927390199578649
+Accuracy Train: 25.62%, Dev: 19.61% ; Time: 11746 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 356: 19.627%
+epoch: 362/500 - loss = 3.9273341630049243
+Accuracy Train: 25.62%, Dev: 19.64% ; Time: 11780 (last_train: 22sec, last_pred: 12sec)
+*************** The best score on DEV 362: 19.637%
+epoch: 363/500 - loss = 3.9272788100478255
+Accuracy Train: 25.63%, Dev: 19.63% ; Time: 11814 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 362: 19.637%
+epoch: 364/500 - loss = 3.927216401568788
+Accuracy Train: 25.63%, Dev: 19.65% ; Time: 11848 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 364: 19.647%
+epoch: 365/500 - loss = 3.927158386425334
+Accuracy Train: 25.64%, Dev: 19.66% ; Time: 11882 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 365: 19.663%
+epoch: 366/500 - loss = 3.9271001406737924
+Accuracy Train: 25.64%, Dev: 19.67% ; Time: 11916 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 366: 19.673%
+epoch: 367/500 - loss = 3.9270401913083175
+Accuracy Train: 25.64%, Dev: 19.68% ; Time: 11948 (last_train: 21sec, last_pred: 10sec)
+*************** The best score on DEV 367: 19.677%
+epoch: 368/500 - loss = 3.9269777983178833
+Accuracy Train: 25.65%, Dev: 19.67% ; Time: 11982 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 367: 19.677%
+epoch: 369/500 - loss = 3.926916564722183
+Accuracy Train: 25.65%, Dev: 19.67% ; Time: 12015 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 367: 19.677%
+epoch: 370/500 - loss = 3.9268587129371553
+Accuracy Train: 25.65%, Dev: 19.69% ; Time: 12049 (last_train: 22sec, last_pred: 13sec)
+*************** The best score on DEV 370: 19.69%
+epoch: 371/500 - loss = 3.9268005982430227
+Accuracy Train: 25.66%, Dev: 19.7% ; Time: 12083 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 371: 19.7%
+epoch: 372/500 - loss = 3.92674511369899
+Accuracy Train: 25.67%, Dev: 19.68% ; Time: 12117 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 371: 19.7%
+epoch: 373/500 - loss = 3.9266938286844324
+Accuracy Train: 25.67%, Dev: 19.69% ; Time: 12151 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 371: 19.7%
+epoch: 374/500 - loss = 3.9266476396849788
+Accuracy Train: 25.68%, Dev: 19.71% ; Time: 12185 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 374: 19.707%
+epoch: 375/500 - loss = 3.926596259223561
+Accuracy Train: 25.69%, Dev: 19.71% ; Time: 12218 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 375: 19.71%
+epoch: 376/500 - loss = 3.9265492415176637
+Accuracy Train: 25.71%, Dev: 19.69% ; Time: 12253 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 375: 19.71%
+epoch: 377/500 - loss = 3.9265027447318714
+Accuracy Train: 25.7%, Dev: 19.69% ; Time: 12286 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 375: 19.71%
+epoch: 378/500 - loss = 3.9264566010067954
+Accuracy Train: 25.71%, Dev: 19.68% ; Time: 12321 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 375: 19.71%
+epoch: 379/500 - loss = 3.926412021498227
+Accuracy Train: 25.71%, Dev: 19.68% ; Time: 12355 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 375: 19.71%
+epoch: 380/500 - loss = 3.926366135519389
+Accuracy Train: 25.72%, Dev: 19.7% ; Time: 12388 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 375: 19.71%
+epoch: 381/500 - loss = 3.9263154578698733
+Accuracy Train: 25.72%, Dev: 19.69% ; Time: 12421 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 375: 19.71%
+epoch: 382/500 - loss = 3.926259517802059
+Accuracy Train: 25.72%, Dev: 19.68% ; Time: 12454 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 375: 19.71%
+epoch: 383/500 - loss = 3.926211889951114
+Accuracy Train: 25.73%, Dev: 19.68% ; Time: 12489 (last_train: 22sec, last_pred: 13sec)
+*************** The best score on DEV 375: 19.71%
+epoch: 384/500 - loss = 3.9261632037123064
+Accuracy Train: 25.72%, Dev: 19.69% ; Time: 12522 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 375: 19.71%
+epoch: 385/500 - loss = 3.92611607546809
+Accuracy Train: 25.73%, Dev: 19.7% ; Time: 12556 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 375: 19.71%
+epoch: 386/500 - loss = 3.926064475386226
+Accuracy Train: 25.74%, Dev: 19.7% ; Time: 12590 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 375: 19.71%
+epoch: 387/500 - loss = 3.926015771408335
+Accuracy Train: 25.73%, Dev: 19.71% ; Time: 12624 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 375: 19.71%
+epoch: 388/500 - loss = 3.9259696027955897
+Accuracy Train: 25.73%, Dev: 19.73% ; Time: 12658 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 388: 19.727%
+epoch: 389/500 - loss = 3.9259248780648224
+Accuracy Train: 25.73%, Dev: 19.72% ; Time: 12692 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 388: 19.727%
+epoch: 390/500 - loss = 3.925877091885937
+Accuracy Train: 25.74%, Dev: 19.71% ; Time: 12726 (last_train: 22sec, last_pred: 12sec)
+*************** The best score on DEV 388: 19.727%
+epoch: 391/500 - loss = 3.925823257341443
+Accuracy Train: 25.74%, Dev: 19.71% ; Time: 12760 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 388: 19.727%
+epoch: 392/500 - loss = 3.9257697888310257
+Accuracy Train: 25.74%, Dev: 19.72% ; Time: 12794 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 388: 19.727%
+epoch: 393/500 - loss = 3.92571948846799
+Accuracy Train: 25.74%, Dev: 19.73% ; Time: 12828 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 393: 19.73%
+epoch: 394/500 - loss = 3.925671218435742
+Accuracy Train: 25.75%, Dev: 19.73% ; Time: 12863 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 393: 19.73%
+epoch: 395/500 - loss = 3.9256229938102525
+Accuracy Train: 25.75%, Dev: 19.72% ; Time: 12895 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 393: 19.73%
+epoch: 396/500 - loss = 3.9255659238687164
+Accuracy Train: 25.75%, Dev: 19.72% ; Time: 12930 (last_train: 22sec, last_pred: 13sec)
+*************** The best score on DEV 393: 19.73%
+epoch: 397/500 - loss = 3.9255156922115346
+Accuracy Train: 25.76%, Dev: 19.72% ; Time: 12963 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 393: 19.73%
+epoch: 398/500 - loss = 3.9254648236682983
+Accuracy Train: 25.77%, Dev: 19.71% ; Time: 12996 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 393: 19.73%
+epoch: 399/500 - loss = 3.925407614594099
+Accuracy Train: 25.78%, Dev: 19.73% ; Time: 13031 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 399: 19.733%
+epoch: 400/500 - loss = 3.925354368086989
+Accuracy Train: 25.78%, Dev: 19.73% ; Time: 13065 (last_train: 22sec, last_pred: 12sec)
+*************** The best score on DEV 399: 19.733%
+epoch: 401/500 - loss = 3.925299052461394
+Accuracy Train: 25.79%, Dev: 19.73% ; Time: 13099 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 399: 19.733%
+epoch: 402/500 - loss = 3.925241543278967
+Accuracy Train: 25.8%, Dev: 19.75% ; Time: 13133 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 402: 19.747%
+epoch: 403/500 - loss = 3.9251876208333423
+Accuracy Train: 25.81%, Dev: 19.75% ; Time: 13166 (last_train: 22sec, last_pred: 12sec)
+*************** The best score on DEV 403: 19.753%
+epoch: 404/500 - loss = 3.925134726063137
+Accuracy Train: 25.82%, Dev: 19.76% ; Time: 13201 (last_train: 22sec, last_pred: 13sec)
+*************** The best score on DEV 404: 19.76%
+epoch: 405/500 - loss = 3.92508700911963
+Accuracy Train: 25.82%, Dev: 19.74% ; Time: 13235 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 404: 19.76%
+epoch: 406/500 - loss = 3.925044984568628
+Accuracy Train: 25.82%, Dev: 19.73% ; Time: 13268 (last_train: 22sec, last_pred: 12sec)
+*************** The best score on DEV 404: 19.76%
+epoch: 407/500 - loss = 3.9249936810206996
+Accuracy Train: 25.83%, Dev: 19.74% ; Time: 13303 (last_train: 22sec, last_pred: 13sec)
+*************** The best score on DEV 404: 19.76%
+epoch: 408/500 - loss = 3.924948233488465
+Accuracy Train: 25.83%, Dev: 19.74% ; Time: 13334 (last_train: 22sec, last_pred: 10sec)
+*************** The best score on DEV 404: 19.76%
+epoch: 409/500 - loss = 3.9249018539924347
+Accuracy Train: 25.82%, Dev: 19.74% ; Time: 13367 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 404: 19.76%
+epoch: 410/500 - loss = 3.9248525511218997
+Accuracy Train: 25.84%, Dev: 19.75% ; Time: 13400 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 404: 19.76%
+epoch: 411/500 - loss = 3.9248049866815595
+Accuracy Train: 25.84%, Dev: 19.76% ; Time: 13432 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 404: 19.76%
+epoch: 412/500 - loss = 3.9247636244338064
+Accuracy Train: 25.84%, Dev: 19.77% ; Time: 13464 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 412: 19.773%
+epoch: 413/500 - loss = 3.9247249715001233
+Accuracy Train: 25.84%, Dev: 19.78% ; Time: 13497 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 413: 19.783%
+epoch: 414/500 - loss = 3.924682790871662
+Accuracy Train: 25.85%, Dev: 19.78% ; Time: 13529 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 413: 19.783%
+epoch: 415/500 - loss = 3.9246497408407786
+Accuracy Train: 25.86%, Dev: 19.77% ; Time: 13562 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 413: 19.783%
+epoch: 416/500 - loss = 3.924610079294572
+Accuracy Train: 25.87%, Dev: 19.75% ; Time: 13594 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 413: 19.783%
+epoch: 417/500 - loss = 3.924574499326173
+Accuracy Train: 25.87%, Dev: 19.73% ; Time: 13626 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 413: 19.783%
+epoch: 418/500 - loss = 3.9245386295752813
+Accuracy Train: 25.88%, Dev: 19.74% ; Time: 13658 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 413: 19.783%
+epoch: 419/500 - loss = 3.9244972264217313
+Accuracy Train: 25.88%, Dev: 19.73% ; Time: 13691 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 413: 19.783%
+epoch: 420/500 - loss = 3.9244468312737415
+Accuracy Train: 25.89%, Dev: 19.74% ; Time: 13723 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 413: 19.783%
+epoch: 421/500 - loss = 3.924399549202546
+Accuracy Train: 25.89%, Dev: 19.75% ; Time: 13755 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 413: 19.783%
+epoch: 422/500 - loss = 3.9243559896912856
+Accuracy Train: 25.89%, Dev: 19.73% ; Time: 13787 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 413: 19.783%
+epoch: 423/500 - loss = 3.9243135856033233
+Accuracy Train: 25.89%, Dev: 19.75% ; Time: 13820 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 413: 19.783%
+epoch: 424/500 - loss = 3.9242618351363925
+Accuracy Train: 25.9%, Dev: 19.74% ; Time: 13852 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 413: 19.783%
+epoch: 425/500 - loss = 3.9242212221663504
+Accuracy Train: 25.89%, Dev: 19.74% ; Time: 13884 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 413: 19.783%
+epoch: 426/500 - loss = 3.9241797252868955
+Accuracy Train: 25.91%, Dev: 19.75% ; Time: 13915 (last_train: 20sec, last_pred: 11sec)
+*************** The best score on DEV 413: 19.783%
+epoch: 427/500 - loss = 3.92414368926519
+Accuracy Train: 25.91%, Dev: 19.77% ; Time: 13947 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 413: 19.783%
+epoch: 428/500 - loss = 3.924091036487857
+Accuracy Train: 25.91%, Dev: 19.75% ; Time: 13980 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 413: 19.783%
+epoch: 429/500 - loss = 3.9240489949920585
+Accuracy Train: 25.92%, Dev: 19.78% ; Time: 14012 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 413: 19.783%
+epoch: 430/500 - loss = 3.923997409869273
+Accuracy Train: 25.92%, Dev: 19.77% ; Time: 14044 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 413: 19.783%
+epoch: 431/500 - loss = 3.923959079283863
+Accuracy Train: 25.92%, Dev: 19.76% ; Time: 14077 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 413: 19.783%
+epoch: 432/500 - loss = 3.923917092858653
+Accuracy Train: 25.91%, Dev: 19.75% ; Time: 14109 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 413: 19.783%
+epoch: 433/500 - loss = 3.923869474142012
+Accuracy Train: 25.92%, Dev: 19.78% ; Time: 14142 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 413: 19.783%
+epoch: 434/500 - loss = 3.923821976421807
+Accuracy Train: 25.92%, Dev: 19.77% ; Time: 14174 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 413: 19.783%
+epoch: 435/500 - loss = 3.923776949861856
+Accuracy Train: 25.92%, Dev: 19.77% ; Time: 14207 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 413: 19.783%
+epoch: 436/500 - loss = 3.9237364807902013
+Accuracy Train: 25.93%, Dev: 19.77% ; Time: 14239 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 413: 19.783%
+epoch: 437/500 - loss = 3.9236917711508927
+Accuracy Train: 25.94%, Dev: 19.77% ; Time: 14272 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 413: 19.783%
+epoch: 438/500 - loss = 3.9236506854475106
+Accuracy Train: 25.94%, Dev: 19.77% ; Time: 14304 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 413: 19.783%
+epoch: 439/500 - loss = 3.9236092249728918
+Accuracy Train: 25.94%, Dev: 19.78% ; Time: 14336 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 413: 19.783%
+epoch: 440/500 - loss = 3.9235730213565603
+Accuracy Train: 25.95%, Dev: 19.78% ; Time: 14369 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 413: 19.783%
+epoch: 441/500 - loss = 3.9235285207472
+Accuracy Train: 25.96%, Dev: 19.79% ; Time: 14401 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 441: 19.793%
+epoch: 442/500 - loss = 3.9234765899770463
+Accuracy Train: 25.97%, Dev: 19.78% ; Time: 14433 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 441: 19.793%
+epoch: 443/500 - loss = 3.923429147195048
+Accuracy Train: 25.97%, Dev: 19.79% ; Time: 14465 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 441: 19.793%
+epoch: 444/500 - loss = 3.923385428296798
+Accuracy Train: 25.97%, Dev: 19.78% ; Time: 14496 (last_train: 19sec, last_pred: 11sec)
+*************** The best score on DEV 441: 19.793%
+epoch: 445/500 - loss = 3.9233479985655975
+Accuracy Train: 25.97%, Dev: 19.8% ; Time: 14528 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 445: 19.803%
+epoch: 446/500 - loss = 3.923298302522836
+Accuracy Train: 25.97%, Dev: 19.81% ; Time: 14560 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 446: 19.81%
+epoch: 447/500 - loss = 3.923246460315719
+Accuracy Train: 25.98%, Dev: 19.8% ; Time: 14592 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 446: 19.81%
+epoch: 448/500 - loss = 3.9231929323661334
+Accuracy Train: 25.99%, Dev: 19.8% ; Time: 14625 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 446: 19.81%
+epoch: 449/500 - loss = 3.9231540831110996
+Accuracy Train: 25.99%, Dev: 19.81% ; Time: 14657 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 449: 19.813%
+epoch: 450/500 - loss = 3.9231090246472737
+Accuracy Train: 25.98%, Dev: 19.81% ; Time: 14689 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 449: 19.813%
+epoch: 451/500 - loss = 3.9230605810632446
+Accuracy Train: 25.99%, Dev: 19.83% ; Time: 14721 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 451: 19.827%
+epoch: 452/500 - loss = 3.923014952565881
+Accuracy Train: 25.99%, Dev: 19.81% ; Time: 14753 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 451: 19.827%
+epoch: 453/500 - loss = 3.9229615984328383
+Accuracy Train: 25.99%, Dev: 19.83% ; Time: 14785 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 453: 19.833%
+epoch: 454/500 - loss = 3.9229101204064607
+Accuracy Train: 25.99%, Dev: 19.82% ; Time: 14817 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 453: 19.833%
+epoch: 455/500 - loss = 3.922860475198088
+Accuracy Train: 26.0%, Dev: 19.82% ; Time: 14849 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 453: 19.833%
+epoch: 456/500 - loss = 3.922805876284424
+Accuracy Train: 25.99%, Dev: 19.83% ; Time: 14882 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 453: 19.833%
+epoch: 457/500 - loss = 3.9227554244772715
+Accuracy Train: 26.0%, Dev: 19.82% ; Time: 14914 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 453: 19.833%
+epoch: 458/500 - loss = 3.922713270192673
+Accuracy Train: 26.0%, Dev: 19.84% ; Time: 14947 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 458: 19.837%
+epoch: 459/500 - loss = 3.9226713248056413
+Accuracy Train: 26.0%, Dev: 19.83% ; Time: 14979 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 458: 19.837%
+epoch: 460/500 - loss = 3.9226308458053953
+Accuracy Train: 26.0%, Dev: 19.81% ; Time: 15011 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 458: 19.837%
+epoch: 461/500 - loss = 3.922585536876299
+Accuracy Train: 26.01%, Dev: 19.8% ; Time: 15044 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 458: 19.837%
+epoch: 462/500 - loss = 3.922533233453008
+Accuracy Train: 26.01%, Dev: 19.8% ; Time: 15074 (last_train: 20sec, last_pred: 11sec)
+*************** The best score on DEV 458: 19.837%
+epoch: 463/500 - loss = 3.9224919593711483
+Accuracy Train: 26.0%, Dev: 19.81% ; Time: 15107 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 458: 19.837%
+epoch: 464/500 - loss = 3.922443324363874
+Accuracy Train: 26.01%, Dev: 19.84% ; Time: 15139 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 464: 19.843%
+epoch: 465/500 - loss = 3.922402583778335
+Accuracy Train: 26.01%, Dev: 19.84% ; Time: 15171 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 464: 19.843%
+epoch: 466/500 - loss = 3.9223645961926685
+Accuracy Train: 26.01%, Dev: 19.85% ; Time: 15204 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 466: 19.85%
+epoch: 467/500 - loss = 3.9223393835272145
+Accuracy Train: 26.02%, Dev: 19.85% ; Time: 15236 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 467: 19.853%
+epoch: 468/500 - loss = 3.9223022851462104
+Accuracy Train: 26.02%, Dev: 19.84% ; Time: 15269 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 467: 19.853%
+epoch: 469/500 - loss = 3.9222733254302944
+Accuracy Train: 26.02%, Dev: 19.83% ; Time: 15301 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 467: 19.853%
+epoch: 470/500 - loss = 3.922235711821578
+Accuracy Train: 26.04%, Dev: 19.81% ; Time: 15333 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 467: 19.853%
+epoch: 471/500 - loss = 3.9221866729191976
+Accuracy Train: 26.04%, Dev: 19.8% ; Time: 15365 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 467: 19.853%
+epoch: 472/500 - loss = 3.9221468456317026
+Accuracy Train: 26.04%, Dev: 19.81% ; Time: 15397 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 467: 19.853%
+epoch: 473/500 - loss = 3.9221055334240513
+Accuracy Train: 26.04%, Dev: 19.81% ; Time: 15429 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 467: 19.853%
+epoch: 474/500 - loss = 3.9220714036919286
+Accuracy Train: 26.04%, Dev: 19.79% ; Time: 15461 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 467: 19.853%
+epoch: 475/500 - loss = 3.922039518748172
+Accuracy Train: 26.06%, Dev: 19.79% ; Time: 15494 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 467: 19.853%
+epoch: 476/500 - loss = 3.92199970589023
+Accuracy Train: 26.06%, Dev: 19.77% ; Time: 15526 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 467: 19.853%
+epoch: 477/500 - loss = 3.9219614552630775
+Accuracy Train: 26.06%, Dev: 19.78% ; Time: 15558 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 467: 19.853%
+epoch: 478/500 - loss = 3.9219096926170742
+Accuracy Train: 26.06%, Dev: 19.8% ; Time: 15591 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 467: 19.853%
+epoch: 479/500 - loss = 3.921875025549576
+Accuracy Train: 26.07%, Dev: 19.78% ; Time: 15623 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 467: 19.853%
+epoch: 480/500 - loss = 3.921835746849861
+Accuracy Train: 26.07%, Dev: 19.8% ; Time: 15653 (last_train: 19sec, last_pred: 12sec)
+*************** The best score on DEV 467: 19.853%
+epoch: 481/500 - loss = 3.921806882845568
+Accuracy Train: 26.08%, Dev: 19.78% ; Time: 15686 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 467: 19.853%
+epoch: 482/500 - loss = 3.921756674090337
+Accuracy Train: 26.09%, Dev: 19.78% ; Time: 15718 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 467: 19.853%
+epoch: 483/500 - loss = 3.9217327615408553
+Accuracy Train: 26.09%, Dev: 19.8% ; Time: 15750 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 467: 19.853%
+epoch: 484/500 - loss = 3.9216938267675525
+Accuracy Train: 26.08%, Dev: 19.8% ; Time: 15782 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 467: 19.853%
+epoch: 485/500 - loss = 3.921665211242811
+Accuracy Train: 26.1%, Dev: 19.8% ; Time: 15814 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 467: 19.853%
+epoch: 486/500 - loss = 3.921614849190127
+Accuracy Train: 26.1%, Dev: 19.8% ; Time: 15847 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 467: 19.853%
+epoch: 487/500 - loss = 3.9215769878961457
+Accuracy Train: 26.09%, Dev: 19.81% ; Time: 15879 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 467: 19.853%
+epoch: 488/500 - loss = 3.9215469075731937
+Accuracy Train: 26.09%, Dev: 19.8% ; Time: 15911 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 467: 19.853%
+epoch: 489/500 - loss = 3.921511059532822
+Accuracy Train: 26.08%, Dev: 19.82% ; Time: 15943 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 467: 19.853%
+epoch: 490/500 - loss = 3.921481062345277
+Accuracy Train: 26.09%, Dev: 19.81% ; Time: 15975 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 467: 19.853%
+epoch: 491/500 - loss = 3.9214366039655264
+Accuracy Train: 26.11%, Dev: 19.77% ; Time: 16007 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 467: 19.853%
+epoch: 492/500 - loss = 3.921405040443374
+Accuracy Train: 26.11%, Dev: 19.78% ; Time: 16039 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 467: 19.853%
+epoch: 493/500 - loss = 3.921374239569436
+Accuracy Train: 26.1%, Dev: 19.78% ; Time: 16072 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 467: 19.853%
+epoch: 494/500 - loss = 3.92133505075657
+Accuracy Train: 26.11%, Dev: 19.8% ; Time: 16104 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 467: 19.853%
+epoch: 495/500 - loss = 3.9213078832176245
+Accuracy Train: 26.12%, Dev: 19.78% ; Time: 16136 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 467: 19.853%
+epoch: 496/500 - loss = 3.9212791740993604
+Accuracy Train: 26.12%, Dev: 19.78% ; Time: 16169 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 467: 19.853%
+epoch: 497/500 - loss = 3.9212558919492526
+Accuracy Train: 26.13%, Dev: 19.77% ; Time: 16201 (last_train: 20sec, last_pred: 12sec)
+*************** The best score on DEV 467: 19.853%
+epoch: 498/500 - loss = 3.9212282225530988
+Accuracy Train: 26.13%, Dev: 19.79% ; Time: 16232 (last_train: 19sec, last_pred: 12sec)
+*************** The best score on DEV 467: 19.853%
+epoch: 499/500 - loss = 3.9212017964813723
+Accuracy Train: 26.13%, Dev: 19.81% ; Time: 16266 (last_train: 21sec, last_pred: 12sec)
+*************** The best score on DEV 467: 19.853%
+epoch: 500/500 - loss = 3.921164893759813
+Accuracy Train: 26.14%, Dev: 19.8% ; Time: 16300 (last_train: 21sec, last_pred: 13sec)
+*************** The best score on DEV 467: 19.853%
+Recalculing the best DEV: WAcc: 19.853333333333335%
