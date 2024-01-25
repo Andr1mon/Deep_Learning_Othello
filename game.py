@@ -97,20 +97,18 @@ def start_game(conf):
         # First player1 starts game, and then Player2 starts the other game
         if g:
             conf['player1'], conf['player2'] = conf['player2'], conf['player1']
-        else:
-            data = np.zeros((2,60,8,8))
+        
         #print(conf['player1'])
         #print("VERSUS")
         #print(conf['player2'])
-
+        data = np.zeros((2,60,8,8))
+        k = 0
         board_stat=initialze_board()
-
         moves_log=""
         board_stats_seq=[]
         pass2player=False
 
         while not np.all(board_stat) and not pass2player:
-            k = 0
             NgBlackPsWhith=-1
             board_stats_seq.append(copy.copy(board_stat))
             model = torch.load(conf['player1'],map_location=torch.device('cpu'))
@@ -203,11 +201,13 @@ def start_game(conf):
                                         repeat_delay=1000)   
         ani.save(f"games/game_{g}.gif", writer='imagemagick', fps=0.8)
         """
-        if g:
-            conf['player1'], conf['player2'] = conf['player2'], conf['player1']
-            conf['games'] += 2
         with h5py.File(f"AI_dataset/{str(datetime.now()).replace('.','-').replace(':','-')}.h5", 'w') as h5f:
             h5f.create_dataset('dataset', data=data)
+            for i in range (60):
+                np.savetxt(f"AI_dataset_status/{str(datetime.now()).replace('.','-').replace(':','-')}.txt", data[0][i])
+                np.savetxt(f"AI_dataset_moves/{str(datetime.now()).replace('.','-').replace(':','-')}.txt", data[1][i])
+    conf['player1'], conf['player2'] = conf['player2'], conf['player1']
+    conf['games'] += 2
 
         
     
@@ -219,8 +219,8 @@ else:
 
 conf={}
 for dropout1 in [0.1, 0.3, 0.5, 0.7]:
-    for model1 in ["LSTM", "MLP"]:
-        for optimizer1 in [ "Adam", "RMSprop", "SGD", "Adadelta", "Adagrad"]:
+    for model1 in ["MLP", "LSTM"]:
+        for optimizer1 in ["Adam", "RMSprop", "SGD", "Adadelta", "Adagrad"]:
             for learning_rate1 in [0.0001, 0.001, 0.01, 0.1, 1]:
                 for batch_size1 in [100, 1000, 5000, 15000, 30000]:
                     for epoch1 in [50, 100, 200, 300, 500]:
@@ -252,6 +252,7 @@ for dropout1 in [0.1, 0.3, 0.5, 0.7]:
                                                                                             continue
                                                                                         conf['player2']=path_to_model+'//'+os.listdir(path_to_model)[0]
                                                                                         start_game(conf)
+                                                                                        print(conf['games'], conf['wins'])
                                                                 elif (model2 == "LSTM"):
                                                                     for hidden_dim2 in [96, 128, 192, 256]:
                                                                         for activation_function2 in ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]:
@@ -261,6 +262,11 @@ for dropout1 in [0.1, 0.3, 0.5, 0.7]:
                                                                             conf['player2']=path_to_model+'//'+os.listdir(path_to_model)[0]
                                                                             start_game(conf)
                                         print(f"Games: {conf['games']}\nWins: {conf['wins']}\nWinrate: {100*conf['wins']/conf['games']}%")
+                                        """
+                                        f = open(f'{path_to_model} description.txt', 'a', encoding='utf-8')
+                                        f.write(f"\nWinrate: {100*conf['wins']/conf['games']}%")
+                                        f.close()
+                                        """
                         elif (model1 == "LSTM"):
                             for hidden_dim1 in [96, 128, 192, 256]:
                                 for activation_function1 in ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]:
@@ -270,6 +276,7 @@ for dropout1 in [0.1, 0.3, 0.5, 0.7]:
                                     conf['games']=0
                                     conf['wins']=0
                                     conf['player1']=path_to_model+'//'+os.listdir(path_to_model)[0]
+                                    print(conf['player1'])
                                     for dropout2 in [0.1, 0.3, 0.5, 0.7]:
                                         for model2 in ["LSTM", "MLP"]:
                                                 for optimizer2 in [ "Adam", "RMSprop", "SGD", "Adadelta", "Adagrad"]:
@@ -296,6 +303,10 @@ for dropout1 in [0.1, 0.3, 0.5, 0.7]:
                                                                             conf['player2']=path_to_model+'//'+os.listdir(path_to_model)[0]
                                                                             start_game(conf)
                                     print(f"Games: {conf['games']}\nWins: {conf['wins']}\nWinrate: {100*conf['wins']/conf['games']}%")
-
+                                    """
+                                    f = open(f'{path_to_model} description.txt', 'a', encoding='utf-8')
+                                    f.write(f"\nWinrate: {100*conf['wins']/conf['games']}%")
+                                    f.close()
+                                    """
 
 

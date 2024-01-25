@@ -1,21 +1,17 @@
 import torch
-import torch.nn as nn
 from torch.utils.data import Dataset,DataLoader
 from torch.nn.utils.rnn import pad_sequence
-
-import pandas as pd
+import random
 import numpy as np
 import os
-import sys
 import h5py
-import json
 from tqdm import tqdm
 from datetime import datetime
 import h5py
 import copy
 
 from utile import has_tile_to_flip, isBlackWinner, initialze_board, BOARD_SIZE
-from networks_e2205046 import MLP, LSTMs
+from networks_e2205046 import MLP
 
 
 class SampleManager():
@@ -180,14 +176,31 @@ class CustomDataset(Dataset):
             
         return features,y,self.len_samples
 
-for dropout in [0.1, 0.3, 0.5, 0.7]:
-    for optimizer in [ "Adam", "RMSprop", "SGD", "Adadelta", "Adagrad"]:
-        for learning_rate in [0.0001, 0.001, 0.01, 0.1, 1]:
-            for batch_size in [100, 1000, 5000, 15000, 30000]:
-                for epoch in [50, 100, 200, 300, 500]:
-                    for hidden_dim_1 in [96, 128, 192, 256]:
-                        for hidden_dim_2 in [96, 128, 192, 256]:
-                            for activation_function in ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]:
+dropout_list = [0.1, 0.3, 0.5, 0.7]
+optimizer_list = [ "Adam", "SGD", "RMSprop", "Adagrad", "Adadelta"]
+learning_rate_list = [0.0001, 0.001, 0.01, 0.1, 1]
+batch_size_list = [100, 1000, 5000, 15000, 30000]
+epoch_list = [50, 100, 200, 300, 500]
+hidden_dim_1_list = [96, 128, 192, 256]
+hidden_dim_2_list = [96, 128, 192, 256]
+activation_function_list = ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]
+random.shuffle(dropout_list)
+random.shuffle(optimizer_list)
+random.shuffle(learning_rate_list)
+random.shuffle(batch_size_list)
+random.shuffle(epoch_list)
+random.shuffle(hidden_dim_1_list)
+random.shuffle(hidden_dim_2_list)
+random.shuffle(activation_function_list)
+
+for dropout in dropout_list:
+    for optimizer in optimizer_list:
+        for learning_rate in learning_rate_list:
+            for batch_size in batch_size_list:
+                for epoch in epoch_list:
+                    for hidden_dim_1 in hidden_dim_1_list:
+                        for hidden_dim_2 in hidden_dim_2_list:
+                            for activation_function in activation_function_list:
                                 conf={}
                                 conf["path_save"]=f"saved_models/Dropout {dropout}/MLP/{optimizer}/Learnings rate {learning_rate}/Batch size {batch_size}/Epoch {epoch}/{hidden_dim_1} {hidden_dim_2} {activation_function}"
 
@@ -277,4 +290,3 @@ for dropout in [0.1, 0.3, 0.5, 0.7]:
 # f.write(f"Accuracy Train: {round(100*acc_train,2)}%")   
 # f.write("\n")
 # f.close()
-
