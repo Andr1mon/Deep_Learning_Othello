@@ -56,3 +56,8 @@ epoch: 19/300 - loss = 4.163392082762323
 Accuracy Train: 2.23%, Dev: 2.14% ; Time: 198 (last_train: 5sec, last_pred: 5sec)
 *************** The best score on DEV 18: 2.193%
 epoch: 20/300 - loss = 4.163155068350101
+Accuracy Train: 2.21%, Dev: 2.16% ; Time: 210 (last_train: 6sec, last_pred: 6sec)
+*************** The best score on DEV 18: 2.193%
+epoch: 21/300 - loss = 4.162785472132224
+Accuracy Train: 2.25%, Dev: 2.24% ; Time: 221 (last_train: 5sec, last_pred: 6sec)
+*************** The best score on DEV 21: 2.237%
