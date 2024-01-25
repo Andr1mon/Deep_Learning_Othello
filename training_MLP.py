@@ -185,8 +185,8 @@ for dropout in [0.1, 0.3, 0.5, 0.7]:
         for learning_rate in [0.0001, 0.001, 0.01, 0.1, 1]:
             for batch_size in [100, 1000, 5000, 15000, 30000]:
                 for epoch in [50, 100, 200, 300, 500]:
-                    for hidden_dim_1 in [128, 256]:
-                        for hidden_dim_2 in [128, 256]:
+                    for hidden_dim_1 in [96, 128, 192, 256]:
+                        for hidden_dim_2 in [96, 128, 192, 256]:
                             for activation_function in ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]:
                                 conf={}
                                 conf["path_save"]=f"saved_models/Dropout {dropout}/MLP/{optimizer}/Learnings rate {learning_rate}/Batch size {batch_size}/Epoch {epoch}/{hidden_dim_1} {hidden_dim_2} {activation_function}"
@@ -199,6 +199,7 @@ for dropout in [0.1, 0.3, 0.5, 0.7]:
                                     #device = torch.device("cpu")
                                 else:
                                     device = torch.device("cpu")
+                                print(conf['path_save'])
                                 print('Running on ' + str(device))
                                 
 

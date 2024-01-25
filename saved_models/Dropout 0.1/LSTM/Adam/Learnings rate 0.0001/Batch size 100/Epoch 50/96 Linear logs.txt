@@ -1,0 +1,36 @@
+epoch: 1/50 - loss = 4.1425764098689
+Accuracy Train: 7.2%, Dev: 6.95% ; Time: 40 (last_train: 24, last_pred: 16)
+*************** The best score on DEV 1: 6.947%
+epoch: 2/50 - loss = 4.108849372683731
+Accuracy Train: 9.27%, Dev: 8.72% ; Time: 83 (last_train: 27, last_pred: 16)
+*************** The best score on DEV 2: 8.72%
+epoch: 3/50 - loss = 4.095210270905482
+Accuracy Train: 10.16%, Dev: 9.36% ; Time: 124 (last_train: 25, last_pred: 16)
+*************** The best score on DEV 3: 9.363%
+epoch: 4/50 - loss = 4.086730998598953
+Accuracy Train: 10.85%, Dev: 9.92% ; Time: 166 (last_train: 26, last_pred: 17)
+*************** The best score on DEV 4: 9.917%
+epoch: 5/50 - loss = 4.0808461936959155
+Accuracy Train: 11.26%, Dev: 10.36% ; Time: 211 (last_train: 27, last_pred: 18)
+*************** The best score on DEV 5: 10.363%
+epoch: 6/50 - loss = 4.0765501526181795
+Accuracy Train: 11.58%, Dev: 10.78% ; Time: 255 (last_train: 26, last_pred: 18)
+*************** The best score on DEV 6: 10.78%
+epoch: 7/50 - loss = 4.072926824189503
+Accuracy Train: 11.98%, Dev: 10.96% ; Time: 299 (last_train: 27, last_pred: 17)
+*************** The best score on DEV 7: 10.957%
+epoch: 8/50 - loss = 4.069672714267288
+Accuracy Train: 12.26%, Dev: 11.11% ; Time: 345 (last_train: 28, last_pred: 18)
+*************** The best score on DEV 8: 11.11%
+epoch: 9/50 - loss = 4.066816514627858
+Accuracy Train: 12.5%, Dev: 11.29% ; Time: 388 (last_train: 25, last_pred: 18)
+*************** The best score on DEV 9: 11.293%
+epoch: 10/50 - loss = 4.063957108980016
+Accuracy Train: 12.88%, Dev: 11.5% ; Time: 438 (last_train: 31, last_pred: 19)
+*************** The best score on DEV 10: 11.503%
+epoch: 11/50 - loss = 4.061260284681177
+Accuracy Train: 13.11%, Dev: 11.67% ; Time: 479 (last_train: 25, last_pred: 16)
+*************** The best score on DEV 11: 11.667%
+epoch: 12/50 - loss = 4.058704014158064
+Accuracy Train: 13.34%, Dev: 11.82% ; Time: 522 (last_train: 26, last_pred: 16)
+*************** The best score on DEV 12: 11.823%

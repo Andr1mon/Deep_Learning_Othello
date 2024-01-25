@@ -7,8 +7,8 @@ for dropout in [0.1, 0.3, 0.5, 0.7]:
     for optimizer in ["SGD", "Adam", "RMSprop", "Adagrad", "Adadelta"]:
         for learning_rate in [0.0001, 0.001, 0.01, 0.1, 1]:
             for batch_size in [100, 1000, 5000, 15000, 30000]:
-                for epoch in [50, 100, 200, 500]:
-                    for hidden_dim in [128, 256]:
+                for epoch in [50, 100, 200, 300, 500]:
+                    for hidden_dim in [96, 128, 192, 256]:
                         for activation_function in ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]:
                             conf={}
                             conf["path_save"]=f"saved_models/Dropout {dropout}/LSTM/{optimizer}/Learnings rate {learning_rate}/Batch size {batch_size}/Epoch {epoch}/{hidden_dim} {activation_function}"
@@ -38,8 +38,8 @@ for dropout in [0.1, 0.3, 0.5, 0.7]:
                                     print("LOST ERROR")
                                     print(conf["path_save"])  
                                 f.close()
-                    for hidden_dim_1 in [128, 256]:
-                        for hidden_dim_2 in [128, 256]:
+                    for hidden_dim_1 in [96, 128, 192, 256]:
+                        for hidden_dim_2 in [96, 128, 192, 256]:
                             for activation_function in ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]:
                                 conf={}
                                 conf["path_save"]=f"saved_models/Dropout {dropout}/MLP/{optimizer}/Learnings rate {learning_rate}/Batch size {batch_size}/Epoch {epoch}/{hidden_dim_1} {hidden_dim_2} {activation_function}"
@@ -48,6 +48,7 @@ for dropout in [0.1, 0.3, 0.5, 0.7]:
                                         print("LOST ERROR")
                                         print(conf["path_save"])
                                     if (len(os.listdir(conf["path_save"])) > 1):
+                                        print("MODELS WARNING")
                                         print(conf["path_save"])
                                     if (len(os.listdir(conf["path_save"])) == 0):
                                         print("EMPTY ERROR")
