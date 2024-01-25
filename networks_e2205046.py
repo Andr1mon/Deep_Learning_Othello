@@ -47,7 +47,6 @@ class MLP(nn.Module):
 
 
 
-
         # Define the layers of the MLP
         self.lin1 = nn.Linear(self.board_size*self.board_size, self.hidden_dim_1) # self.lin1 = nn.Linear(self.board_size*self.board_size, 128)
         self.lin2 = nn.Linear(self.hidden_dim_1, self.hidden_dim_2)
@@ -60,7 +59,7 @@ class MLP(nn.Module):
         elif (self.activation_function == "Leaky ReLU"):
             self.act_function = nn.LeakyReLU()
         self.lin3 = nn.Linear(self.hidden_dim_2, self.board_size*self.board_size) # self.lin3 = nn.Linear(128, self.board_size*self.board_size)
-        self.dropout = nn.Dropout(p=0.1)
+        self.dropout = nn.Dropout(p=conf["dropout"])
         
     def forward(self, seq):
         """
@@ -230,9 +229,8 @@ class LSTMs(nn.Module):
             self.act_function = nn.Tanh()
         elif (self.activation_function == "Leaky ReLU"):
             self.act_function = nn.LeakyReLU()
-
         self.hidden2output = nn.Linear(self.hidden_dim, self.board_size*self.board_size) # self.hidden2output = nn.Linear(self.hidden_dim, self.board_size*self.board_size)
-        self.dropout = nn.Dropout(p=0.1)
+        self.dropout = nn.Dropout(p=conf["dropout"])
 
     def forward(self, seq):
         """

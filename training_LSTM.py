@@ -86,7 +86,6 @@ class CustomDataset(Dataset):
             for gm_idx,gm_name in tqdm(enumerate(self.game_files_name)):
                 h5f = h5py.File(self.path_dataset+gm_name,'r')
                 game_log = np.array(h5f[gm_name.replace(".h5","")][:])
-                print(game_log)
                 h5f.close()
                 last_board_state=copy.copy(game_log[0][-1])
                 is_black_winner=isBlackWinner(game_log[1][-1],last_board_state)
@@ -181,87 +180,90 @@ class CustomDataset(Dataset):
             y=np.array(game_log[1][self.samples[idx].end_move]).flatten()
             
         return features,y,self.len_samples
-for optimizer in [ "Adam", "SGD", "RMSprop", "Adagrad", "Adadelta"]:
-    for learning_rate in [0.0001, 0.001, 0.01, 0.1, 1]:
-        for batch_size in [100, 1000, 5000, 15000, 30000]:
-            for epoch in [50, 100, 200, 500]:
-                for hidden_dim in [128, 256]:
-                    for activation_function in ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]:
-                        conf={}
-                        conf["path_save"]=f"saved_models/LSTM/{optimizer}/Learnings rate {learning_rate}/Batch size {batch_size}/Epoch {epoch}/{hidden_dim} {activation_function}"
+    
+for dropout in [0.1, 0.3, 0.5, 0.7]:
+    for optimizer in [ "Adam", "SGD", "RMSprop", "Adagrad", "Adadelta"]:
+        for learning_rate in [0.0001, 0.001, 0.01, 0.1, 1]:
+            for batch_size in [100, 1000, 5000, 15000, 30000]:
+                for epoch in [50, 100, 200, 500]:
+                    for hidden_dim in [128, 256]:
+                        for activation_function in ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]:
+                            conf={}
+                            conf["path_save"]=f"saved_models/Dropout {dropout}/LSTM/{optimizer}/Learnings rate {learning_rate}/Batch size {batch_size}/Epoch {epoch}/{hidden_dim} {activation_function}"
 
 
-                        if os.path.exists(conf["path_save"]):
-                            continue
+                            if os.path.exists(conf["path_save"]):
+                                continue
 
-                        if torch.cuda.is_available():
-                            #device = torch.device("cuda:0")
-                            device = torch.device("cpu")
-                        else:
-                            device = torch.device("cpu")
-                        print('Running on ' + str(device))
+                            if torch.cuda.is_available():
+                                #device = torch.device("cuda:0")
+                                device = torch.device("cpu")
+                            else:
+                                device = torch.device("cpu")
+                            print('Running on ' + str(device))
 
-                        len_samples=5 # Could be modified?
+                            len_samples=5 # Could be modified?
 
-                        dataset_conf={}  
-                        # self.filelist : a list of all games for train/dev/test
-                        dataset_conf["filelist"]="train.txt"
-                        #len_samples is 1 for one2one but it can be more than 1 for seq2one modeling
-                        dataset_conf["len_samples"]=len_samples
-                        dataset_conf["path_dataset"]="./dataset/"
-                        dataset_conf['batch_size']=batch_size
+                            dataset_conf={}  
+                            # self.filelist : a list of all games for train/dev/test
+                            dataset_conf["filelist"]="train.txt"
+                            #len_samples is 1 for one2one but it can be more than 1 for seq2one modeling
+                            dataset_conf["len_samples"]=len_samples
+                            dataset_conf["path_dataset"]="./dataset/"
+                            dataset_conf['batch_size']=batch_size
 
-                        print("Training Dataset... ")
-                        ds_train = CustomDataset(dataset_conf)
-                        trainSet = DataLoader(ds_train, batch_size=dataset_conf['batch_size']) # shuffle = True - Could be modified? For the best model
+                            print("Training Dataset... ")
+                            ds_train = CustomDataset(dataset_conf)
+                            trainSet = DataLoader(ds_train, batch_size=dataset_conf['batch_size']) # shuffle = True - Could be modified? For the best model
 
-                        dataset_conf={}  
-                        # self.filelist : a list of all games for train/dev/test
-                        dataset_conf["filelist"]="dev.txt"
-                        #len_samples is 1 for one2one but it can be more than 1 for seq2one modeling
-                        dataset_conf["len_samples"]=len_samples
-                        dataset_conf["path_dataset"]="./dataset/"
-                        dataset_conf['batch_size']=batch_size
+                            dataset_conf={}  
+                            # self.filelist : a list of all games for train/dev/test
+                            dataset_conf["filelist"]="dev.txt"
+                            #len_samples is 1 for one2one but it can be more than 1 for seq2one modeling
+                            dataset_conf["len_samples"]=len_samples
+                            dataset_conf["path_dataset"]="./dataset/"
+                            dataset_conf['batch_size']=batch_size
 
-                        print("Development Dataset... ")
-                        ds_dev = CustomDataset(dataset_conf)
-                        devSet = DataLoader(ds_dev, batch_size=dataset_conf['batch_size'])
+                            print("Development Dataset... ")
+                            ds_dev = CustomDataset(dataset_conf)
+                            devSet = DataLoader(ds_dev, batch_size=dataset_conf['batch_size'])
 
-                        conf["board_size"]=BOARD_SIZE
-                        conf['epoch']=epoch
-                        conf["earlyStopping"]=int(epoch/10)
-                        conf["len_inpout_seq"]=len_samples
-                        conf["LSTM_conf"]={}
-                        conf["LSTM_conf"]["hidden_dim"]=hidden_dim
-                        conf["activation_function"]=activation_function
+                            conf["board_size"]=BOARD_SIZE
+                            conf['epoch']=epoch
+                            conf["earlyStopping"]=int(epoch/10)
+                            conf["len_inpout_seq"]=len_samples
+                            conf["LSTM_conf"]={}
+                            conf["LSTM_conf"]["hidden_dim"]=hidden_dim
+                            conf["activation_function"]=activation_function
+                            conf["dropout"]=dropout
 
-                        model = LSTMs(conf).to(device)
-                        if (optimizer == "Adam"):
-                            opt = torch.optim.Adam(model.parameters(), lr=learning_rate)
-                        elif (optimizer == "SGD"):
-                            opt = torch.optim.SGD(model.parameters(), lr=learning_rate)
-                        elif (optimizer == "Adagrad"):
-                            opt = torch.optim.Adagrad(model.parameters(), lr=learning_rate)
-                        elif (optimizer == "Adadelta"):
-                            opt = torch.optim.Adadelta(model.parameters(), lr=learning_rate)
-                        elif (optimizer == "RMSprop"):
-                            opt = torch.optim.RMSprop(model.parameters(), lr=learning_rate)
+                            model = LSTMs(conf).to(device)
+                            if (optimizer == "Adam"):
+                                opt = torch.optim.Adam(model.parameters(), lr=learning_rate)
+                            elif (optimizer == "SGD"):
+                                opt = torch.optim.SGD(model.parameters(), lr=learning_rate)
+                            elif (optimizer == "Adagrad"):
+                                opt = torch.optim.Adagrad(model.parameters(), lr=learning_rate)
+                            elif (optimizer == "Adadelta"):
+                                opt = torch.optim.Adadelta(model.parameters(), lr=learning_rate)
+                            elif (optimizer == "RMSprop"):
+                                opt = torch.optim.RMSprop(model.parameters(), lr=learning_rate)
 
-                        def count_parameters(model):
-                            return sum(p.numel() for p in model.parameters() if p.requires_grad)
+                            def count_parameters(model):
+                                return sum(p.numel() for p in model.parameters() if p.requires_grad)
 
-                        n = count_parameters(model)
+                            n = count_parameters(model)
 
-                        print("Number of parameters: %s" % n)
-                        os.makedirs(conf["path_save"], exist_ok=True)
-                        f = open(f'{conf["path_save"]+" description"}.txt', 'a', encoding='utf-8')
-                        f.write(f"Model: LSTM\nOptimizer: {optimizer}\nLearning rate: {learning_rate}\nHidden dimension layer: {hidden_dim}\nBatch size: {batch_size}\nEpoch: {epoch}\nEarlystopping: {int(epoch/10)}\nNumber of parameters: {n}\nThe best score on DEV : ")
-                        f.close()
+                            print("Number of parameters: %s" % n)
+                            os.makedirs(conf["path_save"], exist_ok=True)
+                            f = open(f'{conf["path_save"]+" description"}.txt', 'a', encoding='utf-8')
+                            f.write(f"Model: LSTM\nOptimizer: {optimizer}\nLearning rate: {learning_rate}\nHidden dimension layer: {hidden_dim}\nBatch size: {batch_size}\nEpoch: {epoch}\nEarlystopping: {int(epoch/10)}\nNumber of parameters: {n}\nThe best score on DEV : ")
+                            f.close()
 
-                        best_epoch=model.train_all(trainSet,
-                                            devSet,
-                                            conf['epoch'],
-                                            device, opt)
+                            best_epoch=model.train_all(trainSet,
+                                                devSet,
+                                                conf['epoch'],
+                                                device, opt)
 
 
     # model = torch.load(conf["path_save"] + '/model_2.pt')
