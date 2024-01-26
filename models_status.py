@@ -79,9 +79,9 @@ for dropout in [0.1, 0.3, 0.5, 0.7]:
 
 
 print("****************************************************************************")
-print("The best MLP model winrate: %.2f" % max_MLP + "%")
+print("The best MLP accuracy on DEV: %.2f" % max_MLP + "%")
 print(path_max_MLP)
-print("The best LSTM model winrate: %.2f" % max_LSTM + "%")
+print("The best LSTM accuracy on DEV: %.2f" % max_LSTM + "%")
 print(path_max_LSTM)
 print("****************************************************************************")
 print(f"Total: {total} Done: {done}")
