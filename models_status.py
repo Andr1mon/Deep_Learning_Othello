@@ -57,6 +57,7 @@ for dropout in [0.1, 0.3, 0.5, 0.7]:
                                                     plt.legend(('Train', 'Validation'), shadow=True)
                                                     plt.title('Training and Validation Accuracy')
                                                     plt.savefig(f"{conf['path_save']} curve.png")
+                                                    plt.clf()
                                                     #plt.show()
                             if (os.path.exists(conf["path_save"]+" description.txt")):
                                 if (not os.path.exists(conf["path_save"])):
@@ -109,6 +110,7 @@ for dropout in [0.1, 0.3, 0.5, 0.7]:
                                                     plt.legend(('Train', 'Validation'), shadow=True)
                                                     plt.title('Training and Validation Accuracy')
                                                     plt.savefig(f"{conf['path_save']} curve.png")
+                                                    plt.clf()
                                                     #plt.show()
                                                         
                                                 
