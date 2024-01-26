@@ -1,0 +1,36 @@
+epoch: 1/50 - loss = 4.155498033070432
+Accuracy Train: 3.13%, Dev: 3.01% ; Time: 5 (last_train: 2sec, last_pred: 2sec)
+*************** The best score on DEV 1: 3.007%
+epoch: 2/50 - loss = 4.158716059521417
+Accuracy Train: 2.29%, Dev: 2.19% ; Time: 10 (last_train: 3sec, last_pred: 2sec)
+*************** The best score on DEV 1: 3.007%
+epoch: 3/50 - loss = 4.162843427605392
+Accuracy Train: 2.27%, Dev: 2.22% ; Time: 15 (last_train: 2sec, last_pred: 3sec)
+*************** The best score on DEV 1: 3.007%
+epoch: 4/50 - loss = 4.161612610790611
+Accuracy Train: 2.29%, Dev: 2.35% ; Time: 20 (last_train: 2sec, last_pred: 3sec)
+*************** The best score on DEV 1: 3.007%
+epoch: 5/50 - loss = 4.159233217081312
+Accuracy Train: 2.82%, Dev: 2.93% ; Time: 25 (last_train: 3sec, last_pred: 2sec)
+*************** The best score on DEV 1: 3.007%
+epoch: 6/50 - loss = 4.152081518542042
+Accuracy Train: 3.74%, Dev: 3.62% ; Time: 30 (last_train: 3sec, last_pred: 3sec)
+*************** The best score on DEV 6: 3.62%
+epoch: 7/50 - loss = 4.148019150475771
+Accuracy Train: 3.62%, Dev: 3.59% ; Time: 36 (last_train: 2sec, last_pred: 3sec)
+*************** The best score on DEV 6: 3.62%
+epoch: 8/50 - loss = 4.153937281824607
+Accuracy Train: 2.83%, Dev: 2.86% ; Time: 41 (last_train: 3sec, last_pred: 2sec)
+*************** The best score on DEV 6: 3.62%
+epoch: 9/50 - loss = 4.156614804136161
+Accuracy Train: 2.87%, Dev: 2.94% ; Time: 46 (last_train: 3sec, last_pred: 2sec)
+*************** The best score on DEV 6: 3.62%
+epoch: 10/50 - loss = 4.157681365039467
+Accuracy Train: 2.7%, Dev: 2.76% ; Time: 51 (last_train: 2sec, last_pred: 3sec)
+*************** The best score on DEV 6: 3.62%
+epoch: 11/50 - loss = 4.158226803521425
+Accuracy Train: 2.56%, Dev: 2.56% ; Time: 56 (last_train: 2sec, last_pred: 2sec)
+*************** The best score on DEV 6: 3.62%
+epoch: 12/50 - loss = 4.160016947688319
+Accuracy Train: 2.31%, Dev: 2.23% ; Time: 61 (last_train: 3sec, last_pred: 2sec)
+Recalculing the best DEV: WAcc: 3.62%
