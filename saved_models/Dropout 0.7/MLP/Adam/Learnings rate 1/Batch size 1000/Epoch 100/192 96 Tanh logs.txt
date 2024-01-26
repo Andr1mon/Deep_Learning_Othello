@@ -1,0 +1,39 @@
+epoch: 1/100 - loss = 4.158436675098061
+Accuracy Train: 2.58%, Dev: 2.57% ; Time: 12 (last_train: 6sec, last_pred: 6sec)
+*************** The best score on DEV 1: 2.57%
+epoch: 2/100 - loss = 4.155118043910074
+Accuracy Train: 3.0%, Dev: 3.06% ; Time: 24 (last_train: 6sec, last_pred: 6sec)
+*************** The best score on DEV 2: 3.06%
+epoch: 3/100 - loss = 4.159171934285875
+Accuracy Train: 2.29%, Dev: 2.26% ; Time: 39 (last_train: 7sec, last_pred: 8sec)
+*************** The best score on DEV 2: 3.06%
+epoch: 4/100 - loss = 4.165612824055371
+Accuracy Train: 1.95%, Dev: 1.85% ; Time: 53 (last_train: 7sec, last_pred: 7sec)
+*************** The best score on DEV 2: 3.06%
+epoch: 5/100 - loss = 4.164940583771764
+Accuracy Train: 2.11%, Dev: 2.11% ; Time: 67 (last_train: 7sec, last_pred: 7sec)
+*************** The best score on DEV 2: 3.06%
+epoch: 6/100 - loss = 4.16412128796235
+Accuracy Train: 2.02%, Dev: 2.0% ; Time: 81 (last_train: 7sec, last_pred: 7sec)
+*************** The best score on DEV 2: 3.06%
+epoch: 7/100 - loss = 4.165720151932859
+Accuracy Train: 1.92%, Dev: 1.96% ; Time: 95 (last_train: 6sec, last_pred: 7sec)
+*************** The best score on DEV 2: 3.06%
+epoch: 8/100 - loss = 4.164658385745728
+Accuracy Train: 1.99%, Dev: 1.99% ; Time: 109 (last_train: 7sec, last_pred: 7sec)
+*************** The best score on DEV 2: 3.06%
+epoch: 9/100 - loss = 4.164374941620379
+Accuracy Train: 2.16%, Dev: 2.24% ; Time: 123 (last_train: 6sec, last_pred: 7sec)
+*************** The best score on DEV 2: 3.06%
+epoch: 10/100 - loss = 4.162838785687863
+Accuracy Train: 2.33%, Dev: 2.26% ; Time: 137 (last_train: 7sec, last_pred: 7sec)
+*************** The best score on DEV 2: 3.06%
+epoch: 11/100 - loss = 4.162181298377106
+Accuracy Train: 2.39%, Dev: 2.17% ; Time: 151 (last_train: 6sec, last_pred: 7sec)
+*************** The best score on DEV 2: 3.06%
+epoch: 12/100 - loss = 4.162322544919852
+Accuracy Train: 2.34%, Dev: 2.14% ; Time: 165 (last_train: 7sec, last_pred: 8sec)
+*************** The best score on DEV 2: 3.06%
+epoch: 13/100 - loss = 4.161876860244498
+Accuracy Train: 2.31%, Dev: 2.06% ; Time: 178 (last_train: 6sec, last_pred: 7sec)
+Recalculing the best DEV: WAcc: 3.06%
