@@ -1,0 +1,9 @@
+Model: LSTM
+Optimizer: Adadelta
+Learning rate: 0.001
+Hidden dimension layer: 96
+Batch size: 30000
+Epoch: 50
+Earlystopping: 5
+Number of parameters: 68416
+The best score on DEV : 1.41%

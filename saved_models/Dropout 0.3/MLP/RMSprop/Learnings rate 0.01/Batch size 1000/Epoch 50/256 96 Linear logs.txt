@@ -1,0 +1,36 @@
+epoch: 1/50 - loss = 4.161546788821563
+Accuracy Train: 2.56%, Dev: 2.71% ; Time: 6 (last_train: 3sec, last_pred: 3sec)
+*************** The best score on DEV 1: 2.707%
+epoch: 2/50 - loss = 4.161525123027149
+Accuracy Train: 2.61%, Dev: 2.72% ; Time: 11 (last_train: 2sec, last_pred: 3sec)
+*************** The best score on DEV 2: 2.72%
+epoch: 3/50 - loss = 4.162960281688205
+Accuracy Train: 2.18%, Dev: 2.35% ; Time: 17 (last_train: 3sec, last_pred: 3sec)
+*************** The best score on DEV 2: 2.72%
+epoch: 4/50 - loss = 4.162046711747817
+Accuracy Train: 2.54%, Dev: 2.74% ; Time: 22 (last_train: 2sec, last_pred: 3sec)
+*************** The best score on DEV 4: 2.743%
+epoch: 5/50 - loss = 4.160176840934964
+Accuracy Train: 2.46%, Dev: 2.68% ; Time: 28 (last_train: 3sec, last_pred: 3sec)
+*************** The best score on DEV 4: 2.743%
+epoch: 6/50 - loss = 4.159032840096489
+Accuracy Train: 2.59%, Dev: 2.78% ; Time: 33 (last_train: 2sec, last_pred: 3sec)
+*************** The best score on DEV 6: 2.783%
+epoch: 7/50 - loss = 4.159481198748172
+Accuracy Train: 2.51%, Dev: 2.76% ; Time: 39 (last_train: 3sec, last_pred: 3sec)
+*************** The best score on DEV 6: 2.783%
+epoch: 8/50 - loss = 4.159943101155823
+Accuracy Train: 2.4%, Dev: 2.65% ; Time: 44 (last_train: 3sec, last_pred: 3sec)
+*************** The best score on DEV 6: 2.783%
+epoch: 9/50 - loss = 4.162081626238744
+Accuracy Train: 2.05%, Dev: 2.28% ; Time: 50 (last_train: 3sec, last_pred: 3sec)
+*************** The best score on DEV 6: 2.783%
+epoch: 10/50 - loss = 4.162651952459009
+Accuracy Train: 2.39%, Dev: 2.61% ; Time: 56 (last_train: 2sec, last_pred: 3sec)
+*************** The best score on DEV 6: 2.783%
+epoch: 11/50 - loss = 4.161262456883383
+Accuracy Train: 2.44%, Dev: 2.69% ; Time: 62 (last_train: 3sec, last_pred: 3sec)
+*************** The best score on DEV 6: 2.783%
+epoch: 12/50 - loss = 4.161102057820526
+Accuracy Train: 2.41%, Dev: 2.68% ; Time: 67 (last_train: 2sec, last_pred: 3sec)
+Recalculing the best DEV: WAcc: 2.7833333333333337%

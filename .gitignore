@@ -172,3 +172,7 @@ cython_debug/
 
 # Built Visual Studio Code Extensions
 *.vsix
+
+/AI_dataset_moves
+/AI_dataset_status
+/AI_dataset

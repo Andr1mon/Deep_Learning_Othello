@@ -97,20 +97,18 @@ def start_game(conf):
         # First player1 starts game, and then Player2 starts the other game
         if g:
             conf['player1'], conf['player2'] = conf['player2'], conf['player1']
-        else:
-            data = np.zeros((2,60,8,8))
-        print(conf['player1'])
-        print("VERSUS")
-        print(conf['player2'])
-
+        
+        #print(conf['player1'])
+        #print("VERSUS")
+        #print(conf['player2'])
+        data = np.zeros((2,60,8,8))
+        k = 0
         board_stat=initialze_board()
-
         moves_log=""
         board_stats_seq=[]
         pass2player=False
 
         while not np.all(board_stat) and not pass2player:
-
             NgBlackPsWhith=-1
             board_stats_seq.append(copy.copy(board_stat))
             model = torch.load(conf['player1'],map_location=torch.device('cpu'))
@@ -127,15 +125,18 @@ def start_game(conf):
             if len(legal_moves)>0:
                 
                 best_move=find_best_move(move1_prob,legal_moves)
-                print(f"Black: {best_move} < from possible move {legal_moves}")
-                data[1][len(board_stats_seq)-1][best_move[0]][best_move[1]] = 1
+                #print(f"Black: {best_move} < from possible move {legal_moves}")
+                data[0][k]=board_stat
+                data[1][k][best_move[0]][best_move[1]] = 1
+                k+=1
                 board_stat[best_move[0],best_move[1]]=NgBlackPsWhith
                 moves_log+=str(best_move[0]+1)+str(best_move[1]+1)
                 
                 board_stat=apply_flip(best_move,board_stat,NgBlackPsWhith)
-
+                
+                
             else:
-                print("Black pass")
+                #print("Black pass")
                 if moves_log[-2:]=="__":
                     pass2player=True
                 moves_log+="__"
@@ -159,31 +160,36 @@ def start_game(conf):
             if len(legal_moves)>0:
                 
                 best_move = find_best_move(move1_prob,legal_moves)
-                print(f"White: {best_move} < from possible move {legal_moves}")
-                
+                #print(f"White: {best_move} < from possible move {legal_moves}")
+                data[0][k]=board_stat
+                data[1][k][best_move[0]][best_move[1]] = 1
+                k+=1
                 board_stat[best_move[0],best_move[1]]=NgBlackPsWhith
                 moves_log+=str(best_move[0]+1)+str(best_move[1]+1)
-                
                 board_stat=apply_flip(best_move,board_stat,NgBlackPsWhith)
-
             else:
-                print("White pass")
+                #print("White pass")
                 if moves_log[-2:]=="__":
                     pass2player=True
                 moves_log+="__"
-
         board_stats_seq.append(copy.copy(board_stat))
         
-        print("Moves log:",moves_log)
-
+        #print("Moves log:",moves_log)
+        
+        
         if np.sum(board_stat)<0:
-            print(f"Black {conf['player1']} is winner (with {-1*int(np.sum(board_stat))} points)")
+            #print(f"Black {conf['player1']} is winner (with {-1*int(np.sum(board_stat))} points)")
+            if not g:
+                conf['wins'] += 1
         elif np.sum(board_stat)>0:
-            print(f"White {conf['player2']} is winner (with {int(np.sum(board_stat))} points)")
-        else:
-            print(f"Draw")
+            #print(f"White {conf['player2']} is winner (with {int(np.sum(board_stat))} points)")
+            if g:
+                conf['wins'] += 1
+        #else:
+            #print(f"Draw")
 
         #save game log in gif file
+        """
         fig,ax = plt.subplots()
         ims = []
         for i in range(len(board_stats_seq)):
@@ -195,11 +201,16 @@ def start_game(conf):
         ani = animation.ArtistAnimation(fig, ims, interval=50, blit=True,
                                         repeat_delay=1000)   
         ani.save(f"games/game_{g}.gif", writer='imagemagick', fps=0.8)
-        if g:
-            conf['player1'], conf['player2'] = conf['player2'], conf['player1']
-        data[0]=board_stats_seq[:60]
+        """
         with h5py.File(f"AI_dataset/{str(datetime.now()).replace('.','-').replace(':','-')}.h5", 'w') as h5f:
             h5f.create_dataset('dataset', data=data)
+            """
+            for i in range (60):
+                np.savetxt(f"AI_dataset_status/{str(datetime.now()).replace('.','-').replace(':','-')}.txt", data[0][i])
+                np.savetxt(f"AI_dataset_moves/{str(datetime.now()).replace('.','-').replace(':','-')}.txt", data[1][i])
+            """
+    conf['player1'], conf['player2'] = conf['player2'], conf['player1']
+    conf['games'] += 2
 
         
     
@@ -211,58 +222,94 @@ else:
 
 conf={}
 for dropout1 in [0.1, 0.3, 0.5, 0.7]:
-    for model1 in ["LSTM", "MLP"]:
-        for optimizer1 in [ "Adam", "RMSprop", "SGD", "Adadelta", "Adagrad"]:
+    for model1 in ["MLP", "LSTM"]:
+        for optimizer1 in ["Adam", "RMSprop", "SGD", "Adadelta", "Adagrad"]:
             for learning_rate1 in [0.0001, 0.001, 0.01, 0.1, 1]:
                 for batch_size1 in [100, 1000, 5000, 15000, 30000]:
-                    for epoch1 in [50, 100, 200, 500]:
+                    for epoch1 in [50, 100, 200, 300, 500]:
                         if (model1 == "MLP"):
-                            for hidden_dim_11 in [128, 256]:
-                                for hidden_dim_21 in [128, 256]:
+                            for hidden_dim_11 in [96, 128, 192, 256]:
+                                for hidden_dim_21 in [96, 128, 192, 256]:
                                     for activation_function1 in ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]:
-                                        conf['player1']=f"saved_models/Dropout {dropout1}/MLP/{optimizer1}/Learnings rate {learning_rate1}/Batch size {batch_size1}/Epoch {epoch1}/{hidden_dim_11} {hidden_dim_21} {activation_function1}"+'//'+os.listdir(f"saved_models/Dropout {dropout1}/MLP/{optimizer1}/Learnings rate {learning_rate1}/Batch size {batch_size1}/Epoch {epoch1}/{hidden_dim_11} {hidden_dim_21} {activation_function1}")[0]
+                                        path_to_model = f"saved_models/Dropout {dropout1}/MLP/{optimizer1}/Learnings rate {learning_rate1}/Batch size {batch_size1}/Epoch {epoch1}/{hidden_dim_11} {hidden_dim_21} {activation_function1}"
+                                        if (not os.path.exists(path_to_model)):
+                                            continue
+                                        conf['games']=0
+                                        conf['wins']=0
+                                        conf['player1']=path_to_model+'//'+os.listdir(path_to_model)[0]
+                                        print(conf['player1'])
                                         for dropout2 in [0.1, 0.3, 0.5, 0.7]:
                                             for model2 in ["LSTM", "MLP"]:
                                                 for optimizer2 in [ "Adam", "RMSprop", "SGD", "Adadelta", "Adagrad"]:
                                                     for learning_rate2 in [0.0001, 0.001, 0.01, 0.1, 1]:
                                                         for batch_size2 in [100, 1000, 5000, 15000, 30000]:
-                                                            for epoch2 in [50, 100, 200, 500]:
+                                                            for epoch2 in [50, 100, 200, 300, 500]:
                                                                 if (model2 == "MLP"):
-                                                                    for hidden_dim_12 in [128, 256]:
-                                                                        for hidden_dim_22 in [128, 256]:
+                                                                    for hidden_dim_12 in [96, 128, 192, 256]:
+                                                                        for hidden_dim_22 in [96, 128, 192, 256]:
                                                                             for activation_function2 in ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]:
-                                                                                for hidden_dim2 in [128, 256]:
+                                                                                for hidden_dim2 in [96, 128, 192, 256]:
                                                                                     for activation_function2 in ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]:
-                                                                                        conf['player2']=f"saved_models/Dropout {dropout2}/MLP/{optimizer2}/Learnings rate {learning_rate2}/Batch size {batch_size2}/Epoch {epoch2}/{hidden_dim_12} {hidden_dim_22} {activation_function2}"+'//'+os.listdir(f"saved_models/Dropout {dropout2}/MLP/{optimizer2}/Learnings rate {learning_rate2}/Batch size {batch_size2}/Epoch {epoch2}/{hidden_dim_12} {hidden_dim_22} {activation_function2}")[0]
+                                                                                        path_to_model = f"saved_models/Dropout {dropout2}/MLP/{optimizer2}/Learnings rate {learning_rate2}/Batch size {batch_size2}/Epoch {epoch2}/{hidden_dim_12} {hidden_dim_22} {activation_function2}"
+                                                                                        if (not os.path.exists(path_to_model)):
+                                                                                            continue
+                                                                                        conf['player2']=path_to_model+'//'+os.listdir(path_to_model)[0]
                                                                                         start_game(conf)
+                                                                                        print(conf['games'], conf['wins'])
                                                                 elif (model2 == "LSTM"):
-                                                                    for hidden_dim2 in [128, 256]:
+                                                                    for hidden_dim2 in [96, 128, 192, 256]:
                                                                         for activation_function2 in ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]:
-                                                                            conf['player2']=f"saved_models/Dropout {dropout2}/LSTM/{optimizer2}/Learnings rate {learning_rate2}/Batch size {batch_size2}/Epoch {epoch2}/{hidden_dim2} {activation_function2}"+'//'+os.listdir(f"saved_models/Dropout {dropout2}/LSTM/{optimizer2}/Learnings rate {learning_rate2}/Batch size {batch_size2}/Epoch {epoch2}/{hidden_dim2} {activation_function2}")[0]
+                                                                            path_to_model = f"saved_models/Dropout {dropout2}/LSTM/{optimizer2}/Learnings rate {learning_rate2}/Batch size {batch_size2}/Epoch {epoch2}/{hidden_dim2} {activation_function2}"
+                                                                            if (not os.path.exists(path_to_model)):
+                                                                                continue
+                                                                            conf['player2']=path_to_model+'//'+os.listdir(path_to_model)[0]
                                                                             start_game(conf)
+                                        print(f"Games: {conf['games']}\nWins: {conf['wins']}\nWinrate: {100*conf['wins']/conf['games']}%")
+                                        """
+                                        f = open(f'{path_to_model} description.txt', 'a', encoding='utf-8')
+                                        f.write(f"\nWinrate: {100*conf['wins']/conf['games']}%")
+                                        f.close()
+                                        """
                         elif (model1 == "LSTM"):
-                            for hidden_dim1 in [128, 256]:
+                            for hidden_dim1 in [96, 128, 192, 256]:
                                 for activation_function1 in ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]:
-                                    conf['player1']=f"saved_models/Dropout {dropout1}/LSTM/{optimizer1}/Learnings rate {learning_rate1}/Batch size {batch_size1}/Epoch {epoch1}/{hidden_dim1} {activation_function1}"+'//'+os.listdir(f"saved_models/Dropout {dropout1}/LSTM/{optimizer1}/Learnings rate {learning_rate1}/Batch size {batch_size1}/Epoch {epoch1}/{hidden_dim1} {activation_function1}")[0]
+                                    path_to_model = f"saved_models/Dropout {dropout1}/LSTM/{optimizer1}/Learnings rate {learning_rate1}/Batch size {batch_size1}/Epoch {epoch1}/{hidden_dim1} {activation_function1}"
+                                    if (not os.path.exists(path_to_model)):
+                                        continue
+                                    conf['games']=0
+                                    conf['wins']=0
+                                    conf['player1']=path_to_model+'//'+os.listdir(path_to_model)[0]
+                                    print(conf['player1'])
                                     for dropout2 in [0.1, 0.3, 0.5, 0.7]:
                                         for model2 in ["LSTM", "MLP"]:
                                                 for optimizer2 in [ "Adam", "RMSprop", "SGD", "Adadelta", "Adagrad"]:
                                                     for learning_rate2 in [0.0001, 0.001, 0.01, 0.1, 1]:
                                                         for batch_size2 in [100, 1000, 5000, 15000, 30000]:
-                                                            for epoch2 in [50, 100, 200, 500]:
+                                                            for epoch2 in [50, 100, 200, 300, 500]:
                                                                 if (model2 == "MLP"):
-                                                                    for hidden_dim_12 in [128, 256]:
-                                                                        for hidden_dim_22 in [128, 256]:
+                                                                    for hidden_dim_12 in [96, 128, 192, 256]:
+                                                                        for hidden_dim_22 in [96, 128, 192, 256]:
                                                                             for activation_function2 in ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]:
-                                                                                for hidden_dim2 in [128, 256]:
+                                                                                for hidden_dim2 in [96, 128, 192, 256]:
                                                                                     for activation_function2 in ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]:
-                                                                                        conf['player2']=f"saved_models/Dropout {dropout2}/MLP/{optimizer2}/Learnings rate {learning_rate2}/Batch size {batch_size2}/Epoch {epoch2}/{hidden_dim_12} {hidden_dim_22} {activation_function2}"+'//'+os.listdir(f"saved_models/Dropout {dropout2}/MLP/{optimizer2}/Learnings rate {learning_rate2}/Batch size {batch_size2}/Epoch {epoch2}/{hidden_dim_12} {hidden_dim_22} {activation_function2}")[0]
+                                                                                        path_to_model =f"saved_models/Dropout {dropout2}/MLP/{optimizer2}/Learnings rate {learning_rate2}/Batch size {batch_size2}/Epoch {epoch2}/{hidden_dim_12} {hidden_dim_22} {activation_function2}"
+                                                                                        if (not os.path.exists(path_to_model)):
+                                                                                            continue
+                                                                                        conf['player2']=path_to_model+'//'+os.listdir(path_to_model)[0]
                                                                                         start_game(conf)
                                                                 elif (model2 == "LSTM"):
-                                                                    for hidden_dim2 in [128, 256]:
+                                                                    for hidden_dim2 in [96, 128, 192, 256]:
                                                                         for activation_function2 in ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]:
-                                                                            conf['player2']=f"saved_models/Dropout {dropout2}/LSTM/{optimizer2}/Learnings rate {learning_rate2}/Batch size {batch_size2}/Epoch {epoch2}/{hidden_dim2} {activation_function2}"+'//'+os.listdir(f"saved_models/Dropout {dropout2}/LSTM/{optimizer2}/Learnings rate {learning_rate2}/Batch size {batch_size2}/Epoch {epoch2}/{hidden_dim2} {activation_function2}")[0]
+                                                                            path_to_model = f"saved_models/Dropout {dropout2}/LSTM/{optimizer2}/Learnings rate {learning_rate2}/Batch size {batch_size2}/Epoch {epoch2}/{hidden_dim2} {activation_function2}"
+                                                                            if (not os.path.exists(path_to_model)):
+                                                                                continue
+                                                                            conf['player2']=path_to_model+'//'+os.listdir(path_to_model)[0]
                                                                             start_game(conf)
-
+                                    print(f"Games: {conf['games']}\nWins: {conf['wins']}\nWinrate: {100*conf['wins']/conf['games']}%")
+                                    """
+                                    f = open(f'{path_to_model} description.txt', 'a', encoding='utf-8')
+                                    f.write(f"\nWinrate: {100*conf['wins']/conf['games']}%")
+                                    f.close()
+                                    """
 
 
