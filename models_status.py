@@ -6,9 +6,7 @@ max_MLP_DEV = 0
 max_LTSM_DEV = 0
 total = 0
 done = 0
-epochs = []
-train_accuracy = []
-dev_accuracy = []
+
 
 for dropout in [0.1, 0.3, 0.5, 0.7]:
     for optimizer in ["SGD", "Adam", "RMSprop", "Adagrad", "Adadelta"]:
@@ -19,6 +17,9 @@ for dropout in [0.1, 0.3, 0.5, 0.7]:
                         for activation_function in ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]:
                             conf={}
                             conf["path_save"]=f"saved_models/Dropout {dropout}/LSTM/{optimizer}/Learnings rate {learning_rate}/Batch size {batch_size}/Epoch {epoch}/{hidden_dim} {activation_function}"
+                            epochs = []
+                            train_accuracy = []
+                            dev_accuracy = []
                             total += 1
                             if (os.path.exists(conf["path_save"])):
                                 if (not os.path.exists(conf["path_save"]+" description.txt")):
@@ -52,6 +53,9 @@ for dropout in [0.1, 0.3, 0.5, 0.7]:
                             for activation_function in ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]:
                                 conf={}
                                 conf["path_save"]=f"saved_models/Dropout {dropout}/MLP/{optimizer}/Learnings rate {learning_rate}/Batch size {batch_size}/Epoch {epoch}/{hidden_dim_1} {hidden_dim_2} {activation_function}"
+                                epochs = []
+                                train_accuracy = []
+                                dev_accuracy = []
                                 total += 1
                                 if os.path.exists(conf["path_save"]):
                                     if (not os.path.exists(conf["path_save"]+" description.txt")):
