@@ -30,7 +30,6 @@ for dropout in [0.1, 0.3, 0.5, 0.7]:
                                 if (len(os.listdir(conf["path_save"])) == 0):
                                     print("EMPTY ERROR")
                                     print(conf["path_save"])
-
                                 f = open(f'{conf["path_save"]+" description"}.txt', encoding='utf-8')
                                 for line in f.readlines():
                                     if ("DEV : " in line):
@@ -43,6 +42,22 @@ for dropout in [0.1, 0.3, 0.5, 0.7]:
                                             if (number > max_LTSM_DEV):
                                                 max_LTSM_DEV = number
                                                 path_max_LTSM_DEV = conf["path_save"]
+                                                if (not os.path.exists(conf["path_save"]+" curve.png")):
+                                                    g = open(f'{conf["path_save"]} logs.txt', encoding='utf-8')
+                                                    for line in g.readlines():
+                                                        if ('epoch: ' in line):
+                                                            epochs.append(int(line.split('epoch: ')[1].split('/')[0]))
+                                                        if ('Accuracy Train: ' in line):
+                                                            train_accuracy.append(float(line.split('Accuracy Train: ')[1].split('%')[0]))
+                                                            dev_accuracy.append(float(line.split('Dev: ')[1].split('%')[0]))
+                                                    g.close()
+                                                    plt.plot(epochs, train_accuracy, 'b-', epochs, dev_accuracy, 'r-')
+                                                    plt.xlabel('Epochs')
+                                                    plt.ylabel('Accuracy (%)')
+                                                    plt.legend(('Train', 'Validation'), shadow=True)
+                                                    plt.title('Training and Validation Accuracy')
+                                                    plt.savefig(f"{conf['path_save']} curve.png")
+                                                    #plt.show()
                             if (os.path.exists(conf["path_save"]+" description.txt")):
                                 if (not os.path.exists(conf["path_save"])):
                                     print("LOST ERROR")
@@ -67,7 +82,6 @@ for dropout in [0.1, 0.3, 0.5, 0.7]:
                                     if (len(os.listdir(conf["path_save"])) == 0):
                                         print("EMPTY ERROR")
                                         print(conf["path_save"])
-
                                     f = open(f'{conf["path_save"]+" description"}.txt', encoding='utf-8')
                                     for line in f.readlines():
                                         if ("DEV : " in line):
@@ -89,14 +103,14 @@ for dropout in [0.1, 0.3, 0.5, 0.7]:
                                                             train_accuracy.append(float(line.split('Accuracy Train: ')[1].split('%')[0]))
                                                             dev_accuracy.append(float(line.split('Dev: ')[1].split('%')[0]))
                                                     g.close()
-                                                    """
-                                                    if (len(epochs) >= 300):
-                                                        plt.plot(epochs, train_accuracy, 'b-', epochs, dev_accuracy, 'r-')
-                                                        plt.xlabel('Epochs')
-                                                        plt.ylabel('Accuracy')
-                                                        plt.show()
-                                                        time.sleep(1000000)
-                                                    """
+                                                    plt.plot(epochs, train_accuracy, 'b-', epochs, dev_accuracy, 'r-')
+                                                    plt.xlabel('Epochs')
+                                                    plt.ylabel('Accuracy (%)')
+                                                    plt.legend(('Train', 'Validation'), shadow=True)
+                                                    plt.title('Training and Validation Accuracy')
+                                                    plt.savefig(f"{conf['path_save']} curve.png")
+                                                    #plt.show()
+                                                        
                                                 
 
                                     f.close()
