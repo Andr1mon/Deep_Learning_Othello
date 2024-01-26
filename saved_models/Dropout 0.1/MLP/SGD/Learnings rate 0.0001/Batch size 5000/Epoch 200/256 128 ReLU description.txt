@@ -1,0 +1,10 @@
+Model: MLP
+Optimizer: SGD
+Learning rate: 0.0001
+Hidden dimension layer 1: 256
+Hidden dimension layer 2: 128
+Batch size: 5000
+Epoch: 200
+Earlystopping: 20
+Number of parameters: 57792
+The best score on DEV : 1.0566666666666666%

@@ -1,0 +1,10 @@
+Model: MLP
+Optimizer: Adadelta
+Learning rate: 1
+Hidden dimension layer 1: 256
+Hidden dimension layer 2: 96
+Batch size: 15000
+Epoch: 500
+Earlystopping: 50
+Number of parameters: 47520
+The best score on DEV : 10.403333333333334%
