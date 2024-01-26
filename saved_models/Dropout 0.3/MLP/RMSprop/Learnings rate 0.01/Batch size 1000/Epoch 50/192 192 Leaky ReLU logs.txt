@@ -1,0 +1,36 @@
+epoch: 1/50 - loss = 4.166270938367475
+Accuracy Train: 1.95%, Dev: 2.02% ; Time: 5 (last_train: 3sec, last_pred: 3sec)
+*************** The best score on DEV 1: 2.017%
+epoch: 2/50 - loss = 4.165195783857483
+Accuracy Train: 2.01%, Dev: 2.11% ; Time: 12 (last_train: 3sec, last_pred: 3sec)
+*************** The best score on DEV 2: 2.113%
+epoch: 3/50 - loss = 4.16421567010616
+Accuracy Train: 2.08%, Dev: 2.11% ; Time: 17 (last_train: 3sec, last_pred: 3sec)
+*************** The best score on DEV 2: 2.113%
+epoch: 4/50 - loss = 4.163968705340643
+Accuracy Train: 2.08%, Dev: 2.15% ; Time: 23 (last_train: 3sec, last_pred: 3sec)
+*************** The best score on DEV 4: 2.15%
+epoch: 5/50 - loss = 4.1638724158482
+Accuracy Train: 2.12%, Dev: 2.07% ; Time: 29 (last_train: 3sec, last_pred: 3sec)
+*************** The best score on DEV 4: 2.15%
+epoch: 6/50 - loss = 4.163308778520447
+Accuracy Train: 2.28%, Dev: 2.32% ; Time: 35 (last_train: 3sec, last_pred: 3sec)
+*************** The best score on DEV 6: 2.317%
+epoch: 7/50 - loss = 4.1626225597950635
+Accuracy Train: 2.3%, Dev: 2.28% ; Time: 41 (last_train: 3sec, last_pred: 3sec)
+*************** The best score on DEV 6: 2.317%
+epoch: 8/50 - loss = 4.1636855141234
+Accuracy Train: 2.04%, Dev: 2.06% ; Time: 47 (last_train: 3sec, last_pred: 3sec)
+*************** The best score on DEV 6: 2.317%
+epoch: 9/50 - loss = 4.1645021939145925
+Accuracy Train: 1.98%, Dev: 1.95% ; Time: 53 (last_train: 3sec, last_pred: 3sec)
+*************** The best score on DEV 6: 2.317%
+epoch: 10/50 - loss = 4.166595045374243
+Accuracy Train: 1.68%, Dev: 1.62% ; Time: 59 (last_train: 3sec, last_pred: 3sec)
+*************** The best score on DEV 6: 2.317%
+epoch: 11/50 - loss = 4.16714962279599
+Accuracy Train: 1.7%, Dev: 1.65% ; Time: 65 (last_train: 2sec, last_pred: 3sec)
+*************** The best score on DEV 6: 2.317%
+epoch: 12/50 - loss = 4.167284338513791
+Accuracy Train: 1.86%, Dev: 1.91% ; Time: 71 (last_train: 3sec, last_pred: 3sec)
+Recalculing the best DEV: WAcc: 2.3166666666666664%

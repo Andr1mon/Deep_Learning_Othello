@@ -1,0 +1,36 @@
+epoch: 1/50 - loss = 4.142623182159761
+Accuracy Train: 5.09%, Dev: 5.36% ; Time: 5 (last_train: 2sec, last_pred: 3sec)
+*************** The best score on DEV 1: 5.363%
+epoch: 2/50 - loss = 4.131521006315452
+Accuracy Train: 5.26%, Dev: 5.49% ; Time: 10 (last_train: 3sec, last_pred: 3sec)
+*************** The best score on DEV 2: 5.493%
+epoch: 3/50 - loss = 4.131685849711381
+Accuracy Train: 5.38%, Dev: 5.56% ; Time: 16 (last_train: 2sec, last_pred: 3sec)
+*************** The best score on DEV 3: 5.557%
+epoch: 4/50 - loss = 4.12887008940976
+Accuracy Train: 5.67%, Dev: 5.85% ; Time: 21 (last_train: 3sec, last_pred: 3sec)
+*************** The best score on DEV 4: 5.85%
+epoch: 5/50 - loss = 4.128153118639361
+Accuracy Train: 5.69%, Dev: 5.86% ; Time: 26 (last_train: 3sec, last_pred: 3sec)
+*************** The best score on DEV 5: 5.86%
+epoch: 6/50 - loss = 4.127060542449108
+Accuracy Train: 5.81%, Dev: 5.93% ; Time: 30 (last_train: 2sec, last_pred: 2sec)
+*************** The best score on DEV 6: 5.933%
+epoch: 7/50 - loss = 4.130914898867107
+Accuracy Train: 4.96%, Dev: 5.07% ; Time: 35 (last_train: 2sec, last_pred: 3sec)
+*************** The best score on DEV 6: 5.933%
+epoch: 8/50 - loss = 4.133334641957151
+Accuracy Train: 5.61%, Dev: 5.74% ; Time: 40 (last_train: 2sec, last_pred: 2sec)
+*************** The best score on DEV 6: 5.933%
+epoch: 9/50 - loss = 4.134438886168254
+Accuracy Train: 5.6%, Dev: 5.67% ; Time: 46 (last_train: 3sec, last_pred: 3sec)
+*************** The best score on DEV 6: 5.933%
+epoch: 10/50 - loss = 4.1361263470096485
+Accuracy Train: 4.46%, Dev: 4.57% ; Time: 51 (last_train: 2sec, last_pred: 3sec)
+*************** The best score on DEV 6: 5.933%
+epoch: 11/50 - loss = 4.133763516146834
+Accuracy Train: 4.91%, Dev: 5.0% ; Time: 56 (last_train: 3sec, last_pred: 2sec)
+*************** The best score on DEV 6: 5.933%
+epoch: 12/50 - loss = 4.135540522264512
+Accuracy Train: 4.73%, Dev: 4.91% ; Time: 61 (last_train: 3sec, last_pred: 3sec)
+Recalculing the best DEV: WAcc: 5.933333333333334%
