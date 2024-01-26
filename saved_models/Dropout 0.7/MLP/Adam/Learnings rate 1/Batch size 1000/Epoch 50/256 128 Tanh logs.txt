@@ -1,0 +1,36 @@
+epoch: 1/50 - loss = 4.1618894055403395
+Accuracy Train: 2.31%, Dev: 2.19% ; Time: 14 (last_train: 7sec, last_pred: 7sec)
+*************** The best score on DEV 1: 2.187%
+epoch: 2/50 - loss = 4.158368650720923
+Accuracy Train: 2.73%, Dev: 2.63% ; Time: 28 (last_train: 6sec, last_pred: 7sec)
+*************** The best score on DEV 2: 2.63%
+epoch: 3/50 - loss = 4.157643823992482
+Accuracy Train: 2.98%, Dev: 2.88% ; Time: 43 (last_train: 7sec, last_pred: 7sec)
+*************** The best score on DEV 3: 2.88%
+epoch: 4/50 - loss = 4.156091097310103
+Accuracy Train: 2.87%, Dev: 2.74% ; Time: 57 (last_train: 7sec, last_pred: 7sec)
+*************** The best score on DEV 3: 2.88%
+epoch: 5/50 - loss = 4.1556064068283165
+Accuracy Train: 2.96%, Dev: 2.93% ; Time: 71 (last_train: 7sec, last_pred: 7sec)
+*************** The best score on DEV 5: 2.93%
+epoch: 6/50 - loss = 4.155522799623605
+Accuracy Train: 3.07%, Dev: 2.99% ; Time: 84 (last_train: 7sec, last_pred: 7sec)
+*************** The best score on DEV 6: 2.987%
+epoch: 7/50 - loss = 4.154596834551564
+Accuracy Train: 3.06%, Dev: 2.98% ; Time: 99 (last_train: 7sec, last_pred: 7sec)
+*************** The best score on DEV 6: 2.987%
+epoch: 8/50 - loss = 4.155030026620264
+Accuracy Train: 3.08%, Dev: 2.91% ; Time: 112 (last_train: 7sec, last_pred: 6sec)
+*************** The best score on DEV 6: 2.987%
+epoch: 9/50 - loss = 4.155845908170247
+Accuracy Train: 2.64%, Dev: 2.65% ; Time: 128 (last_train: 7sec, last_pred: 8sec)
+*************** The best score on DEV 6: 2.987%
+epoch: 10/50 - loss = 4.159215666312539
+Accuracy Train: 2.57%, Dev: 2.54% ; Time: 141 (last_train: 7sec, last_pred: 7sec)
+*************** The best score on DEV 6: 2.987%
+epoch: 11/50 - loss = 4.158494238036772
+Accuracy Train: 2.73%, Dev: 2.77% ; Time: 156 (last_train: 7sec, last_pred: 7sec)
+*************** The best score on DEV 6: 2.987%
+epoch: 12/50 - loss = 4.158373179356696
+Accuracy Train: 2.7%, Dev: 2.78% ; Time: 169 (last_train: 7sec, last_pred: 6sec)
+Recalculing the best DEV: WAcc: 2.986666666666667%

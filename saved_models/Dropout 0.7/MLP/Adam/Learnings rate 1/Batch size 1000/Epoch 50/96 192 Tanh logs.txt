@@ -1,0 +1,36 @@
+epoch: 1/50 - loss = 4.163933379874045
+Accuracy Train: 2.27%, Dev: 2.2% ; Time: 13 (last_train: 6sec, last_pred: 6sec)
+*************** The best score on DEV 1: 2.203%
+epoch: 2/50 - loss = 4.161348008319159
+Accuracy Train: 2.41%, Dev: 2.43% ; Time: 28 (last_train: 8sec, last_pred: 8sec)
+*************** The best score on DEV 2: 2.43%
+epoch: 3/50 - loss = 4.163322201091281
+Accuracy Train: 2.13%, Dev: 2.15% ; Time: 41 (last_train: 6sec, last_pred: 7sec)
+*************** The best score on DEV 2: 2.43%
+epoch: 4/50 - loss = 4.162388174573361
+Accuracy Train: 2.41%, Dev: 2.33% ; Time: 56 (last_train: 7sec, last_pred: 7sec)
+*************** The best score on DEV 2: 2.43%
+epoch: 5/50 - loss = 4.160355175397672
+Accuracy Train: 2.52%, Dev: 2.5% ; Time: 69 (last_train: 7sec, last_pred: 7sec)
+*************** The best score on DEV 5: 2.5%
+epoch: 6/50 - loss = 4.160394792398695
+Accuracy Train: 2.45%, Dev: 2.51% ; Time: 84 (last_train: 7sec, last_pred: 7sec)
+*************** The best score on DEV 6: 2.51%
+epoch: 7/50 - loss = 4.161040422007524
+Accuracy Train: 2.18%, Dev: 2.25% ; Time: 98 (last_train: 7sec, last_pred: 7sec)
+*************** The best score on DEV 6: 2.51%
+epoch: 8/50 - loss = 4.1645760167369525
+Accuracy Train: 2.17%, Dev: 2.24% ; Time: 112 (last_train: 7sec, last_pred: 7sec)
+*************** The best score on DEV 6: 2.51%
+epoch: 9/50 - loss = 4.1637932029218305
+Accuracy Train: 2.17%, Dev: 2.27% ; Time: 126 (last_train: 8sec, last_pred: 7sec)
+*************** The best score on DEV 6: 2.51%
+epoch: 10/50 - loss = 4.163531174317249
+Accuracy Train: 2.19%, Dev: 2.28% ; Time: 140 (last_train: 7sec, last_pred: 7sec)
+*************** The best score on DEV 6: 2.51%
+epoch: 11/50 - loss = 4.164313629845888
+Accuracy Train: 2.21%, Dev: 2.26% ; Time: 155 (last_train: 7sec, last_pred: 7sec)
+*************** The best score on DEV 6: 2.51%
+epoch: 12/50 - loss = 4.163287302407112
+Accuracy Train: 2.16%, Dev: 2.17% ; Time: 168 (last_train: 6sec, last_pred: 8sec)
+Recalculing the best DEV: WAcc: 2.5100000000000002%
