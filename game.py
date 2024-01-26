@@ -126,14 +126,15 @@ def start_game(conf):
                 
                 best_move=find_best_move(move1_prob,legal_moves)
                 #print(f"Black: {best_move} < from possible move {legal_moves}")
-
+                data[0][k]=board_stat
+                data[1][k][best_move[0]][best_move[1]] = 1
+                k+=1
                 board_stat[best_move[0],best_move[1]]=NgBlackPsWhith
                 moves_log+=str(best_move[0]+1)+str(best_move[1]+1)
                 
                 board_stat=apply_flip(best_move,board_stat,NgBlackPsWhith)
-                data[0][k]=board_stat
-                data[1][k][best_move[0]][best_move[1]] = 1
-                k+=1
+                
+                
             else:
                 #print("Black pass")
                 if moves_log[-2:]=="__":
@@ -160,12 +161,12 @@ def start_game(conf):
                 
                 best_move = find_best_move(move1_prob,legal_moves)
                 #print(f"White: {best_move} < from possible move {legal_moves}")
-                board_stat[best_move[0],best_move[1]]=NgBlackPsWhith
-                moves_log+=str(best_move[0]+1)+str(best_move[1]+1)
-                board_stat=apply_flip(best_move,board_stat,NgBlackPsWhith)
                 data[0][k]=board_stat
                 data[1][k][best_move[0]][best_move[1]] = 1
                 k+=1
+                board_stat[best_move[0],best_move[1]]=NgBlackPsWhith
+                moves_log+=str(best_move[0]+1)+str(best_move[1]+1)
+                board_stat=apply_flip(best_move,board_stat,NgBlackPsWhith)
             else:
                 #print("White pass")
                 if moves_log[-2:]=="__":
@@ -203,9 +204,11 @@ def start_game(conf):
         """
         with h5py.File(f"AI_dataset/{str(datetime.now()).replace('.','-').replace(':','-')}.h5", 'w') as h5f:
             h5f.create_dataset('dataset', data=data)
+            """
             for i in range (60):
                 np.savetxt(f"AI_dataset_status/{str(datetime.now()).replace('.','-').replace(':','-')}.txt", data[0][i])
                 np.savetxt(f"AI_dataset_moves/{str(datetime.now()).replace('.','-').replace(':','-')}.txt", data[1][i])
+            """
     conf['player1'], conf['player2'] = conf['player2'], conf['player1']
     conf['games'] += 2
 
