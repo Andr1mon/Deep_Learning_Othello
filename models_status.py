@@ -1,9 +1,14 @@
 import os
+import matplotlib.pyplot as plt
+import time
 
 max_MLP_DEV = 0
 max_LTSM_DEV = 0
 total = 0
 done = 0
+epochs = []
+train_accuracy = []
+dev_accuracy = []
 
 for dropout in [0.1, 0.3, 0.5, 0.7]:
     for optimizer in ["SGD", "Adam", "RMSprop", "Adagrad", "Adadelta"]:
@@ -71,6 +76,23 @@ for dropout in [0.1, 0.3, 0.5, 0.7]:
                                                 if (number > max_MLP_DEV):
                                                     max_MLP_DEV = number
                                                     path_max_MLP_DEV = conf["path_save"]
+                                                if (not os.path.exists(conf["path_save"]+" curve.png")):
+                                                    g = open(f'{conf["path_save"]} logs.txt', encoding='utf-8')
+                                                    for line in g.readlines():
+                                                        if ('epoch: ' in line):
+                                                            epochs.append(int(line.split('epoch: ')[1].split('/')[0]))
+                                                        if ('Accuracy Train: ' in line):
+                                                            train_accuracy.append(float(line.split('Accuracy Train: ')[1].split('%')[0]))
+                                                            dev_accuracy.append(float(line.split('Dev: ')[1].split('%')[0]))
+                                                    g.close()
+                                                    if (len(epochs) >= 300):
+                                                        plt.plot(epochs, train_accuracy, 'b-', epochs, dev_accuracy, 'r-')
+                                                        plt.xlabel('Epochs')
+                                                        plt.ylabel('Accuracy')
+                                                        plt.show()
+                                                        time.sleep(1000000)
+                                                
+
                                     f.close()
                                 if (os.path.exists(conf["path_save"]+" description.txt")):
                                     if (not os.path.exists(conf["path_save"])):
