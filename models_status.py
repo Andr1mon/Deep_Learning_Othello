@@ -89,12 +89,14 @@ for dropout in [0.1, 0.3, 0.5, 0.7]:
                                                             train_accuracy.append(float(line.split('Accuracy Train: ')[1].split('%')[0]))
                                                             dev_accuracy.append(float(line.split('Dev: ')[1].split('%')[0]))
                                                     g.close()
+                                                    """
                                                     if (len(epochs) >= 300):
                                                         plt.plot(epochs, train_accuracy, 'b-', epochs, dev_accuracy, 'r-')
                                                         plt.xlabel('Epochs')
                                                         plt.ylabel('Accuracy')
                                                         plt.show()
                                                         time.sleep(1000000)
+                                                    """
                                                 
 
                                     f.close()
