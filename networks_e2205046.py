@@ -43,22 +43,95 @@ class MLP(nn.Module):
         self.len_inpout_seq=conf["len_inpout_seq"]
         self.hidden_dim_1=conf["MLP_conf"]["hidden_dim_1"]
         self.hidden_dim_2=conf["MLP_conf"]["hidden_dim_2"]
-        self.activation_function=conf["activation_function"]
+        self.hidden_dim_3=conf["MLP_conf"]["hidden_dim_3"]
+        self.hidden_dim_4=conf["MLP_conf"]["hidden_dim_4"]
+        self.hidden_dim_5=conf["MLP_conf"]["hidden_dim_5"]
+        self.activation_function1=conf["activation_function1"]
+        self.activation_function2=conf["activation_function2"]
+        self.activation_function3=conf["activation_function3"]
+        self.activation_function4=conf["activation_function4"]
+        self.activation_function5=conf["activation_function5"]
 
 
 
         # Define the layers of the MLP
-        self.lin1 = nn.Linear(self.board_size*self.board_size, self.hidden_dim_1) # self.lin1 = nn.Linear(self.board_size*self.board_size, 128)
-        self.lin2 = nn.Linear(self.hidden_dim_1, self.hidden_dim_2)
-        if (self.activation_function == "ReLU"):
-            self.act_function = nn.ReLU()
-        elif (self.activation_function == "Sigmoid"):
-            self.act_function = nn.Sigmoid()
-        elif (self.activation_function == "Tanh"):
-            self.act_function = nn.Tanh()
-        elif (self.activation_function == "Leaky ReLU"):
-            self.act_function = nn.LeakyReLU()
-        self.lin3 = nn.Linear(self.hidden_dim_2, self.board_size*self.board_size) # self.lin3 = nn.Linear(128, self.board_size*self.board_size)
+        if (self.activation_function1 == "ReLU"):
+            self.act_function1 = nn.ReLU()
+        elif (self.activation_function1 == "Sigmoid"):
+            self.act_function1 = nn.Sigmoid()
+        elif (self.activation_function1 == "Tanh"):
+            self.act_function1 = nn.Tanh()
+        elif (self.activation_function1 == "Leaky ReLU"):
+            self.act_function1 = nn.LeakyReLU()
+        if (self.activation_function2 == "ReLU"):
+            self.act_function2 = nn.ReLU()
+        elif (self.activation_function2 == "Sigmoid"):
+            self.act_function2 = nn.Sigmoid()
+        elif (self.activation_function2 == "Tanh"):
+            self.act_function2 = nn.Tanh()
+        elif (self.activation_function2 == "Leaky ReLU"):
+            self.act_function2 = nn.LeakyReLU()
+        if (self.activation_function3 == "ReLU"):
+            self.act_function3 = nn.ReLU()
+        elif (self.activation_function3 == "Sigmoid"):
+            self.act_function3 = nn.Sigmoid()
+        elif (self.activation_function3 == "Tanh"):
+            self.act_function3 = nn.Tanh()
+        elif (self.activation_function3 == "Leaky ReLU"):
+            self.act_function3 = nn.LeakyReLU()
+        if (self.activation_function4 == "ReLU"):
+            self.act_function4 = nn.ReLU()
+        elif (self.activation_function4 == "Sigmoid"):
+            self.act_function4 = nn.Sigmoid()
+        elif (self.activation_function4 == "Tanh"):
+            self.act_function4 = nn.Tanh()
+        elif (self.activation_function4 == "Leaky ReLU"):
+            self.act_function4 = nn.LeakyReLU()
+        if (self.activation_function5 == "ReLU"):
+            self.act_function5 = nn.ReLU()
+        elif (self.activation_function5 == "Sigmoid"):
+            self.act_function5 = nn.Sigmoid()
+        elif (self.activation_function5 == "Tanh"):
+            self.act_function5 = nn.Tanh()
+        elif (self.activation_function5 == "Leaky ReLU"):
+            self.act_function5 = nn.LeakyReLU()
+
+        self.hidden_dim_1 = int(self.hidden_dim_1)
+        if (self.hidden_dim_2 == ""):
+            self.lin1 = nn.Linear(self.board_size*self.board_size, self.hidden_dim_1)
+            self.lin2 = nn.Linear(self.hidden_dim_1, self.board_size*self.board_size)
+        elif (self.hidden_dim_3 == ""):
+            self.hidden_dim_2 = int(self.hidden_dim_2)
+            self.lin1 = nn.Linear(self.board_size*self.board_size, self.hidden_dim_1)
+            self.lin2 = nn.Linear(self.hidden_dim_1, self.hidden_dim_2)
+            self.lin3 = nn.Linear(self.hidden_dim_2, self.board_size*self.board_size)
+        elif (self.hidden_dim_4 == ""):
+            self.hidden_dim_2 = int(self.hidden_dim_2)
+            self.hidden_dim_3 = int(self.hidden_dim_3)
+            self.lin1 = nn.Linear(self.board_size*self.board_size, self.hidden_dim_1)
+            self.lin2 = nn.Linear(self.hidden_dim_1, self.hidden_dim_2)
+            self.lin3 = nn.Linear(self.hidden_dim_2, self.hidden_dim_3)
+            self.lin4 = nn.Linear(self.hidden_dim_3, self.board_size*self.board_size)
+        elif (self.hidden_dim_5 == ""):
+            self.hidden_dim_2 = int(self.hidden_dim_2)
+            self.hidden_dim_3 = int(self.hidden_dim_3)
+            self.hidden_dim_4 = int(self.hidden_dim_4)
+            self.lin1 = nn.Linear(self.board_size*self.board_size, self.hidden_dim_1)
+            self.lin2 = nn.Linear(self.hidden_dim_1, self.hidden_dim_2)
+            self.lin3 = nn.Linear(self.hidden_dim_2, self.hidden_dim_3)
+            self.lin4 = nn.Linear(self.hidden_dim_3, self.hidden_dim_4)
+            self.lin5 = nn.Linear(self.hidden_dim_4, self.board_size*self.board_size)
+        else:
+            self.hidden_dim_2 = int(self.hidden_dim_2)
+            self.hidden_dim_3 = int(self.hidden_dim_3)
+            self.hidden_dim_4 = int(self.hidden_dim_4)
+            self.hidden_dim_5 = int(self.hidden_dim_5)
+            self.lin1 = nn.Linear(self.board_size*self.board_size, self.hidden_dim_1)
+            self.lin2 = nn.Linear(self.hidden_dim_1, self.hidden_dim_2)
+            self.lin3 = nn.Linear(self.hidden_dim_2, self.hidden_dim_3)
+            self.lin4 = nn.Linear(self.hidden_dim_3, self.hidden_dim_4)
+            self.lin5 = nn.Linear(self.hidden_dim_4, self.hidden_dim_5)
+            self.lin6 = nn.Linear(self.hidden_dim_5, self.board_size*self.board_size)
         self.dropout = nn.Dropout(p=conf["dropout"])
         
     def forward(self, seq):
@@ -77,10 +150,50 @@ class MLP(nn.Module):
         else:
             seq=torch.flatten(seq, start_dim=0)
         x = self.lin1(seq)
-        x = self.lin2(x)
-        if (self.activation_function != "Linear"):
-            x = self.act_function(x)
-        outp = self.lin3(x)
+        if (self.activation_function1 != "Linear"):
+            x = self.act_function1(x)
+        
+        if (self.hidden_dim_2 == ""):
+            outp = self.lin2(x)
+        elif (self.hidden_dim_3 == ""):
+            x = self.lin2(x)
+            if (self.activation_function2 != "Linear"):
+                x = self.act_function2(x)
+            outp = self.lin3(x)
+        elif (self.hidden_dim_4 == ""):
+            x = self.lin2(x)
+            if (self.activation_function2 != "Linear"):
+                x = self.act_function2(x)
+            x = self.lin3(x)
+            if (self.activation_function3 != "Linear"):
+                x = self.act_function3(x)
+            outp = self.lin4(x)
+        elif (self.hidden_dim_5 == ""):
+            x = self.lin2(x)
+            if (self.activation_function2 != "Linear"):
+                x = self.act_function2(x)
+            x = self.lin3(x)
+            if (self.activation_function3 != "Linear"):
+                x = self.act_function3(x)
+            x = self.lin4(x)
+            if (self.activation_function4 != "Linear"):
+                x = self.act_function4(x)
+            outp = self.lin5(x)
+        else:
+            x = self.lin2(x)
+            if (self.activation_function2 != "Linear"):
+                x = self.act_function2(x)
+            x = self.lin3(x)
+            if (self.activation_function3 != "Linear"):
+                x = self.act_function3(x)
+            x = self.lin4(x)
+            if (self.activation_function4 != "Linear"):
+                x = self.act_function4(x)
+            x = self.lin5(x)
+            if (self.activation_function5 != "Linear"):
+                x = self.act_function5(x)
+            outp = self.lin6(x)
+        
         return F.softmax(outp, dim=-1)
     
     def train_all(self, train, dev, num_epoch, device, optimizer):

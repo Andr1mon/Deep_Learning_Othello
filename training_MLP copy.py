@@ -177,109 +177,151 @@ class CustomDataset(Dataset):
         return features,y,self.len_samples
 
 dropout_list = [0.1]
-optimizer_list = ["Adam", "SGD", "RMSprop"]
-learning_rate_list = [0.0001, 0.01, 0.1, 1]
-batch_size_list = [500, 1000, 5000]
-epoch_list = [50, 200]
-hidden_dim_1_list = [96, 128, 192, 256]
-hidden_dim_2_list = [96, 128, 192, 256]
-activation_function_list = ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]
-random.shuffle(dropout_list)
+optimizer_list = ["Adam"]
+learning_rate_list = [0.0001]
+batch_size_list = [1000]
+epoch_list = [200]
+hidden_dim_list = ["", " 128 ", " 96 ", " 192 ", " 256 "]
+hidden_dim_list1 = ["256 ", "96 ", "128 ", "192 "]
+activation_function_list = ["Leaky ReLU", "Linear", "ReLU",  "Sigmoid", "Tanh"]
+"""random.shuffle(dropout_list)
 random.shuffle(optimizer_list)
 random.shuffle(learning_rate_list)
 random.shuffle(batch_size_list)
 random.shuffle(epoch_list)
-random.shuffle(hidden_dim_1_list)
-random.shuffle(hidden_dim_2_list)
-random.shuffle(activation_function_list)
+random.shuffle(hidden_dim_list)
+random.shuffle(activation_function_list)"""
 
 for dropout in dropout_list:
     for optimizer in optimizer_list:
         for learning_rate in learning_rate_list:
             for batch_size in batch_size_list:
                 for epoch in epoch_list:
-                    for hidden_dim_1 in hidden_dim_1_list:
-                        for hidden_dim_2 in hidden_dim_2_list:
-                            for activation_function in activation_function_list:
-                                conf={}
-                                conf["path_save"]=f"saved_models/Dropout {dropout}/MLP/{optimizer}/Learnings rate {learning_rate}/Batch size {batch_size}/Epoch {epoch}/{hidden_dim_1} {hidden_dim_2} {activation_function}"
+                    for hidden_dim_1 in hidden_dim_list1:
+                        for hidden_dim_2 in hidden_dim_list:
+                            for hidden_dim_3 in hidden_dim_list:
+                                for hidden_dim_4 in hidden_dim_list:
+                                    for hidden_dim_5 in hidden_dim_list:
+                                        for activation_function1 in activation_function_list:
+                                            for activation_function2 in activation_function_list:
+                                                for activation_function3 in activation_function_list:
+                                                    for activation_function4 in activation_function_list:
+                                                        for activation_function5 in activation_function_list:
+                                                            conf={}
+                                                            if (hidden_dim_2 == ""):
+                                                                hidden_dim_2 = ""
+                                                                hidden_dim_3 = ""
+                                                                hidden_dim_4 = ""
+                                                                hidden_dim_5 = ""
+                                                                activation_function2 = ""
+                                                                activation_function3 = ""
+                                                                activation_function4 = ""
+                                                                activation_function5 = ""
+                                                            elif (hidden_dim_3 == ""):
+                                                                hidden_dim_3 = ""
+                                                                hidden_dim_4 = ""
+                                                                hidden_dim_5 = ""
+                                                                activation_function3 = ""
+                                                                activation_function4 = ""
+                                                                activation_function5 = ""
+                                                            elif (hidden_dim_4 == ""):
+                                                                hidden_dim_4 = ""
+                                                                hidden_dim_5 = ""
+                                                                activation_function4 = ""
+                                                                activation_function5 = ""
+                                                            elif (hidden_dim_5 == ""):
+                                                                hidden_dim_5 = ""
+                                                                activation_function5 = ""
+                                                            conf["path_save"]=f"saved_models/Dropout {dropout}/MLP/{optimizer}/Learnings rate {learning_rate}/Batch size {batch_size}/Epoch {epoch}/{hidden_dim_1}{activation_function1}{hidden_dim_2}{activation_function2}{hidden_dim_3}{activation_function3}{hidden_dim_4}{activation_function4}{hidden_dim_5}{activation_function5}"
+                                                            
 
-                                if os.path.exists(conf["path_save"]):
-                                    continue
+                                                            if os.path.exists(conf["path_save"]):
+                                                                continue
 
-                                if torch.cuda.is_available():
-                                    device = torch.device("cuda:0")
-                                    #device = torch.device("cpu")
-                                else:
-                                    device = torch.device("cpu")
-                                print(conf['path_save'])
-                                print('Running on ' + str(device))
-                                
+                                                            if torch.cuda.is_available():
+                                                                device = torch.device("cuda:0")
+                                                                #device = torch.device("cpu")
+                                                            else:
+                                                                device = torch.device("cpu")
+                                                            print(conf['path_save'])
+                                                            print('Running on ' + str(device))
+                                                            
 
-                                len_samples=1 # Could be modified?
+                                                            len_samples=1 # Could be modified?
 
-                                dataset_conf={}  
-                                # self.filelist : a list of all games for train/dev/test
-                                dataset_conf["filelist"]="train.txt"
-                                #len_samples is 1 for one2one but it can be more than 1 for seq2one modeling
-                                dataset_conf["len_samples"]=len_samples
-                                dataset_conf["path_dataset"]="./dataset/"
-                                dataset_conf['batch_size']=batch_size
+                                                            dataset_conf={}  
+                                                            # self.filelist : a list of all games for train/dev/test
+                                                            dataset_conf["filelist"]="train.txt"
+                                                            #len_samples is 1 for one2one but it can be more than 1 for seq2one modeling
+                                                            dataset_conf["len_samples"]=len_samples
+                                                            dataset_conf["path_dataset"]="./dataset/"
+                                                            dataset_conf['batch_size']=batch_size
 
-                                print("Training Dataset... ")
-                                ds_train = CustomDataset(dataset_conf,load_data_once4all=True)
-                                trainSet = DataLoader(ds_train, batch_size=dataset_conf['batch_size']) # shuffle = True - Could be modified? For the best model
+                                                            print("Training Dataset... ")
+                                                            ds_train = CustomDataset(dataset_conf,load_data_once4all=True)
+                                                            trainSet = DataLoader(ds_train, batch_size=dataset_conf['batch_size']) # shuffle = True - Could be modified? For the best model
 
-                                dataset_conf={}  
-                                # self.filelist : a list of all games for train/dev/test
-                                dataset_conf["filelist"]="dev.txt"
-                                #len_samples is 1 for one2one but it can be more than 1 for seq2one modeling
-                                dataset_conf["len_samples"]=len_samples
-                                dataset_conf["path_dataset"]="./dataset/"
-                                dataset_conf['batch_size']=batch_size
+                                                            dataset_conf={}  
+                                                            # self.filelist : a list of all games for train/dev/test
+                                                            dataset_conf["filelist"]="dev.txt"
+                                                            #len_samples is 1 for one2one but it can be more than 1 for seq2one modeling
+                                                            dataset_conf["len_samples"]=len_samples
+                                                            dataset_conf["path_dataset"]="./dataset/"
+                                                            dataset_conf['batch_size']=batch_size
 
-                                print("Development Dataset... ")
-                                ds_dev = CustomDataset(dataset_conf,load_data_once4all=True)
-                                devSet = DataLoader(ds_dev, batch_size=dataset_conf['batch_size'])
+                                                            print("Development Dataset... ")
+                                                            ds_dev = CustomDataset(dataset_conf,load_data_once4all=True)
+                                                            devSet = DataLoader(ds_dev, batch_size=dataset_conf['batch_size'])
 
-                                conf["board_size"]=BOARD_SIZE
-                                conf['epoch']=epoch
-                                conf["earlyStopping"]=int(epoch/10)
-                                conf["len_inpout_seq"]=len_samples
-                                conf["MLP_conf"]={}
-                                conf["MLP_conf"]["hidden_dim_1"]=hidden_dim_1
-                                conf["MLP_conf"]["hidden_dim_2"]=hidden_dim_2
-                                conf["activation_function"]=activation_function
-                                conf["dropout"]=dropout
+                                                            conf["board_size"]=BOARD_SIZE
+                                                            conf['epoch']=epoch
+                                                            conf["earlyStopping"]=int(epoch/10)
+                                                            conf["len_inpout_seq"]=len_samples
+                                                            conf["MLP_conf"]={}
+                                                            conf["MLP_conf"]["hidden_dim_1"]=hidden_dim_1
+                                                            conf["MLP_conf"]["hidden_dim_2"]=hidden_dim_2
+                                                            conf["MLP_conf"]["hidden_dim_3"]=hidden_dim_3
+                                                            conf["MLP_conf"]["hidden_dim_4"]=hidden_dim_4
+                                                            conf["MLP_conf"]["hidden_dim_5"]=hidden_dim_5
+                                                            conf["activation_function1"]=activation_function1
+                                                            conf["activation_function2"]=activation_function2
+                                                            conf["activation_function3"]=activation_function3
+                                                            conf["activation_function4"]=activation_function4
+                                                            conf["activation_function5"]=activation_function5
+                                                            conf["dropout"]=dropout
+                                                            
+                                                            
+                                                            
+                                                            
 
-                                model = MLP(conf).to(device)
-                                if (optimizer == "Adam"):
-                                    opt = torch.optim.Adam(model.parameters(), lr=learning_rate)
-                                elif (optimizer == "SGD"):
-                                    opt = torch.optim.SGD(model.parameters(), lr=learning_rate)
-                                elif (optimizer == "Adagrad"):
-                                    opt = torch.optim.Adagrad(model.parameters(), lr=learning_rate)
-                                elif (optimizer == "Adadelta"):
-                                    opt = torch.optim.Adadelta(model.parameters(), lr=learning_rate)
-                                elif (optimizer == "RMSprop"):
-                                    opt = torch.optim.RMSprop(model.parameters(), lr=learning_rate)
+                                                            model = MLP(conf).to(device)
+                                                            if (optimizer == "Adam"):
+                                                                opt = torch.optim.Adam(model.parameters(), lr=learning_rate)
+                                                            elif (optimizer == "SGD"):
+                                                                opt = torch.optim.SGD(model.parameters(), lr=learning_rate)
+                                                            elif (optimizer == "Adagrad"):
+                                                                opt = torch.optim.Adagrad(model.parameters(), lr=learning_rate)
+                                                            elif (optimizer == "Adadelta"):
+                                                                opt = torch.optim.Adadelta(model.parameters(), lr=learning_rate)
+                                                            elif (optimizer == "RMSprop"):
+                                                                opt = torch.optim.RMSprop(model.parameters(), lr=learning_rate)
 
-                                def count_parameters(model):
-                                    return sum(p.numel() for p in model.parameters() if p.requires_grad)
+                                                            def count_parameters(model):
+                                                                return sum(p.numel() for p in model.parameters() if p.requires_grad)
 
-                                n = count_parameters(model)
-                                
-                                print("Number of parameters: %s" % n)
-                                os.makedirs(conf["path_save"], exist_ok=True)
-                                f = open(f'{conf["path_save"]+" description"}.txt', 'a', encoding='utf-8')
-                                f.write(f"Model: MLP\nOptimizer: {optimizer}\nLearning rate: {learning_rate}\nHidden dimension layer 1: {hidden_dim_1}\nHidden dimension layer 2: {hidden_dim_2}\nBatch size: {batch_size}\nEpoch: {epoch}\nEarlystopping: {int(epoch/10)}\nNumber of parameters: {n}\nThe best score on DEV : ")
-                                f.close()
+                                                            n = count_parameters(model)
+                                                            
+                                                            print("Number of parameters: %s" % n)
+                                                            os.makedirs(conf["path_save"], exist_ok=True)
+                                                            f = open(f'{conf["path_save"]+" description"}.txt', 'a', encoding='utf-8')
+                                                            f.write(f"Model: MLP\nOptimizer: {optimizer}\nLearning rate: {learning_rate}\nHidden dimension layer 1: {hidden_dim_1}\nHidden dimension layer 2: {hidden_dim_2}\nHidden dimension layer 3: {hidden_dim_3}\nHidden dimension layer 4: {hidden_dim_4}\nHidden dimension layer 5: {hidden_dim_5}\nBatch size: {batch_size}\nEpoch: {epoch}\nEarlystopping: {int(epoch/10)}\nNumber of parameters: {n}\nThe best score on DEV : ")
+                                                            f.close()
 
 
-                                best_epoch=model.train_all(trainSet,
-                                                    devSet,
-                                                    conf['epoch'],
-                                                    device, opt)
+                                                            best_epoch=model.train_all(trainSet,
+                                                                                devSet,
+                                                                                conf['epoch'],
+                                                                                device, opt)
 
 # model = torch.load(conf["path_save"] + '/model_2.pt')
 # model.eval()
