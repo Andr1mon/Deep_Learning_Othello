@@ -184,13 +184,14 @@ epoch_list = [200]
 hidden_dim_list = ["", " 128 ", " 96 ", " 192 ", " 256 "]
 hidden_dim_list1 = ["256 ", "96 ", "128 ", "192 "]
 activation_function_list = ["Leaky ReLU", "Linear", "ReLU",  "Sigmoid", "Tanh"]
-"""random.shuffle(dropout_list)
+random.shuffle(dropout_list)
 random.shuffle(optimizer_list)
 random.shuffle(learning_rate_list)
 random.shuffle(batch_size_list)
 random.shuffle(epoch_list)
 random.shuffle(hidden_dim_list)
-random.shuffle(activation_function_list)"""
+random.shuffle(hidden_dim_list1)
+random.shuffle(activation_function_list)
 
 for dropout in dropout_list:
     for optimizer in optimizer_list:
