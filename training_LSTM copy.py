@@ -213,7 +213,6 @@ for dropout in dropout_list:
                                                         for activation_function5 in activation_function_list:
                                                             conf={}
                                                             if (hidden_dim_2 == ""):
-                                                                hidden_dim_2 = ""
                                                                 hidden_dim_3 = ""
                                                                 hidden_dim_4 = ""
                                                                 hidden_dim_5 = ""
@@ -222,19 +221,16 @@ for dropout in dropout_list:
                                                                 activation_function4 = ""
                                                                 activation_function5 = ""
                                                             elif (hidden_dim_3 == ""):
-                                                                hidden_dim_3 = ""
                                                                 hidden_dim_4 = ""
                                                                 hidden_dim_5 = ""
                                                                 activation_function3 = ""
                                                                 activation_function4 = ""
                                                                 activation_function5 = ""
                                                             elif (hidden_dim_4 == ""):
-                                                                hidden_dim_4 = ""
                                                                 hidden_dim_5 = ""
                                                                 activation_function4 = ""
                                                                 activation_function5 = ""
                                                             elif (hidden_dim_5 == ""):
-                                                                hidden_dim_5 = ""
                                                                 activation_function5 = ""
                                                             conf["path_save"]=f"saved_models/Dropout {dropout}/LSTM/{optimizer}/Learnings rate {learning_rate}/Batch size {batch_size}/Epoch {epoch}/{hidden_dim_1}{activation_function1}{hidden_dim_2}{activation_function2}{hidden_dim_3}{activation_function3}{hidden_dim_4}{activation_function4}{hidden_dim_5}{activation_function5}"
                                                             
@@ -281,8 +277,16 @@ for dropout in dropout_list:
                                                             conf["earlyStopping"]=int(epoch/10)
                                                             conf["len_inpout_seq"]=len_samples
                                                             conf["LSTM_conf"]={}
-                                                            conf["LSTM_conf"]["hidden_dim"]=hidden_dim
-                                                            conf["activation_function"]=activation_function
+                                                            conf["LSTM_conf"]["hidden_dim_1"]=hidden_dim_1
+                                                            conf["LSTM_conf"]["hidden_dim_2"]=hidden_dim_2
+                                                            conf["LSTM_conf"]["hidden_dim_3"]=hidden_dim_3
+                                                            conf["LSTM_conf"]["hidden_dim_4"]=hidden_dim_4
+                                                            conf["LSTM_conf"]["hidden_dim_5"]=hidden_dim_5
+                                                            conf["activation_function1"]=activation_function1
+                                                            conf["activation_function2"]=activation_function2
+                                                            conf["activation_function3"]=activation_function3
+                                                            conf["activation_function4"]=activation_function4
+                                                            conf["activation_function5"]=activation_function5
                                                             conf["dropout"]=dropout
 
                                                             model = LSTMs(conf).to(device)
@@ -305,7 +309,7 @@ for dropout in dropout_list:
                                                             print("Number of parameters: %s" % n)
                                                             os.makedirs(conf["path_save"], exist_ok=True)
                                                             f = open(f'{conf["path_save"]+" description"}.txt', 'a', encoding='utf-8')
-                                                            f.write(f"Model: LSTM\nOptimizer: {optimizer}\nLearning rate: {learning_rate}\nHidden dimension layer: {hidden_dim}\nBatch size: {batch_size}\nEpoch: {epoch}\nEarlystopping: {int(epoch/10)}\nNumber of parameters: {n}\nThe best score on DEV : ")
+                                                            f.write(f"Model: LSTM\nOptimizer: {optimizer}\nLearning rate: {learning_rate}\nHidden dimension layer 1: {hidden_dim_1}\nHidden dimension layer 2:{hidden_dim_2}\nHidden dimension layer 3:{hidden_dim_3}\nHidden dimension layer 4:{hidden_dim_4}\nHidden dimension layer 5:{hidden_dim_5}\nBatch size: {batch_size}\nEpoch: {epoch}\nEarlystopping: {int(epoch/10)}\nNumber of parameters: {n}\nThe best score on DEV : ")
                                                             f.close()
 
                                                             best_epoch=model.train_all(trainSet,

@@ -210,7 +210,6 @@ for dropout in dropout_list:
                                                         for activation_function5 in activation_function_list:
                                                             conf={}
                                                             if (hidden_dim_2 == ""):
-                                                                hidden_dim_2 = ""
                                                                 hidden_dim_3 = ""
                                                                 hidden_dim_4 = ""
                                                                 hidden_dim_5 = ""
@@ -219,19 +218,16 @@ for dropout in dropout_list:
                                                                 activation_function4 = ""
                                                                 activation_function5 = ""
                                                             elif (hidden_dim_3 == ""):
-                                                                hidden_dim_3 = ""
                                                                 hidden_dim_4 = ""
                                                                 hidden_dim_5 = ""
                                                                 activation_function3 = ""
                                                                 activation_function4 = ""
                                                                 activation_function5 = ""
                                                             elif (hidden_dim_4 == ""):
-                                                                hidden_dim_4 = ""
                                                                 hidden_dim_5 = ""
                                                                 activation_function4 = ""
                                                                 activation_function5 = ""
                                                             elif (hidden_dim_5 == ""):
-                                                                hidden_dim_5 = ""
                                                                 activation_function5 = ""
                                                             conf["path_save"]=f"saved_models/Dropout {dropout}/MLP/{optimizer}/Learnings rate {learning_rate}/Batch size {batch_size}/Epoch {epoch}/{hidden_dim_1}{activation_function1}{hidden_dim_2}{activation_function2}{hidden_dim_3}{activation_function3}{hidden_dim_4}{activation_function4}{hidden_dim_5}{activation_function5}"
                                                             
@@ -240,8 +236,8 @@ for dropout in dropout_list:
                                                                 continue
 
                                                             if torch.cuda.is_available():
-                                                                #device = torch.device("cuda:0")
-                                                                device = torch.device("cpu")
+                                                                device = torch.device("cuda:0")
+                                                                #device = torch.device("cpu")
                                                             else:
                                                                 device = torch.device("cpu")
                                                             print(conf['path_save'])
@@ -290,9 +286,6 @@ for dropout in dropout_list:
                                                             conf["activation_function4"]=activation_function4
                                                             conf["activation_function5"]=activation_function5
                                                             conf["dropout"]=dropout
-                                                            
-                                                            
-                                                            
                                                             
 
                                                             model = MLP(conf).to(device)

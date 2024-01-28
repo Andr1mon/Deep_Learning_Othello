@@ -97,18 +97,16 @@ class MLP(nn.Module):
             self.act_function5 = nn.LeakyReLU()
 
         self.hidden_dim_1 = int(self.hidden_dim_1)
+        self.lin1 = nn.Linear(self.board_size*self.board_size, self.hidden_dim_1)
         if (self.hidden_dim_2 == ""):
-            self.lin1 = nn.Linear(self.board_size*self.board_size, self.hidden_dim_1)
             self.lin2 = nn.Linear(self.hidden_dim_1, self.board_size*self.board_size)
         elif (self.hidden_dim_3 == ""):
             self.hidden_dim_2 = int(self.hidden_dim_2)
-            self.lin1 = nn.Linear(self.board_size*self.board_size, self.hidden_dim_1)
             self.lin2 = nn.Linear(self.hidden_dim_1, self.hidden_dim_2)
             self.lin3 = nn.Linear(self.hidden_dim_2, self.board_size*self.board_size)
         elif (self.hidden_dim_4 == ""):
             self.hidden_dim_2 = int(self.hidden_dim_2)
             self.hidden_dim_3 = int(self.hidden_dim_3)
-            self.lin1 = nn.Linear(self.board_size*self.board_size, self.hidden_dim_1)
             self.lin2 = nn.Linear(self.hidden_dim_1, self.hidden_dim_2)
             self.lin3 = nn.Linear(self.hidden_dim_2, self.hidden_dim_3)
             self.lin4 = nn.Linear(self.hidden_dim_3, self.board_size*self.board_size)
@@ -116,7 +114,6 @@ class MLP(nn.Module):
             self.hidden_dim_2 = int(self.hidden_dim_2)
             self.hidden_dim_3 = int(self.hidden_dim_3)
             self.hidden_dim_4 = int(self.hidden_dim_4)
-            self.lin1 = nn.Linear(self.board_size*self.board_size, self.hidden_dim_1)
             self.lin2 = nn.Linear(self.hidden_dim_1, self.hidden_dim_2)
             self.lin3 = nn.Linear(self.hidden_dim_2, self.hidden_dim_3)
             self.lin4 = nn.Linear(self.hidden_dim_3, self.hidden_dim_4)
@@ -126,7 +123,6 @@ class MLP(nn.Module):
             self.hidden_dim_3 = int(self.hidden_dim_3)
             self.hidden_dim_4 = int(self.hidden_dim_4)
             self.hidden_dim_5 = int(self.hidden_dim_5)
-            self.lin1 = nn.Linear(self.board_size*self.board_size, self.hidden_dim_1)
             self.lin2 = nn.Linear(self.hidden_dim_1, self.hidden_dim_2)
             self.lin3 = nn.Linear(self.hidden_dim_2, self.hidden_dim_3)
             self.lin4 = nn.Linear(self.hidden_dim_3, self.hidden_dim_4)
@@ -152,16 +148,15 @@ class MLP(nn.Module):
         x = self.lin1(seq)
         if (self.activation_function1 != "Linear"):
             x = self.act_function1(x)
-        
+        x = self.lin2(x)
+    
         if (self.hidden_dim_2 == ""):
-            outp = self.lin2(x)
+            outp = x
         elif (self.hidden_dim_3 == ""):
-            x = self.lin2(x)
             if (self.activation_function2 != "Linear"):
                 x = self.act_function2(x)
             outp = self.lin3(x)
         elif (self.hidden_dim_4 == ""):
-            x = self.lin2(x)
             if (self.activation_function2 != "Linear"):
                 x = self.act_function2(x)
             x = self.lin3(x)
@@ -169,7 +164,6 @@ class MLP(nn.Module):
                 x = self.act_function3(x)
             outp = self.lin4(x)
         elif (self.hidden_dim_5 == ""):
-            x = self.lin2(x)
             if (self.activation_function2 != "Linear"):
                 x = self.act_function2(x)
             x = self.lin3(x)
@@ -180,7 +174,6 @@ class MLP(nn.Module):
                 x = self.act_function4(x)
             outp = self.lin5(x)
         else:
-            x = self.lin2(x)
             if (self.activation_function2 != "Linear"):
                 x = self.act_function2(x)
             x = self.lin3(x)
@@ -324,25 +317,92 @@ class LSTMs(nn.Module):
         self.path_save=conf["path_save"]
         self.earlyStopping=conf["earlyStopping"]
         self.len_inpout_seq=conf["len_inpout_seq"]
-        self.hidden_dim=conf["LSTM_conf"]["hidden_dim"]
-        self.activation_function=conf["activation_function"]
+        self.hidden_dim_1=conf["LSTM_conf"]["hidden_dim_1"]
+        self.hidden_dim_2=conf["LSTM_conf"]["hidden_dim_2"]
+        self.hidden_dim_3=conf["LSTM_conf"]["hidden_dim_3"]
+        self.hidden_dim_4=conf["LSTM_conf"]["hidden_dim_4"]
+        self.hidden_dim_5=conf["LSTM_conf"]["hidden_dim_5"]
+        self.activation_function1=conf["activation_function1"]
+        self.activation_function2=conf["activation_function2"]
+        self.activation_function3=conf["activation_function3"]
+        self.activation_function4=conf["activation_function4"]
+        self.activation_function5=conf["activation_function5"]
 
-         # Define the layers of the LSTM model
-        self.lstm = nn.LSTM(self.board_size*self.board_size, self.hidden_dim, batch_first=True) # self.lstm = nn.LSTM(self.board_size*self.board_size, self.hidden_dim,batch_first=True)
+        # Define the layers of the LSTM model
+        if (self.activation_function1 == "ReLU"):
+            self.act_function1 = nn.ReLU()
+        elif (self.activation_function1 == "Sigmoid"):
+            self.act_function1 = nn.Sigmoid()
+        elif (self.activation_function1 == "Tanh"):
+            self.act_function1 = nn.Tanh()
+        elif (self.activation_function1 == "Leaky ReLU"):
+            self.act_function1 = nn.LeakyReLU()
+        if (self.activation_function2 == "ReLU"):
+            self.act_function2 = nn.ReLU()
+        elif (self.activation_function2 == "Sigmoid"):
+            self.act_function2 = nn.Sigmoid()
+        elif (self.activation_function2 == "Tanh"):
+            self.act_function2 = nn.Tanh()
+        elif (self.activation_function2 == "Leaky ReLU"):
+            self.act_function2 = nn.LeakyReLU()
+        if (self.activation_function3 == "ReLU"):
+            self.act_function3 = nn.ReLU()
+        elif (self.activation_function3 == "Sigmoid"):
+            self.act_function3 = nn.Sigmoid()
+        elif (self.activation_function3 == "Tanh"):
+            self.act_function3 = nn.Tanh()
+        elif (self.activation_function3 == "Leaky ReLU"):
+            self.act_function3 = nn.LeakyReLU()
+        if (self.activation_function4 == "ReLU"):
+            self.act_function4 = nn.ReLU()
+        elif (self.activation_function4 == "Sigmoid"):
+            self.act_function4 = nn.Sigmoid()
+        elif (self.activation_function4 == "Tanh"):
+            self.act_function4 = nn.Tanh()
+        elif (self.activation_function4 == "Leaky ReLU"):
+            self.act_function4 = nn.LeakyReLU()
+        if (self.activation_function5 == "ReLU"):
+            self.act_function5 = nn.ReLU()
+        elif (self.activation_function5 == "Sigmoid"):
+            self.act_function5 = nn.Sigmoid()
+        elif (self.activation_function5 == "Tanh"):
+            self.act_function5 = nn.Tanh()
+        elif (self.activation_function5 == "Leaky ReLU"):
+            self.act_function5 = nn.LeakyReLU()
+
+        self.hidden_dim_1 = int(self.hidden_dim_1)
+        self.lstm = nn.LSTM(self.board_size*self.board_size, self.hidden_dim_1, batch_first=True)
         
-        # 1st option: using hidden states
-        # self.hidden2output = nn.Linear(self.hidden_dim*2, self.board_size*self.board_size)
-
-        # 2nd option: using output sequence
-        if (self.activation_function == "ReLU"):
-            self.act_function = nn.ReLU()
-        elif (self.activation_function == "Sigmoid"):
-            self.act_function = nn.Sigmoid()
-        elif (self.activation_function == "Tanh"):
-            self.act_function = nn.Tanh()
-        elif (self.activation_function == "Leaky ReLU"):
-            self.act_function = nn.LeakyReLU()
-        self.hidden2output = nn.Linear(self.hidden_dim, self.board_size*self.board_size) # self.hidden2output = nn.Linear(self.hidden_dim, self.board_size*self.board_size)
+        if (self.hidden_dim_2 == ""):
+            self.lin2 = nn.Linear(self.hidden_dim_1, self.board_size*self.board_size)
+        elif (self.hidden_dim_3 == ""):
+            self.hidden_dim_2 = int(self.hidden_dim_2)
+            self.lin2 = nn.Linear(self.hidden_dim_1, self.hidden_dim_2)
+            self.lin3 = nn.Linear(self.hidden_dim_2, self.board_size*self.board_size)
+        elif (self.hidden_dim_4 == ""):
+            self.hidden_dim_2 = int(self.hidden_dim_2)
+            self.hidden_dim_3 = int(self.hidden_dim_3)
+            self.lin2 = nn.Linear(self.hidden_dim_1, self.hidden_dim_2)
+            self.lin3 = nn.Linear(self.hidden_dim_2, self.hidden_dim_3)
+            self.lin4 = nn.Linear(self.hidden_dim_3, self.board_size*self.board_size)
+        elif (self.hidden_dim_5 == ""):
+            self.hidden_dim_2 = int(self.hidden_dim_2)
+            self.hidden_dim_3 = int(self.hidden_dim_3)
+            self.hidden_dim_4 = int(self.hidden_dim_4)
+            self.lin2 = nn.Linear(self.hidden_dim_1, self.hidden_dim_2)
+            self.lin3 = nn.Linear(self.hidden_dim_2, self.hidden_dim_3)
+            self.lin4 = nn.Linear(self.hidden_dim_3, self.hidden_dim_4)
+            self.lin5 = nn.Linear(self.hidden_dim_4, self.board_size*self.board_size)
+        else:
+            self.hidden_dim_2 = int(self.hidden_dim_2)
+            self.hidden_dim_3 = int(self.hidden_dim_3)
+            self.hidden_dim_4 = int(self.hidden_dim_4)
+            self.hidden_dim_5 = int(self.hidden_dim_5)
+            self.lin2 = nn.Linear(self.hidden_dim_1, self.hidden_dim_2)
+            self.lin3 = nn.Linear(self.hidden_dim_2, self.hidden_dim_3)
+            self.lin4 = nn.Linear(self.hidden_dim_3, self.hidden_dim_4)
+            self.lin5 = nn.Linear(self.hidden_dim_4, self.hidden_dim_5)
+            self.lin6 = nn.Linear(self.hidden_dim_5, self.board_size*self.board_size)
         self.dropout = nn.Dropout(p=conf["dropout"])
 
     def forward(self, seq):
@@ -361,31 +421,65 @@ class LSTMs(nn.Module):
         else:
             seq=torch.flatten(seq, start_dim=1)
 
-        lstm_out, (hn, cn) = self.lstm(seq)
+        x, (hn, cn) = self.lstm(seq)
         
-        #1st option: using hidden states as below
-        # outp = self.hidden2output(torch.cat((hn,cn),-1))
-        
-        #2nd option: using output sequence as below 
+        #using output sequence as below 
         #(lstm_out[:,-1,:] pass only last vector of output sequence)
         if len(seq.shape)>2: # to manage the batch of sample
             # Training phase where input is batch of seq
-            if (self.activation_function == "Linear"):
-                outp = self.hidden2output(lstm_out[:,-1,:])
+            if (self.activation_function1 != "Linear"):
+                x = self.act_function1(x[:,-1,:])
+                x = self.lin2(x)
             else:
-                outp = self.act_function(lstm_out[:,-1,:])
-                outp = self.hidden2output(outp)
-            
-            outp = F.softmax(outp, dim=1).squeeze()
-            
+                x = self.lin2(x[:,-1,:])
         else:
             # Prediction phase where input is a single seq
-            if (self.activation_function == "Linear"):
-                outp = self.hidden2output(lstm_out[-1,:])
+            if (self.activation_function1 != "Linear"):
+                x = self.act_function1(x[-1,:])
+                x = self.lin2(x)
             else:
-                outp = self.act_function(lstm_out[-1,:])
-                outp = self.hidden2output(outp)
+                x = self.lin2(x[-1,:])
+        
+        if (self.hidden_dim_2 == ""):
+            outp = x
+        elif (self.hidden_dim_3 == ""):
+            if (self.activation_function2 != "Linear"):
+                x = self.act_function2(x)
+            outp = self.lin3(x)
+        elif (self.hidden_dim_4 == ""):
+            if (self.activation_function2 != "Linear"):
+                x = self.act_function2(x)
+            x = self.lin3(x)
+            if (self.activation_function3 != "Linear"):
+                x = self.act_function3(x)
+            outp = self.lin4(x)
+        elif (self.hidden_dim_5 == ""):
+            if (self.activation_function2 != "Linear"):
+                x = self.act_function2(x)
+            x = self.lin3(x)
+            if (self.activation_function3 != "Linear"):
+                x = self.act_function3(x)
+            x = self.lin4(x)
+            if (self.activation_function4 != "Linear"):
+                x = self.act_function4(x)
+            outp = self.lin5(x)
+        else:
+            if (self.activation_function2 != "Linear"):
+                x = self.act_function2(x)
+            x = self.lin3(x)
+            if (self.activation_function3 != "Linear"):
+                x = self.act_function3(x)
+            x = self.lin4(x)
+            if (self.activation_function4 != "Linear"):
+                x = self.act_function4(x)
+            x = self.lin5(x)
+            if (self.activation_function5 != "Linear"):
+                x = self.act_function5(x)
+            outp = self.lin6(x)
 
+        if len(seq.shape)>2:
+            outp = F.softmax(outp, dim=1).squeeze()
+        else:  
             outp = F.softmax(outp, dim=-1).squeeze()
             
         
