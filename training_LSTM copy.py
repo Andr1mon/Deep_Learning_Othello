@@ -177,7 +177,7 @@ class CustomDataset(Dataset):
             y=np.array(game_log[1][self.samples[idx].end_move]).flatten()
             
         return features,y,self.len_samples
-    
+
 
 dropout_list = [0.1]
 optimizer_list = ["Adam"]
@@ -186,7 +186,7 @@ batch_size_list = [1000]
 epoch_list = [200]
 hidden_dim_list = ["", " 128 ", " 96 ", " 192 ", " 256 "]
 hidden_dim_list1 = ["256 ", "96 ", "128 ", "192 "]
-activation_function_list = ["Leaky ReLU", "Linear", "ReLU",  "Sigmoid", "Tanh"]
+activation_function_list = ["Linear"]
 random.shuffle(dropout_list)
 random.shuffle(optimizer_list)
 random.shuffle(learning_rate_list)
