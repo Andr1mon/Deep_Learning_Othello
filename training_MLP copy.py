@@ -177,7 +177,7 @@ class CustomDataset(Dataset):
         return features,y,self.len_samples
 
 dropout_list = [0.1]
-optimizer_list = ["Adam"]
+optimizer_list = ["Adagrad"]
 learning_rate_list = [0.0001]
 batch_size_list = [1000]
 epoch_list = [200]
@@ -240,8 +240,8 @@ for dropout in dropout_list:
                                                                 continue
 
                                                             if torch.cuda.is_available():
-                                                                device = torch.device("cuda:0")
-                                                                #device = torch.device("cpu")
+                                                                #device = torch.device("cuda:0")
+                                                                device = torch.device("cpu")
                                                             else:
                                                                 device = torch.device("cpu")
                                                             print(conf['path_save'])
@@ -315,7 +315,7 @@ for dropout in dropout_list:
                                                             print("Number of parameters: %s" % n)
                                                             os.makedirs(conf["path_save"], exist_ok=True)
                                                             f = open(f'{conf["path_save"]+" description"}.txt', 'a', encoding='utf-8')
-                                                            f.write(f"Model: MLP\nOptimizer: {optimizer}\nLearning rate: {learning_rate}\nHidden dimension layer 1: {hidden_dim_1}\nHidden dimension layer 2: {hidden_dim_2}\nHidden dimension layer 3: {hidden_dim_3}\nHidden dimension layer 4: {hidden_dim_4}\nHidden dimension layer 5: {hidden_dim_5}\nBatch size: {batch_size}\nEpoch: {epoch}\nEarlystopping: {int(epoch/10)}\nNumber of parameters: {n}\nThe best score on DEV : ")
+                                                            f.write(f"Model: MLP\nOptimizer: {optimizer}\nLearning rate: {learning_rate}\nHidden dimension layer 1: {hidden_dim_1}\nHidden dimension layer 2:{hidden_dim_2}\nHidden dimension layer 3:{hidden_dim_3}\nHidden dimension layer 4:{hidden_dim_4}\nHidden dimension layer 5:{hidden_dim_5}\nBatch size: {batch_size}\nEpoch: {epoch}\nEarlystopping: {int(epoch/10)}\nNumber of parameters: {n}\nThe best score on DEV : ")
                                                             f.close()
 
 
