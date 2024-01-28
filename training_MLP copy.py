@@ -240,8 +240,8 @@ for dropout in dropout_list:
                                                                 continue
 
                                                             if torch.cuda.is_available():
-                                                                #device = torch.device("cuda:0")
-                                                                device = torch.device("cpu")
+                                                                device = torch.device("cuda:0")
+                                                                #device = torch.device("cpu")
                                                             else:
                                                                 device = torch.device("cpu")
                                                             print(conf['path_save'])
@@ -290,9 +290,6 @@ for dropout in dropout_list:
                                                             conf["activation_function4"]=activation_function4
                                                             conf["activation_function5"]=activation_function5
                                                             conf["dropout"]=dropout
-                                                            
-                                                            
-                                                            
                                                             
 
                                                             model = MLP(conf).to(device)
