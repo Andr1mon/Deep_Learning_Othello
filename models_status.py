@@ -17,12 +17,27 @@ hidden_dim_list1 = ["256 ", "96 ", "128 ", "192 "]
 activation_function_list = ["Leaky ReLU", "Linear", "ReLU",  "Sigmoid", "Tanh"]
 conf={}
 
+if (len(os.listdir("saved_models")) == 0):
+    print('dropout EMPTY ERROR')
+    print(os.listdir("saved_models"))
 for dropout in os.listdir("saved_models"):
+    if (len(os.listdir(f'saved_models/{dropout}')) == 0):
+        print('architecture EMPTY ERROR')
     for architecture in os.listdir(f'saved_models/{dropout}'):
+        if (len(os.listdir(f'saved_models/{dropout}/{architecture}')) == 0):
+            print('optimizer EMPTY ERROR')
         for optimizer in os.listdir(f'saved_models/{dropout}/{architecture}'):
+            if (len(os.listdir(f'saved_models/{dropout}/{architecture}/{optimizer}')) == 0):
+                print('learning_rate EMPTY ERROR')
             for learning_rate in os.listdir(f'saved_models/{dropout}/{architecture}/{optimizer}'):
+                if (len(os.listdir(f'saved_models/{dropout}/{architecture}/{optimizer}/{learning_rate}')) == 0):
+                    print('batch_size EMPTY ERROR')
                 for batch_size in os.listdir(f'saved_models/{dropout}/{architecture}/{optimizer}/{learning_rate}'):
+                    if (len(os.listdir(f'saved_models/{dropout}/{architecture}/{optimizer}/{learning_rate}')) == 0):
+                        print('epoch EMPTY ERROR')
                     for epoch in os.listdir(f'saved_models/{dropout}/{architecture}/{optimizer}/{learning_rate}/{batch_size}'):
+                        if (len(os.listdir(f'saved_models/{dropout}/{architecture}/{optimizer}/{learning_rate}/{batch_size}')) == 0):
+                            print('layers EMPTY ERROR')
                         for layers in os.listdir(f'saved_models/{dropout}/{architecture}/{optimizer}/{learning_rate}/{batch_size}/{epoch}'):
                             conf["path_save"]=f"saved_models/{dropout}/{architecture}/{optimizer}/{learning_rate}/{batch_size}/{epoch}/{layers}"
                             if ("description" in conf["path_save"] or "logs" in conf["path_save"] or "curve" in conf["path_save"]):
