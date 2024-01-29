@@ -1,0 +1,13 @@
+Model: MLP
+Optimizer: Adagrad
+Learning rate: 1
+Hidden dimension layer 1: 128 
+Hidden dimension layer 2: 256 
+Hidden dimension layer 3: 256 
+Hidden dimension layer 4: 96 
+Hidden dimension layer 5: 96 
+Batch size: 1000
+Epoch: 200
+Earlystopping: 20
+Number of parameters: 147328
+The best score on DEV : 1.6666666666666667%

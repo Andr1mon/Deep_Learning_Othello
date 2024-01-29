@@ -94,6 +94,6 @@ print(path_max_MLP_DEV)
 print("The best LSTM accuracy on DEV: %.2f" % max_LSTM_DEV + "%")
 print(path_max_LSTM_DEV)
 print("****************************************************************************")
-print(f"Total: {total}")
+print(f"Total: {int(total/4)}")
 
 

@@ -178,7 +178,6 @@ class CustomDataset(Dataset):
             
         return features,y,self.len_samples
 
-
 dropout_list = [0.1]
 optimizer_list = ["Adam"]
 learning_rate_list = [0.0001, 0.0005]
@@ -239,8 +238,8 @@ for dropout in dropout_list:
                                                                 continue
 
                                                             if torch.cuda.is_available():
-                                                                #device = torch.device("cuda:0")
-                                                                device = torch.device("cpu")
+                                                                device = torch.device("cuda:0")
+                                                                #device = torch.device("cpu")
                                                             else:
                                                                 device = torch.device("cpu")
                                                             print(conf['path_save'])
