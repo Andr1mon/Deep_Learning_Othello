@@ -179,8 +179,8 @@ class CustomDataset(Dataset):
         return features,y,self.len_samples
 
 dropout_list = [0.1]
-optimizer_list = [ "Adam", "SGD", "RMSprop", "Adagrad", "Adadelta"]
-learning_rate_list = [0.0001, 0.001, 0.005, 0.01, 0.1, 1]
+optimizer_list = ["Adam"]
+learning_rate_list = [0.0001, 0.0005]
 batch_size_list = [1000]
 epoch_list = [200]
 hidden_dim_list = ["", " 128 ", " 96 ", " 192 ", " 256 "]

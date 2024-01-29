@@ -247,8 +247,6 @@ for dropout1 in os.listdir("saved_models"):
                                                             continue
                                                         conf["path_save"]=f"saved_models/{dropout2}/{architecture2}/{optimizer2}/{learning_rate2}/{batch_size2}/{epoch2}/{layers2}"
                                                         conf['player2']=conf["path_save"]+'//'+os.listdir(conf["path_save"])[0]
-                                                        try: 
-                                                            start_game(conf)
                                                         print(conf['games'], conf['wins'])
                             print(f"Games: {conf['games']}\nWins: {conf['wins']}\nWinrate: {100*conf['wins']/conf['games']}%")
                             """

@@ -26,13 +26,19 @@ for dropout in os.listdir("saved_models"):
                         for layers in os.listdir(f'saved_models/{dropout}/{architecture}/{optimizer}/{learning_rate}/{batch_size}/{epoch}'):
                             conf["path_save"]=f"saved_models/{dropout}/{architecture}/{optimizer}/{learning_rate}/{batch_size}/{epoch}/{layers}"
                             if ("description" in conf["path_save"] or "logs" in conf["path_save"] or "curve" in conf["path_save"]):
-                                continue
+                                conf["path_save"]=conf["path_save"].replace(' description.txt', '').replace(' logs.txt', '').replace(' curve.png', '')
                             if not os.path.exists(conf["path_save"]+" description.txt"):
-                                print("LOST ERROR")
-                                print(conf["path_save"]+" description.txt")
-                            if not os.path.exists(conf["path_save"]+" logs.txt"):
+                                print("Description LOST ERROR")
                                 print(conf["path_save"])
+                                print(conf["path_save"]+" description.txt")
                                 print(conf["path_save"]+" logs.txt")
+                                continue
+                            if not os.path.exists(conf["path_save"]+" logs.txt"):
+                                print("Logs LOST ERROR")
+                                print(conf["path_save"])
+                                print(conf["path_save"]+" description.txt")
+                                print(conf["path_save"]+" logs.txt")
+                                continue
                             epochs = []
                             train_accuracy = []
                             dev_accuracy = []
