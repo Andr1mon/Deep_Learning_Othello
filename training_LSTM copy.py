@@ -178,14 +178,14 @@ class CustomDataset(Dataset):
             
         return features,y,self.len_samples
 
-dropout_list = [0.1]
+dropout_list = [0.1, 0.3, 0.5, 0.7]
 optimizer_list = ["Adam", "SGD", "RMSprop", "Adagrad", "Adadelta"]
-learning_rate_list = [0.005]
-batch_size_list = [1000] # [100, 1000, 5000, 15000, 30000]
-epoch_list = [200]
+learning_rate_list = [0.0001, 0.001, 0.005, 0.01, 0.1, 1]
+batch_size_list = [100, 1000, 5000, 15000, 30000]
+epoch_list = [50, 100, 200, 300, 500]
 hidden_dim_list = ["", " 128 ", " 96 ", " 192 ", " 256 "]
 hidden_dim_list1 = ["256 ", "96 ", "128 ", "192 "]
-activation_function_list = ["Linear"]
+activation_function_list = ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]
 random.shuffle(dropout_list)
 random.shuffle(optimizer_list)
 random.shuffle(learning_rate_list)
@@ -195,21 +195,21 @@ random.shuffle(hidden_dim_list)
 random.shuffle(hidden_dim_list1)
 random.shuffle(activation_function_list)
 
-for dropout in dropout_list:
-    for optimizer in optimizer_list:
-        for learning_rate in learning_rate_list:
-            for batch_size in batch_size_list:
-                for epoch in epoch_list:
-                    for hidden_dim_1 in ["128 "]:
-                        for hidden_dim_2 in [""]:
-                            for hidden_dim_3 in [""]:
-                                for hidden_dim_4 in [""]:
-                                    for hidden_dim_5 in [""]:
-                                        for activation_function1 in ["Linear"]:
-                                            for activation_function2 in ["Linear"]:
-                                                for activation_function3 in ["Linear"]:
-                                                    for activation_function4 in ["Linear"]:
-                                                        for activation_function5 in ["Linear"]:
+for hidden_dim_1 in ["128 "]:
+    for hidden_dim_2 in [" 128 "]:
+        for hidden_dim_3 in [""]:
+            for hidden_dim_4 in [""]:
+                for hidden_dim_5 in [""]:
+                    for activation_function1 in ["Linear"]:
+                        for activation_function2 in ["Linear"]:
+                            for activation_function3 in ["Linear"]:
+                                for activation_function4 in ["Linear"]:
+                                    for activation_function5 in ["Linear"]:
+                                        for dropout in dropout_list:
+                                            for optimizer in optimizer_list:
+                                                for learning_rate in learning_rate_list:
+                                                    for batch_size in batch_size_list:
+                                                        for epoch in epoch_list:
                                                             conf={}
                                                             if (hidden_dim_2 == ""):
                                                                 hidden_dim_3 = ""
