@@ -1,0 +1,13 @@
+Model: MLP
+Optimizer: RMSprop
+Learning rate: 0.005
+Hidden dimension layer 1: 192 
+Hidden dimension layer 2: 192 
+Hidden dimension layer 3: 96 
+Hidden dimension layer 4: 128 
+Hidden dimension layer 5: 256 
+Batch size: 1000
+Epoch: 200
+Earlystopping: 20
+Number of parameters: 129952
+The best score on DEV : 1.3666666666666667%
