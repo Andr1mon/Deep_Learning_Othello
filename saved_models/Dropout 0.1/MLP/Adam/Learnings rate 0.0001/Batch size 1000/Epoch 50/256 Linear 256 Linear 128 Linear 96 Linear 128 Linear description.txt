@@ -5,9 +5,9 @@ Hidden dimension layer 1: 256
 Hidden dimension layer 2: 256 
 Hidden dimension layer 3: 128 
 Hidden dimension layer 4: 96 
-Hidden dimension layer 5: 192 
+Hidden dimension layer 5: 128 
 Batch size: 1000
 Epoch: 50
 Earlystopping: 5
-Number of parameters: 158688
-The best score on DEV : 10.206666666666667%
+Number of parameters: 148384
+The best score on DEV : 9.68%
