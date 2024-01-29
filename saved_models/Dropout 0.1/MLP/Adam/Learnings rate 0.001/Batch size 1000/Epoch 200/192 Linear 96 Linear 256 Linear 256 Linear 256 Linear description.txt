@@ -1,0 +1,13 @@
+Model: MLP
+Optimizer: Adam
+Learning rate: 0.001
+Hidden dimension layer 1: 192 
+Hidden dimension layer 2: 96 
+Hidden dimension layer 3: 256 
+Hidden dimension layer 4: 256 
+Hidden dimension layer 5: 256 
+Batch size: 1000
+Epoch: 200
+Earlystopping: 20
+Number of parameters: 203872
+The best score on DEV : 7.573333333333333%
