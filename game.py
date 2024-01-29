@@ -260,5 +260,3 @@ for dropout1 in os.listdir("saved_models"):
                             f.write(f"\nWinrate: {100*conf['wins']/conf['games']}%")
                             f.close()
                             """
-
-
