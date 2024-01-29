@@ -221,95 +221,40 @@ else:
     device = torch.device("cpu")
 
 conf={}
-for dropout1 in [0.1, 0.3, 0.5, 0.7]:
-    for model1 in ["MLP", "LSTM"]:
-        for optimizer1 in ["Adam", "RMSprop", "SGD", "Adadelta", "Adagrad"]:
-            for learning_rate1 in [0.0001, 0.001, 0.01, 0.1, 1]:
-                for batch_size1 in [100, 1000, 5000, 15000, 30000]:
-                    for epoch1 in [50, 100, 200, 300, 500]:
-                        if (model1 == "MLP"):
-                            for hidden_dim_11 in [96, 128, 192, 256]:
-                                for hidden_dim_21 in [96, 128, 192, 256]:
-                                    for activation_function1 in ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]:
-                                        path_to_model = f"saved_models/Dropout {dropout1}/MLP/{optimizer1}/Learnings rate {learning_rate1}/Batch size {batch_size1}/Epoch {epoch1}/{hidden_dim_11} {hidden_dim_21} {activation_function1}"
-                                        if (not os.path.exists(path_to_model)):
-                                            continue
-                                        conf['games']=0
-                                        conf['wins']=0
-                                        conf['player1']=path_to_model+'//'+os.listdir(path_to_model)[0]
-                                        print(conf['player1'])
-                                        for dropout2 in [0.1, 0.3, 0.5, 0.7]:
-                                            for model2 in ["LSTM", "MLP"]:
-                                                for optimizer2 in [ "Adam", "RMSprop", "SGD", "Adadelta", "Adagrad"]:
-                                                    for learning_rate2 in [0.0001, 0.001, 0.01, 0.1, 1]:
-                                                        for batch_size2 in [100, 1000, 5000, 15000, 30000]:
-                                                            for epoch2 in [50, 100, 200, 300, 500]:
-                                                                if (model2 == "MLP"):
-                                                                    for hidden_dim_12 in [96, 128, 192, 256]:
-                                                                        for hidden_dim_22 in [96, 128, 192, 256]:
-                                                                            for activation_function2 in ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]:
-                                                                                for hidden_dim2 in [96, 128, 192, 256]:
-                                                                                    for activation_function2 in ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]:
-                                                                                        path_to_model = f"saved_models/Dropout {dropout2}/MLP/{optimizer2}/Learnings rate {learning_rate2}/Batch size {batch_size2}/Epoch {epoch2}/{hidden_dim_12} {hidden_dim_22} {activation_function2}"
-                                                                                        if (not os.path.exists(path_to_model)):
-                                                                                            continue
-                                                                                        conf['player2']=path_to_model+'//'+os.listdir(path_to_model)[0]
-                                                                                        start_game(conf)
-                                                                                        print(conf['games'], conf['wins'])
-                                                                elif (model2 == "LSTM"):
-                                                                    for hidden_dim2 in [96, 128, 192, 256]:
-                                                                        for activation_function2 in ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]:
-                                                                            path_to_model = f"saved_models/Dropout {dropout2}/LSTM/{optimizer2}/Learnings rate {learning_rate2}/Batch size {batch_size2}/Epoch {epoch2}/{hidden_dim2} {activation_function2}"
-                                                                            if (not os.path.exists(path_to_model)):
-                                                                                continue
-                                                                            conf['player2']=path_to_model+'//'+os.listdir(path_to_model)[0]
-                                                                            start_game(conf)
-                                        print(f"Games: {conf['games']}\nWins: {conf['wins']}\nWinrate: {100*conf['wins']/conf['games']}%")
-                                        """
-                                        f = open(f'{path_to_model} description.txt', 'a', encoding='utf-8')
-                                        f.write(f"\nWinrate: {100*conf['wins']/conf['games']}%")
-                                        f.close()
-                                        """
-                        elif (model1 == "LSTM"):
-                            for hidden_dim1 in [96, 128, 192, 256]:
-                                for activation_function1 in ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]:
-                                    path_to_model = f"saved_models/Dropout {dropout1}/LSTM/{optimizer1}/Learnings rate {learning_rate1}/Batch size {batch_size1}/Epoch {epoch1}/{hidden_dim1} {activation_function1}"
-                                    if (not os.path.exists(path_to_model)):
-                                        continue
-                                    conf['games']=0
-                                    conf['wins']=0
-                                    conf['player1']=path_to_model+'//'+os.listdir(path_to_model)[0]
-                                    print(conf['player1'])
-                                    for dropout2 in [0.1, 0.3, 0.5, 0.7]:
-                                        for model2 in ["LSTM", "MLP"]:
-                                                for optimizer2 in [ "Adam", "RMSprop", "SGD", "Adadelta", "Adagrad"]:
-                                                    for learning_rate2 in [0.0001, 0.001, 0.01, 0.1, 1]:
-                                                        for batch_size2 in [100, 1000, 5000, 15000, 30000]:
-                                                            for epoch2 in [50, 100, 200, 300, 500]:
-                                                                if (model2 == "MLP"):
-                                                                    for hidden_dim_12 in [96, 128, 192, 256]:
-                                                                        for hidden_dim_22 in [96, 128, 192, 256]:
-                                                                            for activation_function2 in ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]:
-                                                                                for hidden_dim2 in [96, 128, 192, 256]:
-                                                                                    for activation_function2 in ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]:
-                                                                                        path_to_model =f"saved_models/Dropout {dropout2}/MLP/{optimizer2}/Learnings rate {learning_rate2}/Batch size {batch_size2}/Epoch {epoch2}/{hidden_dim_12} {hidden_dim_22} {activation_function2}"
-                                                                                        if (not os.path.exists(path_to_model)):
-                                                                                            continue
-                                                                                        conf['player2']=path_to_model+'//'+os.listdir(path_to_model)[0]
-                                                                                        start_game(conf)
-                                                                elif (model2 == "LSTM"):
-                                                                    for hidden_dim2 in [96, 128, 192, 256]:
-                                                                        for activation_function2 in ["Linear", "ReLU", "Leaky ReLU", "Sigmoid", "Tanh"]:
-                                                                            path_to_model = f"saved_models/Dropout {dropout2}/LSTM/{optimizer2}/Learnings rate {learning_rate2}/Batch size {batch_size2}/Epoch {epoch2}/{hidden_dim2} {activation_function2}"
-                                                                            if (not os.path.exists(path_to_model)):
-                                                                                continue
-                                                                            conf['player2']=path_to_model+'//'+os.listdir(path_to_model)[0]
-                                                                            start_game(conf)
-                                    print(f"Games: {conf['games']}\nWins: {conf['wins']}\nWinrate: {100*conf['wins']/conf['games']}%")
-                                    """
-                                    f = open(f'{path_to_model} description.txt', 'a', encoding='utf-8')
-                                    f.write(f"\nWinrate: {100*conf['wins']/conf['games']}%")
-                                    f.close()
-                                    """
+for dropout1 in os.listdir("saved_models"):
+    for architecture1 in os.listdir(f'saved_models/{dropout1}'):
+        for optimizer1 in os.listdir(f'saved_models/{dropout1}/{architecture1}'):
+            for learning_rate1 in os.listdir(f'saved_models/{dropout1}/{architecture1}/{optimizer1}'):
+                for batch_size1 in os.listdir(f'saved_models/{dropout1}/{architecture1}/{optimizer1}/{learning_rate1}'):
+                    for epoch1 in os.listdir(f'saved_models/{dropout1}/{architecture1}/{optimizer1}/{learning_rate1}/{batch_size1}'):
+                        for layers1 in os.listdir(f'saved_models/{dropout1}/{architecture1}/{optimizer1}/{learning_rate1}/{batch_size1}/{epoch1}'):
+                            conf["path_save"]=f"saved_models/{dropout1}/{architecture1}/{optimizer1}/{learning_rate1}/{batch_size1}/{epoch1}/{layers1}"
+                            if ("description" in conf["path_save"] or "logs" in conf["path_save"] or "curve" in conf["path_save"]):
+                                continue
+                            conf['games']=0
+                            conf['wins']=0
+                            conf['player1']=conf["path_save"]+'//'+os.listdir(conf["path_save"])[0]
+                            print(conf['player1'])
+                            for dropout2 in os.listdir("saved_models"):
+                                for architecture2 in os.listdir(f'saved_models/{dropout2}'):
+                                    for optimizer2 in os.listdir(f'saved_models/{dropout2}/{architecture2}'):
+                                        for learning_rate2 in os.listdir(f'saved_models/{dropout2}/{architecture2}/{optimizer2}'):
+                                            for batch_size2 in os.listdir(f'saved_models/{dropout2}/{architecture2}/{optimizer2}/{learning_rate2}'):
+                                                for epoch2 in os.listdir(f'saved_models/{dropout2}/{architecture2}/{optimizer2}/{learning_rate2}/{batch_size2}'):
+                                                    for layers2 in os.listdir(f'saved_models/{dropout2}/{architecture2}/{optimizer2}/{learning_rate2}/{batch_size2}/{epoch2}'):
+                                                        conf["path_save"]=f"saved_models/{dropout2}/{architecture2}/{optimizer2}/{learning_rate2}/{batch_size2}/{epoch2}/{layers2}"
+                                                        if ("description" in conf["path_save"] or "logs" in conf["path_save"] or "curve" in conf["path_save"]):
+                                                            continue
+                                                        conf["path_save"]=f"saved_models/{dropout2}/{architecture2}/{optimizer2}/{learning_rate2}/{batch_size2}/{epoch2}/{layers2}"
+                                                        conf['player2']=conf["path_save"]+'//'+os.listdir(conf["path_save"])[0]
+                                                        try: 
+                                                            start_game(conf)
+                                                        print(conf['games'], conf['wins'])
+                            print(f"Games: {conf['games']}\nWins: {conf['wins']}\nWinrate: {100*conf['wins']/conf['games']}%")
+                            """
+                            f = open(f'{conf["path_save"]} description.txt', 'a', encoding='utf-8')
+                            f.write(f"\nWinrate: {100*conf['wins']/conf['games']}%")
+                            f.close()
+                            """
 
 
