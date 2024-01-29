@@ -180,7 +180,7 @@ class CustomDataset(Dataset):
     
 
 dropout_list = [0.1, 0.3, 0.5, 0.7]
-optimizer_list = [ "Adam", "SGD", "RMSprop", "Adagrad", "Adadelta"]
+optimizer_list = ["Adam", "SGD", "RMSprop", "Adagrad", "Adadelta"]
 learning_rate_list = [0.0001, 0.001, 0.005, 0.01, 0.1, 1]
 batch_size_list = [100, 1000, 5000, 15000, 30000]
 epoch_list = [50, 100, 200, 300, 500]

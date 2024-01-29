@@ -144,7 +144,6 @@ def start_game(conf):
 
             NgBlackPsWhith=+1
             board_stats_seq.append(copy.copy(board_stat))
-            model = torch.load(conf['player2'])
             model = torch.load(conf['player2'],map_location=torch.device('cpu'))
             model.eval()
 
@@ -247,12 +246,17 @@ for dropout1 in os.listdir("saved_models"):
                                                             continue
                                                         conf["path_save"]=f"saved_models/{dropout2}/{architecture2}/{optimizer2}/{learning_rate2}/{batch_size2}/{epoch2}/{layers2}"
                                                         conf['player2']=conf["path_save"]+'//'+os.listdir(conf["path_save"])[0]
-                                                        print(conf['games'], conf['wins'])
-                            print(f"Games: {conf['games']}\nWins: {conf['wins']}\nWinrate: {100*conf['wins']/conf['games']}%")
+                                                        try:
+                                                            start_game(conf)
+                                                            print(conf['games'], conf['wins'])
+                                                        except:
+                                                            pass
+                            try:
+                                print(f"Games: {conf['games']}\nWins: {conf['wins']}\nWinrate: {100*conf['wins']/conf['games']}%")
+                            except:
+                                pass
                             """
                             f = open(f'{conf["path_save"]} description.txt', 'a', encoding='utf-8')
                             f.write(f"\nWinrate: {100*conf['wins']/conf['games']}%")
                             f.close()
                             """
-
-
