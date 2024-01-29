@@ -195,16 +195,16 @@ random.shuffle(activation_function_list)
 
 
 
-for hidden_dim_1 in ["128 "]:
-    for hidden_dim_2 in [" 128 "]:
-        for hidden_dim_3 in [""]:
-            for hidden_dim_4 in [""]:
-                for hidden_dim_5 in [""]:
-                    for activation_function1 in ["Linear"]:
-                        for activation_function2 in ["Linear"]:
-                            for activation_function3 in ["Linear"]:
-                                for activation_function4 in ["Linear"]:
-                                    for activation_function5 in ["Linear"]:
+for hidden_dim_1 in hidden_dim_list1:
+    for hidden_dim_2 in hidden_dim_list:
+        for hidden_dim_3 in hidden_dim_list:
+            for hidden_dim_4 in hidden_dim_list:
+                for hidden_dim_5 in hidden_dim_list:
+                    for activation_function1 in activation_function_list:
+                        for activation_function2 in activation_function_list:
+                            for activation_function3 in activation_function_list:
+                                for activation_function4 in activation_function_list:
+                                    for activation_function5 in activation_function_list:
                                         for dropout in dropout_list:
                                             for optimizer in optimizer_list:
                                                 for learning_rate in learning_rate_list:
