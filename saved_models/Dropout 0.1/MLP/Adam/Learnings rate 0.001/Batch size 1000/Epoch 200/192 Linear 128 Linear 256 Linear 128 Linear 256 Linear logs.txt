@@ -67,3 +67,6 @@ Accuracy Train: 2.66%, Dev: 2.63% ; Time: 260 (last_train: 10sec, last_pred: 7se
 epoch: 23/200 - loss = 4.158685499791941
 Accuracy Train: 2.68%, Dev: 2.6% ; Time: 277 (last_train: 11sec, last_pred: 6sec)
 *************** The best score on DEV 3: 8.32%
+epoch: 24/200 - loss = 4.15660651612677
+Accuracy Train: 3.13%, Dev: 3.07% ; Time: 294 (last_train: 11sec, last_pred: 7sec)
+Recalculing the best DEV: WAcc: 8.32%
