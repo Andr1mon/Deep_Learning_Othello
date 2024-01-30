@@ -262,15 +262,13 @@ for dropout1 in os.listdir("saved_models"):
                                                                 p2.close()
                                                             except:
                                                                 pass
-                                                        else:
-                                                            print('yes')
                             try:
                                 print(f"Games: {conf['games']}\nWins: {conf['wins']}\nWinrate: {100*conf['wins']/conf['games']}%")
                             except:
                                 pass
                             p1.close()
-                            """
+                            
                             f = open(f'{conf["path_save1"]} description.txt', 'a', encoding='utf-8')
                             f.write(f"\nWinrate: {100*conf['wins']/conf['games']}%")
                             f.close()
-                            """
+                            
