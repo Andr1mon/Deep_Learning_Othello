@@ -1,0 +1,13 @@
+Model: LSTM
+Optimizer: Adagrad
+Learning rate: 0.005
+Hidden dimension layer 1: 96 
+Hidden dimension layer 2:
+Hidden dimension layer 3:
+Hidden dimension layer 4:
+Hidden dimension layer 5:
+Batch size: 15000
+Epoch: 300
+Earlystopping: 30
+Number of parameters: 68416
+The best score on DEV : 10.97%
