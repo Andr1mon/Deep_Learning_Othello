@@ -256,7 +256,7 @@ for dropout1 in os.listdir("saved_models"):
                                                             try:
                                                                 start_game(conf)
                                                                 print(conf['games'], conf['wins'])
-                                                                p1.write(f"{conf['path_save2']}")
+                                                                p1.write(f"{conf['path_save2']}\n")
                                                                 p2 = open(f'{conf["path_save2"]} games.txt', 'a', encoding='utf-8')
                                                                 p2.write(f"{conf['path_save1']}\n")
                                                                 p2.close()
@@ -267,8 +267,8 @@ for dropout1 in os.listdir("saved_models"):
                             except:
                                 pass
                             p1.close()
-                            """
+                            
                             f = open(f'{conf["path_save1"]} description.txt', 'a', encoding='utf-8')
                             f.write(f"\nWinrate: {100*conf['wins']/conf['games']}%")
                             f.close()
-                            """
+                            
