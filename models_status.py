@@ -45,15 +45,19 @@ for dropout in os.listdir("saved_models"):
                             if not os.path.exists(conf["path_save"]+" description.txt"):
                                 print("Description LOST ERROR")
                                 print(conf["path_save"])
-                                print(conf["path_save"]+" description.txt")
                                 print(conf["path_save"]+" logs.txt")
                                 continue
                             if not os.path.exists(conf["path_save"]+" logs.txt"):
                                 print("Logs LOST ERROR")
                                 print(conf["path_save"])
                                 print(conf["path_save"]+" description.txt")
-                                print(conf["path_save"]+" logs.txt")
                                 continue
+                            """if not os.path.exists(conf["path_save"]+" curve.png"):
+                                print("Curve LOST ERROR")
+                                print(conf["path_save"])
+                                print(conf["path_save"]+" description.txt")
+                                print(conf["path_save"]+" logs.txt")
+                                continue"""
                             epochs = []
                             train_accuracy = []
                             dev_accuracy = []
