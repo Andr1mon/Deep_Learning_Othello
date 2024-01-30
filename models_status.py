@@ -42,7 +42,7 @@ for dropout in os.listdir("saved_models"):
                             conf["path_save"]=f"saved_models/{dropout}/{architecture}/{optimizer}/{learning_rate}/{batch_size}/{epoch}/{layers}"
                             if ("description" in conf["path_save"] or "logs" in conf["path_save"] or "curve" in conf["path_save"]):
                                 conf["path_save"]=conf["path_save"].replace(' description.txt', '').replace(' logs.txt', '').replace(' curve.png', '')
-                            if not os.path.exists(conf["path_save"]+" description.txt"):
+                            """if not os.path.exists(conf["path_save"]+" description.txt"):
                                 print("Description LOST ERROR")
                                 print(conf["path_save"])
                                 print(conf["path_save"]+" logs.txt")
@@ -52,7 +52,7 @@ for dropout in os.listdir("saved_models"):
                                 print(conf["path_save"])
                                 print(conf["path_save"]+" description.txt")
                                 continue
-                            """if not os.path.exists(conf["path_save"]+" curve.png"):
+                            if not os.path.exists(conf["path_save"]+" curve.png"):
                                 print("Curve LOST ERROR")
                                 print(conf["path_save"])
                                 print(conf["path_save"]+" description.txt")
