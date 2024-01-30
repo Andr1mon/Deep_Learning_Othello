@@ -227,12 +227,18 @@ for dropout1 in os.listdir("saved_models"):
                 for batch_size1 in os.listdir(f'saved_models/{dropout1}/{architecture1}/{optimizer1}/{learning_rate1}'):
                     for epoch1 in os.listdir(f'saved_models/{dropout1}/{architecture1}/{optimizer1}/{learning_rate1}/{batch_size1}'):
                         for layers1 in os.listdir(f'saved_models/{dropout1}/{architecture1}/{optimizer1}/{learning_rate1}/{batch_size1}/{epoch1}'):
-                            conf["path_save"]=f"saved_models/{dropout1}/{architecture1}/{optimizer1}/{learning_rate1}/{batch_size1}/{epoch1}/{layers1}"
-                            if ("description" in conf["path_save"] or "logs" in conf["path_save"] or "curve" in conf["path_save"]):
+                            conf["path_save1"]=f"saved_models/{dropout1}/{architecture1}/{optimizer1}/{learning_rate1}/{batch_size1}/{epoch1}/{layers1}"
+                            if ("description" in conf["path_save1"] or "logs" in conf["path_save1"] or "curve" in conf["path_save1"] or "games" in conf['path_save1']):
                                 continue
+                            p1 = open(f"{conf['path_save1']} games.txt", 'a', encoding='utf-8')
+                            p1.close()
+                            p1 = open(f"{conf['path_save1']} games.txt", 'r', encoding='utf-8')
+                            conf['gamesList']=p1.readlines()
+                            p1.close()
+                            p1 = open(f"{conf['path_save1']} games.txt", 'a', encoding='utf-8')
                             conf['games']=0
                             conf['wins']=0
-                            conf['player1']=conf["path_save"]+'//'+os.listdir(conf["path_save"])[0]
+                            conf['player1']=conf["path_save1"]+'//'+os.listdir(conf["path_save1"])[0]
                             print(conf['player1'])
                             for dropout2 in os.listdir("saved_models"):
                                 for architecture2 in os.listdir(f'saved_models/{dropout2}'):
@@ -241,22 +247,30 @@ for dropout1 in os.listdir("saved_models"):
                                             for batch_size2 in os.listdir(f'saved_models/{dropout2}/{architecture2}/{optimizer2}/{learning_rate2}'):
                                                 for epoch2 in os.listdir(f'saved_models/{dropout2}/{architecture2}/{optimizer2}/{learning_rate2}/{batch_size2}'):
                                                     for layers2 in os.listdir(f'saved_models/{dropout2}/{architecture2}/{optimizer2}/{learning_rate2}/{batch_size2}/{epoch2}'):
-                                                        conf["path_save"]=f"saved_models/{dropout2}/{architecture2}/{optimizer2}/{learning_rate2}/{batch_size2}/{epoch2}/{layers2}"
-                                                        if ("description" in conf["path_save"] or "logs" in conf["path_save"] or "curve" in conf["path_save"]):
+                                                        conf['path_save2']=f"saved_models/{dropout2}/{architecture2}/{optimizer2}/{learning_rate2}/{batch_size2}/{epoch2}/{layers2}"
+                                                        if ("description" in conf['path_save2'] or "logs" in conf['path_save2'] or "curve" in conf['path_save2'] or "games" in conf['path_save2']):
                                                             continue
-                                                        conf["path_save"]=f"saved_models/{dropout2}/{architecture2}/{optimizer2}/{learning_rate2}/{batch_size2}/{epoch2}/{layers2}"
-                                                        conf['player2']=conf["path_save"]+'//'+os.listdir(conf["path_save"])[0]
-                                                        try:
-                                                            start_game(conf)
-                                                            print(conf['games'], conf['wins'])
-                                                        except:
-                                                            pass
+                                                        conf['path_save2']=f"saved_models/{dropout2}/{architecture2}/{optimizer2}/{learning_rate2}/{batch_size2}/{epoch2}/{layers2}"
+                                                        conf['player2']=conf['path_save2']+'//'+os.listdir(conf["path_save2"])[0]
+                                                        if (conf['path_save2'] not in conf['gamesList']):
+                                                            try:
+                                                                start_game(conf)
+                                                                print(conf['games'], conf['wins'])
+                                                                p1.write(f"{conf['path_save2']}")
+                                                                p2 = open(f'{conf["path_save2"]} games.txt', 'a', encoding='utf-8')
+                                                                p2.write(f"{conf['path_save1']}\n")
+                                                                p2.close()
+                                                            except:
+                                                                pass
+                                                        else:
+                                                            print('yes')
                             try:
                                 print(f"Games: {conf['games']}\nWins: {conf['wins']}\nWinrate: {100*conf['wins']/conf['games']}%")
                             except:
                                 pass
+                            p1.close()
                             """
-                            f = open(f'{conf["path_save"]} description.txt', 'a', encoding='utf-8')
+                            f = open(f'{conf["path_save1"]} description.txt', 'a', encoding='utf-8')
                             f.write(f"\nWinrate: {100*conf['wins']/conf['games']}%")
                             f.close()
                             """
