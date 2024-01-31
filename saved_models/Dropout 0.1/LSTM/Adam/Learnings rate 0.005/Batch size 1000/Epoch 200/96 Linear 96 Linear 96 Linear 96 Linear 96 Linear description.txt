@@ -1,0 +1,13 @@
+Model: LSTM
+Optimizer: Adam
+Learning rate: 0.005
+Hidden dimension layer 1: 96 
+Hidden dimension layer 2: 96 
+Hidden dimension layer 3: 96 
+Hidden dimension layer 4: 96 
+Hidden dimension layer 5: 96 
+Batch size: 1000
+Epoch: 200
+Earlystopping: 20
+Number of parameters: 105664
+The best score on DEV : 4.866666666666666%
