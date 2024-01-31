@@ -9,6 +9,7 @@ from tqdm import tqdm
 from datetime import datetime
 import h5py
 import copy
+import time
 
 from utile import has_tile_to_flip, isBlackWinner, initialze_board, BOARD_SIZE
 from networks_e2205046 import MLP
@@ -84,6 +85,10 @@ class CustomDataset(Dataset):
                 game_log = np.array(h5f[gm_name.replace(".h5","")][:])
                 h5f.close()
                 last_board_state=copy.copy(game_log[0][-1])
+                for i in range (60):
+                    np.savetxt(f"dataset_status/{str(datetime.now()).replace('.','-').replace(':','-')}.txt", game_log[0][i])
+                    np.savetxt(f"dataset_moves/{str(datetime.now()).replace('.','-').replace(':','-')}.txt", game_log[1][i])
+                time.sleep(10000)
                 is_black_winner=isBlackWinner(game_log[1][-1],last_board_state)
                 for sm_idx in range(30):
                     if is_black_winner:
@@ -121,6 +126,7 @@ class CustomDataset(Dataset):
                 h5f = h5py.File(self.path_dataset+gm_name,'r')
                 game_log = np.array(h5f[gm_name.replace(".h5","")][:])
                 h5f.close()
+                
                 last_board_state=copy.copy(game_log[0][-1])
                 is_black_winner=isBlackWinner(game_log[1][-1],last_board_state)
                 for sm_idx in range(30):
@@ -177,7 +183,7 @@ class CustomDataset(Dataset):
         return features,y,self.len_samples
 
 dropout_list = [0.1]
-optimizer_list = ["Adam"]
+optimizer_list = ["Adam", "RMSprop"]
 learning_rate_list = [0.001]
 batch_size_list = [100, 1000, 5000, 15000, 30000]
 epoch_list = [200]
@@ -246,8 +252,8 @@ while (True):
         continue
 
     if torch.cuda.is_available():
-        #device = torch.device("cuda:0")
-        device = torch.device("cpu")
+        device = torch.device("cuda:0")
+        #device = torch.device("cpu")
     else:
         device = torch.device("cpu")
     print(conf['path_save'])
