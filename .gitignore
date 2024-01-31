@@ -174,4 +174,5 @@ cython_debug/
 *.vsix
 
 # Dataset
-/AI_dataset
+AI_dataset/
+dataset/
