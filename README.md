@@ -1,4 +1,4 @@
-#Presentation
+# Presentation
 
 ![Untitled presentation-1](https://github.com/user-attachments/assets/4114815b-db75-4b0c-88c1-80314b6cb507)
 ![Untitled presentation-2](https://github.com/user-attachments/assets/f322e5a3-6224-48c4-ac6d-d243800e76b4)
@@ -11,7 +11,7 @@
 ![Untitled presentation-9](https://github.com/user-attachments/assets/11bfead9-7eb4-4177-a59e-e55a927aa3bc)
 
 
-#Report
+# Report
 
 ![writeup_page-0001](https://github.com/Andr1mon/AI/assets/26165459/3dcd1dd5-1f65-430a-b1c4-0fa9a4378c68)
 ![writeup_page-0002](https://github.com/Andr1mon/AI/assets/26165459/093d7ead-124b-417f-be1c-721102a6ef02)
